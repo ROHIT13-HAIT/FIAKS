@@ -10,7 +10,7 @@ import LeadersVoice from '../components/marketing/LeadersVoice';
 import Recognition from '../components/marketing/Recognition';
 import GlobalCommunities from '../components/marketing/GlobalCommunities';
 import PartnersSlider from '../components/marketing/PartnersSlider';
-// import JoinCommunity from '../components/marketing/JoinCommunity';
+
 import Gallery from '../components/marketing/Gallery';
 import Footer from '../components/marketing/Footer';
 
