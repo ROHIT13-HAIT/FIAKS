@@ -1,0 +1,119 @@
+/* App specific styles */
+.App {
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Hero section */
+.hero-container {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+/* Stats section */
+.stats-section {
+    background: linear-gradient(135deg, #07549c 0%, #054178 100%);
+}
+
+/* Infographics */
+.infographic-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.infographic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Leaders voice slider */
+.leader-video-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Recognition section */
+.recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Partners marquee */
+.partners-marquee {
+    background: #f8fafc;
+    padding: 40px 0;
+}
+
+/* Join CTA section */
+.join-section {
+    background: linear-gradient(135deg, #07549c 0%, #054178 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.join-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: rotate(15deg);
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+}
+
+.footer a {
+    color: #94a3b8;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #07549c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-container {
+        min-height: 500px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* CSS columns layout */
+.gallery {
+  column-width: 320px;
+  column-gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+  /* Prevent images from breaking across columns */
+  break-inside: avoid;
+}
