@@ -21,6 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif !important;
 }
 
 body {
@@ -77,6 +78,9 @@ code {
     body {
         @apply bg-background text-foreground;
     }
+     html, body {
+    font-family: "Red Hat Display", sans-serif !important;
+  }
 }
 
 /* Custom scrollbar */

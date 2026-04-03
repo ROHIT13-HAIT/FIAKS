@@ -1,48 +1,73 @@
 import React from 'react';
 import { Award, Trophy, Star } from 'lucide-react';
+import { useEffect } from "react";
 
 const recognitionImages = [
   {
     id: 1,
-    image: '/recognition1.png',
+    image: '/fiaks/recognition1.png',
     title: 'Annual Summit 2024',
   },
   {
     id: 2,
-    image: '/recognition2.png',
+    image: '/fiaks/recognition2.png',
     title: 'Excellence Award Ceremony',
   },
   {
     id: 3,
-    image: '/recognition7.png',
+    image: '/fiaks/recognition7.png',
     title: 'Industry Leadership Forum',
   },
   {
     id: 4,
-    image: '/recognition4.png',
+    image: '/fiaks/recognition4.png',
     title: 'Global Partnership Meet',
   },
   {
     id: 5,
-    image: '/recognition8.png',
+    image: '/fiaks/recognition8.png',
     title: 'Innovation Showcase',
   },
   {
     id: 6,
-    image: '/recognition6.png',
+    image: '/fiaks/recognition6.png',
     title: 'Digital Banking Conference',
   },
 ];
 
 const Recognition = () => {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animate");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show"); // 👈 THIS ENABLES HIDE ON SCROLL BACK
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="py-20 md:py-28 bg-slate-50" data-testid="recognition-section">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-16">
-          <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
+          <p className="animate slide-left delay-1 text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Our Achievements
           </p>
-          <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">
             Recognition
           </h2>
           <div className="w-16 h-1 bg-[#07549c] mx-auto" />
@@ -71,24 +96,24 @@ const Recognition = () => {
 
           {/* Content */}
           <div className="space-y-6" data-testid="recognition-content">
-            <p className="text-slate-700 text-lg leading-relaxed">
-              Over the years, Fintech Forum has been honored with numerous accolades recognizing our 
-              contribution to the BFSI ecosystem. From industry excellence awards to government 
-              recognition for promoting financial inclusion, our achievements reflect the trust 
+            <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed">
+              Over the years, Fintech Forum has been honored with numerous accolades recognizing our
+              contribution to the BFSI ecosystem. From industry excellence awards to government
+              recognition for promoting financial inclusion, our achievements reflect the trust
               placed in us by stakeholders across the sector.
             </p>
 
-            <p className="text-slate-700 text-lg leading-relaxed">
-              Our annual summits have been attended by distinguished dignitaries including central 
-              bank governors, ministry officials, and global fintech leaders. These events have 
-              become the benchmark for industry gatherings, setting new standards for knowledge 
+            <p className="animate slide-right delay-4 text-slate-700 text-lg leading-relaxed">
+              Our annual summits have been attended by distinguished dignitaries including central
+              bank governors, ministry officials, and global fintech leaders. These events have
+              become the benchmark for industry gatherings, setting new standards for knowledge
               exchange and networking in financial services.
             </p>
 
-            <p className="text-slate-700 text-lg leading-relaxed">
-              We take pride in fostering an environment where innovation thrives and partnerships 
-              flourish. The success stories emerging from our community – from successful 
-              collaborations to breakthrough innovations – stand testament to the value we create 
+            <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed">
+              We take pride in fostering an environment where innovation thrives and partnerships
+              flourish. The success stories emerging from our community – from successful
+              collaborations to breakthrough innovations – stand testament to the value we create
               for our members.
             </p>
 

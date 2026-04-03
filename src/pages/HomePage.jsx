@@ -26,7 +26,7 @@ const HomePage = () => {
         <FeaturedVideos />
         {/* <Infographics /> */}
         <WhatWeOffer />
-        <WhatMakesUsUnique />
+        {/* <WhatMakesUsUnique /> */}
         <LeadersVoice />
         <Recognition />
         <GlobalCommunities />
