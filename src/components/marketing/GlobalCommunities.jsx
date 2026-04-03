@@ -5,34 +5,46 @@ import {
   Geography,
   Marker,
 } from 'react-simple-maps';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const geoUrl = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
 
 
 
-const fintechCities = [
-  { name: 'New York', coordinates: [-74.006, 40.7128] },
-  { name: 'London', coordinates: [-0.1276, 51.5074] },
+const fintechCountries = [
+  { name: 'Canada', coordinates: [-106.3468, 56.1304] },
+  { name: 'USA', coordinates: [-95.7129, 37.0902] },
+  { name: 'UK', coordinates: [-3.4359, 55.3781] },
+  { name: 'Germany', coordinates: [10.4515, 51.1657] },
+  { name: 'Ghana', coordinates: [-1.0232, 7.9465] },
+  { name: 'Nigeria', coordinates: [8.6753, 9.0820] },
+  { name: 'Egypt', coordinates: [30.8025, 26.8206] },
+  { name: 'Kenya', coordinates: [37.9062, -0.0236] },
+  { name: 'South Africa', coordinates: [22.9375, -30.5595] },
+  { name: 'Israel', coordinates: [34.8516, 31.0461] },
+  { name: 'Ethiopia', coordinates: [40.4897, 9.1450] },
+  { name: 'Bahrain', coordinates: [50.6378, 25.9304] },
+  { name: 'UAE', coordinates: [53.8478, 23.4241] },
+  { name: 'Maldives', coordinates: [73.2207, 3.2028] },
+  { name: 'Sri Lanka', coordinates: [80.7718, 7.8731] },
+  { name: 'Nepal', coordinates: [84.1240, 28.3949] },
+  { name: 'India', coordinates: [78.9629, 20.5937] },
+  { name: 'Bangladesh', coordinates: [90.3563, 23.6850] },
+  { name: 'Myanmar', coordinates: [95.9560, 21.9162] },
+  { name: 'Malaysia', coordinates: [101.9758, 4.2105] },
   { name: 'Singapore', coordinates: [103.8198, 1.3521] },
+  { name: 'Vietnam', coordinates: [108.2772, 14.0583] },
   { name: 'Hong Kong', coordinates: [114.1694, 22.3193] },
-  { name: 'Dubai', coordinates: [55.2708, 25.2048] },
-  { name: 'Mumbai', coordinates: [72.8777, 19.076] },
-  { name: 'Shanghai', coordinates: [121.4737, 31.2304] },
-  { name: 'San Francisco', coordinates: [-122.4194, 37.7749] },
-  { name: 'Frankfurt', coordinates: [8.6821, 50.1109] },
-  { name: 'Sydney', coordinates: [151.2093, -33.8688] },
-  { name: 'Tokyo', coordinates: [139.6917, 35.6895] },
-  { name: 'Zurich', coordinates: [8.5417, 47.3769] },
-  { name: 'Toronto', coordinates: [-79.3832, 43.6532] },
-  { name: 'Bangalore', coordinates: [77.5946, 12.9716] },
+  { name: 'Philippines', coordinates: [121.7740, 12.8797] },
+  { name: 'Indonesia', coordinates: [113.9213, -0.7893] },
+  { name: 'Australia', coordinates: [133.7751, -25.2744] },
 ];
 
 const GlobalCommunities = () => {
 
 
-  const [activeCity, setActiveCity] = useState("New York");
+  // const [activeCity, setActiveCity] = useState("New York");
 
 
   return (
@@ -51,7 +63,7 @@ const GlobalCommunities = () => {
           </p>
         </div>
         {/* City list */}
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
+        {/* <div className="mt-12 flex flex-wrap justify-center gap-3">
           {fintechCities.map((city) => (
             <span
               key={city.name}
@@ -68,8 +80,8 @@ const GlobalCommunities = () => {
               {city.name}
             </span>
           ))}
-        </div>
-        <br></br>
+        </div> */}
+        {/* <br></br> */}
         {/* <div className="relative bg-slate-50 rounded-2xl p-4 md:p-8 overflow-hidden" data-testid="world-map"> */}
         <div className="relative bg-slate-50 rounded-2xl   overflow-hidden" data-testid="world-map">
           <ComposableMap
@@ -98,63 +110,39 @@ const GlobalCommunities = () => {
                 ))
               }
             </Geographies>
-            {fintechCities.map((city) => {
-              const isActive = activeCity === city.name;
+            {fintechCountries.map((city) => (
+  <Marker key={city.name} coordinates={city.coordinates}>
+    <g className="map-marker">
 
-              return (
-                <Marker key={city.name} coordinates={city.coordinates}>
-                  <g className="map-marker cursor-pointer">
+      {/* Uniform pulse for ALL points */}
+      <circle r={8} fill="#07549c" opacity={0.25} />
+      <circle r={5} fill="#07549c" />
 
-                    {/* Pulse animation ONLY for active */}
-                    {isActive && (
-                      <>
-                        <circle r={8} fill="#07549c" opacity={0.3} />
-                        <circle r={5} fill="#07549c" />
-                      </>
-                    )}
+    </g>
 
-                    {/* Default circle */}
-                    {!isActive && (
-                      <>
-                        <circle r={8} fill="#000000" opacity={0.3} />
-                        <circle r={5} fill="#000000" />
-                      </>
-                    )}
-                  </g>
-                  {/* Active PNG marker */}
-                  {/* {isActive && (
-          <image
-            href="/pin.png"
-            width={60}
-            height={60}
-            x={-20}
-            y={-60}
-          />
-        )}
-     */}
+    {/* Pin icon for all */}
+    <image
+      href="/fiaks/pin.png"
+      width={50}
+      height={50}
+      x={-18}
+      y={-50}
+    />
 
-                  {/* PNG marker for ALL cities */}
-                  <image
-                    href="/pin.png"
-                    width={isActive ? 75 : 50}   // slightly bigger when active
-                    height={isActive ? 75 : 50}
-                    x={isActive ? -22 : -18}
-                    y={isActive ? -65 : -50}
-                  />
-                  <text
-                    textAnchor="middle"
-                    y={-18}
-                    style={{
-                      fontSize: '10px',
-                      fill: isActive ? '#07549c' : '#334155',
-                      fontWeight: isActive ? 700 : 500,
-                    }}
-                  >
-                    {city.name}
-                  </text>
-                </Marker>
-              );
-            })}
+    {/* City label */}
+    <text
+      textAnchor="middle"
+      y={-18}
+      style={{
+        fontSize: '10px',
+        fill: '#334155',
+        fontWeight: 500,
+      }}
+    >
+      {city.name}
+    </text>
+  </Marker>
+))}
           </ComposableMap>
         </div>
 

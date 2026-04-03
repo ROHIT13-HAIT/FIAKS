@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Instagram, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 import { useState, useRef } from 'react';
 import { Play } from "lucide-react";
-import logo from "../../images/logo.png";
+// import logo from "../../images/logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -34,17 +34,17 @@ const Footer = () => {
     }, 100);
   };
 
-const getVideoId = (url) => {
-  if (url.includes("youtu.be")) {
-    return url.split("youtu.be/")[1];
-  }
-  if (url.includes("v=")) {
-    return url.split("v=")[1].split("&")[0];
-  }
-  return "";
-};
+// const getVideoId = (url) => {
+//   if (url.includes("youtu.be")) {
+//     return url.split("youtu.be/")[1];
+//   }
+//   if (url.includes("v=")) {
+//     return url.split("v=")[1].split("&")[0];
+//   }
+//   return "";
+// };
 
-const [playVideo, setPlayVideo] = useState(false);
+// const [playVideo, setPlayVideo] = useState(false);
 
 
 
@@ -68,7 +68,7 @@ const [playVideo, setPlayVideo] = useState(false);
           {/* Video */}
           <video
             ref={videoRef}
-            src="/How-To-Pronounce-Fiaks.mp4"
+            src="/fiaks/How-To-Pronounce-Fiaks.mp4"
             className="w-full h-full object-cover"
             controls={isPlaying}
           />

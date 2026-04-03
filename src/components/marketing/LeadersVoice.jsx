@@ -20,6 +20,12 @@ const leaderVideos = [
     title: 'Head Developer Ecosystem & Integrations , Tally Solutions',
     quote: 'FIAKS Focused Acclivity Program of Knowledge Sharing',
   },
+  {
+    url: 'https://youtu.be/BThYX3O2NjA',
+    name: 'Abhishek Dalmiya',
+    title: 'Head Developer Ecosystem & Integrations , Tally Solutions',
+    quote: 'FIAKS Focused Acclivity Program of Knowledge Sharing',
+  },
 ];
 
 const getVideoId = (url) => {
@@ -34,7 +40,10 @@ const getVideoId = (url) => {
 
 const LeadersVoice = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [playingVideo, setPlayingVideo] = useState(null);
+  // const [playingVideo, setPlayingVideo] = useState(null);
+  const [hoveredVideo, setHoveredVideo] = useState(null);
+
+
   const itemsPerView = 3;
 
   const nextSlide = () => {
@@ -99,37 +108,29 @@ const LeadersVoice = () => {
                     <div className="leader-video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100">
 
                       {/* Video/Image */}
-                      <div className="relative aspect-video">
+                      {/* <div className="relative aspect-video"> */}
 
-                        {playingVideo === index ? (
-                          <iframe
-                            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                            title={leader.name}
-                            className="w-full h-full"
-                            allow="autoplay; encrypted-media"
-                            allowFullScreen
-                          />
-                        ) : (
-                          <>
-                            {/* ✅ Thumbnail */}
-                            <img
-                              src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
-                              alt={leader.name}
-                              className="w-full h-full object-cover"
-                            />
+                      <div
+                        className="relative aspect-video cursor-pointer"
+                        onMouseEnter={() => setHoveredVideo(leader.url)}
+                        onMouseLeave={() => setHoveredVideo(null)}
+                      >
+                        <img
+                          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                          alt={leader.name}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        />
 
-                            {/* ▶ Play */}
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                              <button
-                                onClick={() => setPlayingVideo(index)}
-                                className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110"
-                              >
-                                <Play className="w-6 h-6 text-white ml-1" fill="white" />
-                              </button>
-                            </div>
-                          </>
-                        )}
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                                  <button
+                                                    // onClick={() => setModalVideo(video.iframe)}
+                                                    className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110"
+                                                  >
+                                                    <Play className="w-6 h-6 text-white ml-1" fill="white" />
+                                                  </button>
+                                                </div>
                       </div>
+                      {/* </div> */}
 
                       {/* Content */}
                       <div className="p-6">
@@ -150,6 +151,36 @@ const LeadersVoice = () => {
           </div>
         </div>
       </div>
+      {hoveredVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+
+          <div
+            className="relative w-[80%] max-w-4xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl animate-[zoomIn_0.25s_ease]"
+            onMouseEnter={() => setHoveredVideo(hoveredVideo)}
+            onMouseLeave={() => setHoveredVideo(null)}
+            style={{ pointerEvents: "auto" }}
+          >
+            {/* Close */}
+            <button
+              className="absolute top-3 right-3 z-10 bg-white/20 hover:bg-white/40 text-white rounded-full p-2"
+              onClick={() => setHoveredVideo(null)}
+            >
+              ✕
+            </button>
+
+            {/* Video */}
+            <iframe
+              src={`https://www.youtube.com/embed/${getVideoId(hoveredVideo)}?autoplay=1&mute=1`}
+              title="Video"
+              className="w-full h-full"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+
+        </div>
+      )}
+
     </section>
   );
 };

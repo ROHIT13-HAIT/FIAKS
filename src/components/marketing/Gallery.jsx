@@ -1,21 +1,21 @@
 import React from 'react' 
 
 const gridImg = [
-  "/1.jpg",
-  "/2.jpg",
-  "/3.jpg",
-  "/4.jpg",
-  "/5.jpg",
-  "/6.jpg",
-  "/7.jpg",
-  "/8.jpg",
-  "/9.jpg",
-  "/10.jpg",
-  "/11.jpg",
-  "/12.jpg",
-  "/13.jpg",
-  "/14.jpg",
-  "/15.jpg", 
+  "/fiaks/1.jpg",
+  "/fiaks/2.jpg",
+  "/fiaks/3.jpg",
+  "/fiaks/4.jpg",
+  "/fiaks/5.jpg",
+  "/fiaks/6.jpg",
+  "/fiaks/7.jpg",
+  "/fiaks/8.jpg",
+  "/fiaks/9.jpg",
+  "/fiaks/10.jpg",
+  "/fiaks/11.jpg",
+  "/fiaks/12.jpg",
+  "/fiaks/13.jpg",
+  "/fiaks/14.jpg",
+  "/fiaks/15.jpg", 
 ];
 
 const GalleryImg = ({ src }) => (
