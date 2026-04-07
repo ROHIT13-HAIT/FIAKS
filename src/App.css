@@ -305,3 +305,100 @@
   }
 }
 
+
+/* WHO WE ARE */
+
+/* 3D tilt base */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.tilt-card:hover {
+  transform: perspective(600px) rotateX(5deg) rotateY(-5deg) scale(1.02);
+}
+
+/* base */
+.role-pill {
+  background: rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* hover */
+.role-pill:hover {
+  background: white;
+  color: #07549c;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* base pill */
+.floating-pill {
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* hover */
+.floating-pill:hover {
+  background: white;
+  color: #07549c;
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+/* 🎯 DIFFERENT POSITIONS + ANIMATIONS */
+.pill-0 { top: 10%; left: 15%; animation: float1 10s ease-in-out infinite; }
+.pill-1 { top: 30%; left: 60%; animation: float2 12s ease-in-out infinite; }
+.pill-2 { top: 70%; left: 20%; animation: float3 11s ease-in-out infinite; }
+.pill-3 { top: 50%; left: 80%; animation: float1 13s ease-in-out infinite; }
+.pill-4 { top: 20%; left: 40%; animation: float2 14s ease-in-out infinite; }
+.pill-5 { top: 80%; left: 55%; animation: float3 12s ease-in-out infinite; }
+.pill-6 { top: 60%; left: 10%; animation: float1 15s ease-in-out infinite; }
+.pill-7 { top: 40%; left: 30%; animation: float2 13s ease-in-out infinite; }
+.pill-8 { top: 75%; left: 75%; animation: float3 14s ease-in-out infinite; }
+.pill-9 { top: 15%; left: 70%; animation: float1 11s ease-in-out infinite; }
+.pill-10 { top: 55%; left: 50%; animation: float2 12s ease-in-out infinite; }
+.pill-11 { top: 35%; left: 5%; animation: float3 13s ease-in-out infinite; }
+
+/* ✨ FLOAT ANIMATIONS */
+@keyframes float1 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-25px, 15px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes float3 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(15px, 25px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* base */
+.industry-card {
+  transition: all 0.3s ease;
+}
+
+/* hover lift */
+.industry-card:hover {
+  transform: translateY(-10px);
+}
+
+/* card hover glow */
+.industry-card:hover .bg-white {
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}

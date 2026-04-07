@@ -21,6 +21,8 @@ import FIAKSMotes from './pages/Events/FIAKSMotes';
 import FIAKSZeroHour from './pages/Events/FIAKSZeroHour';
 import Workshops from './pages/Events/Workshops';
 import FLCAndAwardsDetails from './pages/Events/FLCAndAwardsDetails';
+import WhoWeAre from './pages/WhoWeAre';
+import ToranPage from './pages/ToranPage';
 
 const App = () => {
   return (
@@ -30,6 +32,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/who-we-are" element={<WhoWeAre />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
@@ -45,6 +48,7 @@ const App = () => {
           <Route path="/events/fiaks-motes" element={<FIAKSMotes />} />
           <Route path="/events/fiaks-zero-hour" element={<FIAKSZeroHour />} />
           <Route path="/events/workshops" element={<Workshops />} />
+          <Route path="/toran" element={<ToranPage />} />
         </Routes>
       </HashRouter>
       <Toaster position="top-right" />
