@@ -132,7 +132,8 @@ const Header = ({ forceDark = false }) => {
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS TORAN</li>
+    <Link to="/toran"><span className="text-xs mt-1">▶</span>FIAKS TORAN</Link> </li>
+                        
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
                             <span className="text-xs mt-1">▶</span>FIAKS Executive Search</li>
