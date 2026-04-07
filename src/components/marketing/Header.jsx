@@ -110,19 +110,19 @@ const Header = ({ forceDark = false }) => {
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FLC & Awards</li>
+                            <Link to="/events/flc-and-awards"><span className="text-xs mt-1">▶</span>FLC & Awards</Link> </li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Premier League (FPL)</li>
+                            <Link to="/events/fiaks-premier-league"><span className="text-xs mt-1">▶</span>FIAKS Premier League (FPL)</Link></li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS MOTES</li>
+                             <Link to="/events/fiaks-motes"><span className="text-xs mt-1">▶</span>FIAKS MOTES </Link></li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS ZERO HOUR</li>
+                            <Link to="/events/fiaks-zero-hour"><span className="text-xs mt-1">▶</span>FIAKS ZERO HOUR</Link></li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>Workshops</li>
+                            <Link to="/events/workshops"><span className="text-xs mt-1">▶</span>Workshops</Link></li>
                         </ul>
                       </div>
 
@@ -132,10 +132,10 @@ const Header = ({ forceDark = false }) => {
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS TORAN</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS TORAN</li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS Executive Search</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS Executive Search</li>
                         </ul>
                       </div>
 
@@ -145,13 +145,13 @@ const Header = ({ forceDark = false }) => {
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS Digital शिक्षासार अभियान</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS Digital शिक्षासार अभियान</li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS Global Meets Local</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS Global Meets Local</li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>Corporate Social Responsibility</li>
+                            <span className="text-xs mt-1">▶</span>Corporate Social Responsibility</li>
                         </ul>
                       </div>
 
@@ -161,19 +161,19 @@ const Header = ({ forceDark = false }) => {
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS e-Bulletin</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS e-Bulletin</li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS Writ</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS Writ</li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS Bespoke</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS Bespoke</li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS Daily</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS Daily</li>
                           <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/10 hover:translate-x-1 hover:text-white">
-  <span className="text-xs mt-1">▶</span>FIAKS Compendium</li>
+                            <span className="text-xs mt-1">▶</span>FIAKS Compendium</li>
                         </ul>
                       </div>
 

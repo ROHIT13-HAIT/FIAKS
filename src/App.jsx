@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from './components/ui/sonner';
+
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import AboutPage from './pages/AboutPage';
@@ -12,7 +13,14 @@ import EventsPage from './pages/EventsPage';
 import EventDetailsPage from './pages/EventDetailsPage';
 import JobsPage from './pages/JobsPage';
 import JobDetailsPage from './pages/JobDetailsPage';
+
 import './App.css';
+import FLCAndAwards from './pages/Events/FLCAndAwards';
+import FIAKSPremierLeague from './pages/Events/FIAKSPremierLeague';
+import FIAKSMotes from './pages/Events/FIAKSMotes';
+import FIAKSZeroHour from './pages/Events/FIAKSZeroHour';
+import Workshops from './pages/Events/Workshops';
+import FLCAndAwardsDetails from './pages/Events/FLCAndAwardsDetails';
 
 const App = () => {
   return (
@@ -30,9 +38,18 @@ const App = () => {
           <Route path="/events/:slug" element={<EventDetailsPage />} />
           <Route path="/jobs" element={<JobsPage />} />
           <Route path="/jobs/:slug" element={<JobDetailsPage />} />
+
+          <Route path="/events/flc-and-awards" element={<FLCAndAwards />} />
+          <Route path="/events/flc-and-awards/details" element={<FLCAndAwardsDetails />} />
+          <Route path="/events/fiaks-premier-league" element={<FIAKSPremierLeague />} />
+          <Route path="/events/fiaks-motes" element={<FIAKSMotes />} />
+          <Route path="/events/fiaks-zero-hour" element={<FIAKSZeroHour />} />
+          <Route path="/events/workshops" element={<Workshops />} />
         </Routes>
       </HashRouter>
       <Toaster position="top-right" />
+
+       
     </div>
   );
 };

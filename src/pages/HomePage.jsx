@@ -12,8 +12,7 @@ import GlobalCommunities from '../components/marketing/GlobalCommunities';
 import PartnersSlider from '../components/marketing/PartnersSlider';
 
 import Gallery from '../components/marketing/Gallery';
-import Footer from '../components/marketing/Footer';
-
+import Footer from '../components/marketing/Footer'; 
 
 
 const HomePage = () => {
