@@ -7,9 +7,9 @@ import logo from "../../images/logo.png";
 const Header = ({ forceDark = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+  // const [searchOpen, setSearchOpen] = useState(false);
   const [whatWeOfferOpen, setWhatWeOfferOpen] = useState(false);
-  const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
+  // const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
   const location = useLocation();
 
   // Pages that have light/white backgrounds at the top
@@ -35,12 +35,12 @@ const Header = ({ forceDark = false }) => {
     { label: 'Social Impact', href: '/#what-we-offer' },
   ];
 
-  const whoWeAreItems = [
-    { label: 'About Us', href: '/about' },
-    { label: 'Honorary Advisory Committee', href: '/about#committee' },
-    { label: 'Partners', href: '/#partners' },
-    { label: 'Testimonials', href: '/#leaders-voice' },
-  ];
+  // const whoWeAreItems = [
+  //   { label: 'About Us', href: '/about' },
+  //   { label: 'Honorary Advisory Committee', href: '/about#committee' },
+  //   { label: 'Partners', href: '/#partners' },
+  //   { label: 'Testimonials', href: '/#leaders-voice' },
+  // ];
 
   return (
     <header
@@ -185,17 +185,17 @@ const Header = ({ forceDark = false }) => {
 
             {/* Who We Are Dropdown */}
             <Link
-              to="/"
+              to="/who-we-are"
               className={`font-medium transition-colors ${isDarkText
-                ? 'text-slate-700 hover:text-[#07549c]'
-                : 'text-white hover:text-white/80'
+                  ? "text-slate-700 hover:text-[#07549c]"
+                  : "text-white hover:text-white/80"
                 }`}
             >
               Who We Are
             </Link>
 
             <Link
-              to="/"
+              to="/contact"
               className={`font-medium transition-colors ${isDarkText ? 'text-slate-700 hover:text-[#07549c]' : 'text-white hover:text-white/80'
                 }`}
               data-testid="contact-link"
@@ -260,7 +260,8 @@ const Header = ({ forceDark = false }) => {
               </div>
               <div className="py-2 border-b">
                 <p className="font-semibold text-[#07549c] mb-2">Who We Are</p>
-                {whoWeAreItems.map((item) => (
+                
+                {/* {whoWeAreItems.map((item) => (
                   <Link
                     key={item.label}
                     to={item.href}
@@ -269,10 +270,10 @@ const Header = ({ forceDark = false }) => {
                   >
                     {item.label}
                   </Link>
-                ))}
+                ))} */}
               </div>
               <Link
-                to="/"
+                to="/contact"
                 className="py-3 px-4 text-slate-700 hover:text-[#07549c] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
