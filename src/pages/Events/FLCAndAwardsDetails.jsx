@@ -7,7 +7,7 @@ import { Calendar, MapPin, Users, ArrowRight, Clock, Filter } from 'lucide-react
 import { Globe, BarChart3 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 
-import banner from '../../../src/images/flc-award-banner.jpeg'
+import banner from '../../../src/images/awards-banner.jpg'
 import IgnitedMinds from '../../../src/images/IgnitedMinds.png'
 import Pathfinder from '../../../src/images/Pathfinder.png'
 import Intellectual from '../../../src/images/Intellectual.png'
@@ -307,8 +307,18 @@ const FLCAndAwardsDetails = () => {
 
             {/* Hero Section */}
 
-            <section className="" style={{ marginTop: '80px' }}>
-                <img src={banner} className='img-fluid' alt='' style={{ width: '100%' }} />
+            <section className="relative" style={{ marginTop: '80px' }}>
+                <img src={banner} className='img-fluid' alt='' style={{ width: '100%', height: '600px', objectFit: 'cover', objectPosition: 'top' }} />
+                <div className='absolute top-0 bottom-0 left-0 right-0' style={{ background: '#07549ce8' }}>
+                    <div style={{ position: 'absolute', top: '42%',left: '50%', transform: 'translate(-50%)', textAlign: 'center'}}>
+                        <h1 className="font-['Outfit'] text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                            FLC 2024
+                        </h1>
+                        <p className="text-white text-xl mb-3">
+                            FIAKS Leadership Conclave - Shaping the Future of Banking, Fintech & Payments
+                        </p>
+                    </div>
+                </div>
             </section>
 
             {/* Leadership Conclave */}
@@ -436,24 +446,24 @@ const FLCAndAwardsDetails = () => {
                         </TabsList>
 
                         <TabsContent value="Sponsors">
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3"> 
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3">
                                 {flcVideos.map((video) => (
                                     <div
                                         key={video.id}
                                         className="video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100 gap-8 m-4"
                                         data-testid={`video-card-${video.id}`}
                                     >
-                                         <img
-                                        src={video.image}
-                                        alt={video.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                        
-                                        <div > 
+                                        <img
+                                            src={video.image}
+                                            alt={video.title}
+                                            className="w-full h-full object-cover"
+                                        />
+
+                                        <div >
                                             <p className="text-slate-600">{video.description}</p>
                                         </div>
                                     </div>
-                                ))}  
+                                ))}
                             </div>
                         </TabsContent>
 
