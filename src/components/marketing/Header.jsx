@@ -88,7 +88,7 @@ const Header = ({ forceDark = false }) => {
                   {/* invisible hover area */}
                   <div className="h-4 w-full"></div>
 
-                  <div className="bg-[#165a9c] text-white shadow-2xl p-6">
+                  <div className="bg-[#165a9c] text-white shadow-2xl rounded-xl p-6">
                     <div className="grid grid-cols-5 gap-6">
 
                       {/* Forums */}

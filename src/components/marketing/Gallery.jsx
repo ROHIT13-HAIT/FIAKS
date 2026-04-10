@@ -1,4 +1,4 @@
-import React from 'react' 
+import React from 'react'
 
 const gridImg = [
   "/fiaks/1.jpg",
@@ -15,7 +15,7 @@ const gridImg = [
   "/fiaks/12.jpg",
   "/fiaks/13.jpg",
   "/fiaks/14.jpg",
-  "/fiaks/15.jpg", 
+  "/fiaks/15.jpg",
 ];
 
 const GalleryImg = ({ src }) => (
@@ -31,7 +31,7 @@ const GalleryImg = ({ src }) => (
 const Gallery = () => {
   return (
     <div>
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl relative z-10">
+      <div className="mx-auto relative z-10">
         <div className="text-center mb-12">
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Worldwide Presence
@@ -44,14 +44,13 @@ const Gallery = () => {
             Connecting fintech professionals across major financial hubs worldwide
           </p>
         </div>
-                <div className="gallery">
-                    {gridImg.map((src, index) => (
-    <GalleryImg key={index} src={src} />
-  ))}
-                     
-                    </div>
-                </div> 
+        <div className="gallery">
+          {gridImg.map((src, index) => (
+            <GalleryImg key={index} src={src} />
+          ))} 
         </div>
+      </div>
+    </div>
   )
 }
 

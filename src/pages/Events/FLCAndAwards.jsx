@@ -501,15 +501,16 @@ const FLCAndAwards = () => {
               <div className='my-4'>
                 <div className="md:flex gap-5" style={{ height: '100%' }}>
                   <div className='md:w-3/5 relative'>
-                    <div className='offering-card bg-white rounded-xl p-8 md:shadow-lg hover:shadow-xl' style={{ height: '100%' }}>
-                      <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
+                    <div className='offering-card bg-[#07549c] rounded-xl p-8 md:shadow-lg hover:shadow-xl' style={{ height: '100%' }}>
+                      <div className='w-16 h-16 rounded-xl bg-white flex items-center justify-center mb-6'>
                         <img src={IgnitedMinds} className='p-2 rounded-xl md:shadow-lg hover:shadow-xl' alt='FIAKS Ignited Minds Awards' />
                       </div>
-                      <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                      <h3 className="font-['Outfit'] text-2xl font-semibold text-white mb-4">
                         FIAKS Ignited Minds Awards
                       </h3>
+                      <div className="w-16 h-1 bg-white/20 backdrop-blur-sm mb-6" />
                     </div>
-                    <span className='absolute top-5 right-6 text-slate-100 font-bold text-8xl'>01</span>
+                    <span className='absolute top-5 right-6 font-bold text-8xl' style={{color: '#ffffff29'}}>01</span>
                   </div>
                   <div className='md:w-4/5'>
                     <div className='offering-card bg-white rounded-xl p-8 shadow-lg md:hover:shadow-xl' style={{ height: '100%' }}>
@@ -535,15 +536,16 @@ const FLCAndAwards = () => {
                     </div>
                   </div>
                   <div className='md:w-3/5 relative'>
-                    <div className='offering-card bg-white rounded-xl p-8 md:shadow-lg md:hover:shadow-xl' style={{ height: '100%' }}>
-                      <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
+                    <div className='offering-card bg-[#07549c] rounded-xl p-8 md:shadow-lg md:hover:shadow-xl' style={{ height: '100%' }}>
+                      <div className='w-16 h-16 rounded-xl bg-white flex items-center justify-center mb-6'>
                         <img src={Pathfinder} className='p-2 rounded-xl md:shadow-lg hover:shadow-xl' alt='FIAKS Pathfinder Awards' />
                       </div>
-                      <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                      <h3 className="font-['Outfit'] text-2xl font-semibold text-white mb-4">
                        FIAKS Pathfinder Awards
                       </h3>
+                      <div className="w-16 h-1 bg-white/20 backdrop-blur-sm mb-6" />
                     </div>
-                    <span className='absolute top-5 right-6 text-slate-100 font-bold text-8xl'>02</span>
+                    <span className='absolute top-5 right-6 font-bold text-8xl' style={{color: '#ffffff29'}}>02</span>
                   </div>
                 </div>
               </div>
@@ -551,15 +553,16 @@ const FLCAndAwards = () => {
               <div className='my-4'>
                 <div className="md:flex gap-5" style={{ height: '100%' }}>
                   <div className='md:w-3/5 relative'>
-                    <div className='offering-card bg-white rounded-xl p-8 md:shadow-lg hover:shadow-xl' style={{ height: '100%' }}>
-                      <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
+                    <div className='offering-card bg-[#07549c] rounded-xl p-8 md:shadow-lg hover:shadow-xl' style={{ height: '100%' }}>
+                      <div className='w-16 h-16 rounded-xl bg-white flex items-center justify-center mb-6'>
                          <img src={Intellectual} className='p-2 rounded-xl md:shadow-lg hover:shadow-xl' alt='FIAKS Pathfinder Awards' />
                       </div>
-                      <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                      <h3 className="font-['Outfit'] text-2xl font-semibold text-white mb-4">
                         FIAKS Intellectual Explorer Award
                       </h3>
+                      <div className="w-16 h-1 bg-white/20 backdrop-blur-sm mb-6" />
                     </div>
-                    <span className='absolute top-5 right-6 text-slate-100 font-bold text-8xl'>03</span>
+                    <span className='absolute top-5 right-6 font-bold text-8xl' style={{color: '#ffffff29'}}>03</span>
                   </div>
                   <div className='md:w-4/5'>
                     <div className='offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl' style={{ height: '100%' }}>
@@ -584,8 +587,8 @@ const FLCAndAwards = () => {
 
               <p className="text-slate-700 text-lg leading-relaxed">
                 Talent and raw originality come in all shapes and sizes and does not discriminate by age, gender or organizations
-                worked for!. FIAKS identifies these brilliant minds in the community and aims to recognise them as IGNITED MINDS,
-                PATH FINDERS, INTELLECTUAL EXPLORERS!
+                worked for!. FIAKS identifies these brilliant minds in the community and aims to recognise them as <strong>IGNITED MINDS,
+                PATH FINDERS, INTELLECTUAL EXPLORERS!</strong>
               </p>
 
               <p className="text-slate-700 text-lg leading-relaxed">
@@ -617,7 +620,7 @@ const FLCAndAwards = () => {
             {/* Content */}
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               <div className=' '>
-                <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
+                <div className="offering-card bg-[#07549c]/5 rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
                   <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
                     Knowledge Posts
                   </h3>
@@ -628,7 +631,7 @@ const FLCAndAwards = () => {
                 </div>
               </div>
               <div className=' '>
-                <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
+                <div className="offering-card bg-[#07549c]/5 rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
                   <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
                     Intellectual Pull
                   </h3>
@@ -739,21 +742,27 @@ const FLCAndAwards = () => {
               {/* Content */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
                 <div className=''>
-                  <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                    <img src={icon1} style={{ width: '200px', margin: '0 auto', padding: '25px' }} />
-                    <p className="text-slate-700 text-xl leading-relaxed">Speak and showcase to the right business leader.</p>
+                  <div className="offering-card bg-[#07549c] rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
+                    <div className='shadow-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto', borderRadius: '50%'}}>
+                      <img src={icon1} className='p-5' style={{ width: '130px',filter: 'brightness(40)' }} />
+                    </div>
+                    <p className="text-white text-xl leading-relaxed mt-4">Speak and showcase to the right business leader.</p>
                   </div>
                 </div>
                 <div className=' '>
-                  <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                    <img src={icon2} style={{ width: '200px', margin: '0 auto', padding: '25px' }} />
-                    <p className="text-slate-700 text-xl leading-relaxed">With the top-level decision makers of the Banking, Fintech, Tech, Payments world!</p>
+                  <div className="offering-card bg-[#07549c] rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
+                    <div className='shadow-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto', borderRadius: '50%'}}>
+                      <img src={icon2} className='p-5' style={{ width: '130px',filter: 'brightness(40)' }} />
+                    </div>
+                    <p className="text-white text-xl leading-relaxed mt-4">With the top-level decision makers of the Banking, Fintech, Tech, Payments world!</p>
                   </div>
                 </div>
                 <div className=' '>
-                  <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                    <img src={icon3} style={{ width: '200px', margin: '0 auto', padding: '25px' }} />
-                    <p className="text-slate-700 text-xl leading-relaxed">With CxO’s who are on top of the decision-making pyramid.</p>
+                  <div className="offering-card bg-[#07549c] rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
+                    <div className='shadow-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto', borderRadius: '50%'}}>
+                      <img src={icon3} className='p-5' style={{ width: '130px',filter: 'brightness(40)' }} />
+                    </div>
+                    <p className="text-white text-xl leading-relaxed mt-4">With CxO’s who are on top of the decision-making pyramid.</p>
                   </div>
                 </div>
               </div>

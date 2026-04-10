@@ -118,7 +118,7 @@ const Recognition = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-6">
+            {/* <div className="grid grid-cols-3 gap-4 pt-6">
               <div className="text-center p-4 bg-white rounded-xl shadow-sm">
                 <Award className="w-8 h-8 text-[#07549c] mx-auto mb-2" />
                 <div className="font-['Outfit'] text-2xl font-bold text-slate-900">50+</div>
@@ -134,7 +134,7 @@ const Recognition = () => {
                 <div className="font-['Outfit'] text-2xl font-bold text-slate-900">15+</div>
                 <p className="text-sm text-slate-600">Years</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
