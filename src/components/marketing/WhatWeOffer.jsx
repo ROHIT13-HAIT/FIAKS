@@ -217,37 +217,37 @@ const WhatWeOffer = () => {
               </div>
             </div> */}
 
-            <div className="flex flex-wrap gap-4 pt-4" style={{backgroundColor:"aquamarine"}}>
+            <div className="flex flex-wrap gap-4 pt-4 p-4" style={{ backgroundColor: "#07549c", borderRadius: "10px"}}>
 
-  {[
-    { label: 'Forums', img: '/fiaks/forum.png' },
-    { label: 'Events', img: '/fiaks/events.png' },
-    { label: 'Networking Platforms', img: '/fiaks/network.png' },
-    { label: 'Social Impact Programmes', img: '/fiaks/social.png' },
-    { label: 'Knowledge Center', img: '/fiaks/Knowledge.png' }
-  ].map((item, index) => (
+              {[
+                { label: 'Forums', img: '/fiaks/forum.png' },
+                { label: 'Events', img: '/fiaks/events.png' },
+                { label: 'Networking Platforms', img: '/fiaks/network.png' },
+                { label: 'Social Impact Programmes', img: '/fiaks/social.png' },
+                { label: 'Knowledge Center', img: '/fiaks/Knowledge.png' }
+              ].map((item, index) => (
 
-    <div
-      key={item.label}
-      className={`animate flex items-center gap-2 text-slate-700 
+                <div
+                  key={item.label}
+                  className={`animate flex items-center gap-2 text-slate-700 
       ${index % 2 === 0 ? 'slide-left' : 'slide-right'} 
       delay-${index + 1}`}
-    >
+                >
 
-      {/* Image instead of icon */}
-      <img
-        src={item.img}
-        alt={item.label}
-        className="w-5 h-5 object-contain"
-      />
+                  {/* Image instead of icon */}
+                  <img
+                    src={item.img}
+                    alt={item.label}
+                    className="w-5 h-5 object-contain"
+                  />
 
-      <span className="font-medium">{item.label}</span>
+                  <span className="font-medium text-white">{item.label}</span>
 
-    </div>
+                </div>
 
-  ))}
+              ))}
 
-</div>
+            </div>
             <br></br>
             <button className="animate slide-up delay-5 bg-black text-white px-8 py-3 rounded-full hover:scale-105 transition">
               Learn More
