@@ -448,6 +448,7 @@ const FeaturedVideos = () => {
 
         </div>
       </div>
+      
     </section>
   );
 };

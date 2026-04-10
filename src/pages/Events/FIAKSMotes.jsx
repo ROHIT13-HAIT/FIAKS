@@ -56,7 +56,7 @@ const eventTypes = [
     { id: '4th Edition', name: '2023' },
 ];
 
-const videos = [
+const startupVideos = [
     {
         id: 'WhZZK8nNDBU',
         title: 'Curated Lending Startups',
@@ -71,7 +71,7 @@ const videos = [
         id: '6gOrL_6L-Vk',
         title: 'Curated WealthTech & InsureTech Startups',
         thumbnail: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80',
-    },
+    }
 ];
 
 const roundTableVideos1 = [
@@ -102,7 +102,7 @@ const roundTableVideos1 = [
         title: 'Chairperson, Banking Regulatory Authority',
         thumbnail: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
         quote: 'Excellent forum for policy discussions and industry alignment.',
-    }, 
+    },
 ];
 const roundTableVideos2 = [
     {
@@ -132,7 +132,7 @@ const roundTableVideos2 = [
         title: 'Chairperson, Banking Regulatory Authority',
         thumbnail: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
         quote: 'Excellent forum for policy discussions and industry alignment.',
-    } 
+    }
 ];
 const roundTableVideos3 = [
     {
@@ -162,7 +162,7 @@ const roundTableVideos3 = [
         title: 'Chairperson, Banking Regulatory Authority',
         thumbnail: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
         quote: 'Excellent forum for policy discussions and industry alignment.',
-    }, 
+    },
 ];
 const roundTableVideos4 = [
     {
@@ -171,25 +171,80 @@ const roundTableVideos4 = [
         title: 'CEO, National Banking Corp',
         thumbnail: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
         quote: 'Fintech Forum has been instrumental in shaping our digital transformation journey.',
-    } 
+    }
+];
+const videos = [
+    {
+        iframe: "https://youtu.be/0koXRO-rkCk",
+        title: "UPI at Galleries Lafayette",
+    },
+    {
+        iframe: "https://youtu.be/WPPzSBOiwno",
+        title: "UPI at Eifel towers",
+    },
+    {
+        iframe: "https://youtu.be/SUvjxw_pybs",
+        title:
+            "Women international Day",
+    },
+    {
+        iframe: "https://youtu.be/Z78ff1eZRYE",
+        title: "FIAKS Awards",
+    },
+    {
+        iframe: "https://youtu.be/SjBUzkym9uI",
+        title: "FIAKS Digital शिक्षाप्रसार अभियान",
+    },
+    {
+        iframe: "https://youtu.be/w9_-3FvtYok",
+        title:
+            "Nationwide Training",
+    },
+    {
+        iframe: "https://youtu.be/i_9Imt3tj2Q",
+        title:
+            "FIAKS Maven",
+    },
+    {
+        iframe: "https://youtu.be/nbiy8yPQHug",
+        title:
+            "AIFPF",
+    },
+    {
+        iframe: "https://youtu.be/gf7QeRPDijQ",
+        title:
+            "FLC2025",
+    },
+
 ];
 
 const FIAKSMotes = () => {
+
+
+    const [activeVideo, setActiveVideo] = useState(videos[0].iframe);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [playingVideo, setPlayingVideo] = useState(null);
-    const itemsPerView = 3;
+
+    const itemsPerView = 4;
 
     const nextSlide = () => {
-        setCurrentIndex((prev) =>
-            prev + 1 >= leaderVideos.length - itemsPerView + 1 ? 0 : prev + 1
-        );
+        if (currentIndex < videos.length - itemsPerView) {
+            setCurrentIndex((prev) => prev + 1);
+        }
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prev) =>
-            prev - 1 < 0 ? leaderVideos.length - itemsPerView : prev - 1
-        );
+        if (currentIndex > 0) {
+            setCurrentIndex((prev) => prev - 1);
+        }
     };
+
+
+
+    const getVideoId = (url) => {
+        if (url.includes("youtu.be")) return url.split("youtu.be/")[1];
+        return url.split("v=")[1];
+    };
+
 
     return (
         <div className="min-h-screen bg-white" data-testid="events-page">
@@ -288,9 +343,18 @@ const FIAKSMotes = () => {
             {/* STARTUP SHOWCASING - EDITION 1.0 */}
             <section className="pb-12 bg-white">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-                    <h2 className="font-['Outfit'] text-2xl font-bold text-slate-900 mb-8">Startup Showcasing - <span className='text-[#07549c]'>Edition 1.0</span></h2>
+                    {/* HEADER */}
+                    <div className="text-center mb-16">
+                        <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
+                            Edition 1.0
+                        </p>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+                            Startup Showcasing
+                        </h2>
+                        <div className="w-16 h-1 bg-[#07549c] mx-auto" />
+                    </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {videos.map((video) => (
+                        {startupVideos.map((video) => (
                             <div
                                 key={video.id}
                                 className="video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100"
@@ -298,15 +362,15 @@ const FIAKSMotes = () => {
                             >
                                 <div className="relative aspect-video">
                                     {/* {playingVideo === video.id ? ( */}
-                                        <iframe
-                                            src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
-                                            title={video.title}
-                                            className="w-full h-full"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                        />
+                                    <iframe
+                                        src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                                        title={video.title}
+                                        className="w-full h-full"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    />
                                     {/* ) : ( */}
-                                        {/* <>
+                                    {/* <>
                                             <img
                                                 src={video.thumbnail}
                                                 alt={video.title}
@@ -327,7 +391,7 @@ const FIAKSMotes = () => {
                                 <div className="p-5">
                                     <p className="text-slate-700 text-md leading-relaxed">
                                         {video.title}
-                                    </p> 
+                                    </p>
                                 </div>
                             </div>
                         ))}
@@ -336,339 +400,276 @@ const FIAKSMotes = () => {
             </section>
 
             {/* Roundtable Discussions - Edition 1.0 */}
-            <section className="pb-12 bg-white">
+            <section className="py-12 bg-slate-50">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-                    <h2 className="font-['Outfit'] text-2xl font-bold text-slate-900 mb-8">Roundtable Discussions - <span className='text-[#07549c]'>Edition 1.0</span></h2>
+                    {/* HEADER */}
+                    <div className="text-center mb-16">
+                        <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
+                            Edition 1.0
+                        </p>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+                            Roundtable Discussions
+                        </h2>
+                        <div className="w-16 h-1 bg-[#07549c] mx-auto" />
+                    </div>
 
                     {/* 1st row */}
-                    <div className="flex items-center gap-8 w-4/4">
-                        <div className='w-1/4'>
-                            <img src={RoundtableImg1} />
+                    <div className="container mx-auto px-4 max-w-7xl my-10">
+                        {/* MAIN VIDEO */}
+                        <div className="aspect-video rounded-xl overflow-hidden shadow-xl mb-6">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo)}?autoplay=1`}
+                                className="w-full h-full"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                            />
                         </div>
-                        <div className="w-3/4">
-                            <div className="relative">
-                                {/* Navigation Buttons */}
-                                <button
-                                    onClick={prevSlide}
-                                    className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                    data-testid="leaders-prev-btn"
+                        {/* THUMBNAIL NAVIGATION */}
+                        <div className="relative">
+                            <div className="overflow-hidden">
+                                <div
+                                    className="flex gap-4 transition-transform duration-500 ease-in-out"
+                                    style={{
+                                        transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
+                                    }}
                                 >
-                                    <ChevronLeft className="w-6 h-6 text-slate-700" />
-                                </button>
-                                <button
-                                    onClick={nextSlide}
-                                    className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                    data-testid="leaders-next-btn"
-                                >
-                                    <ChevronRight className="w-6 h-6 text-slate-700" />
-                                </button>
+                                    {videos.map((video, index) => {
+                                        const videoId = getVideoId(video.iframe);
 
-                                {/* Slider */}
-                                <div className="overflow-hidden">
-                                    <div
-                                        className="flex transition-transform duration-500 ease-in-out gap-6"
-                                        style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView + 2)}%)` }}
-                                    >
-                                        {roundTableVideos1.map((leader, index) => (
+                                        return (
                                             <div
-                                                key={`${leader.id}-${index}`}
-                                                className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
-                                                data-testid={`leader-card-${index}`}
+                                                key={index}
+                                                onClick={() => setActiveVideo(video.iframe)}
+                                                className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
+                                          ${activeVideo === video.iframe
+                                                        ? "border-[#07549c] scale-105"
+                                                        : "border-transparent hover:scale-105"
+                                                    }`}
                                             >
-                                                <div className="leader-video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100">
-                                                    {/* Video/Image */}
-                                                    <div className="relative aspect-video">
-                                                        {/* {playingVideo === `${leader.id}-${index}` ? ( */}
-                                                            <iframe
-                                                                src={`https://www.youtube.com/embed/${leader.id}?autoplay=1`}
-                                                                title={leader.name}
-                                                                className="w-full h-full"
-                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                                allowFullScreen
-                                                            />
-                                                        {/* ) : ( */}
-                                                            <>
-                                                                {/* <img
-                                                                    src={leader.thumbnail}
-                                                                    alt={leader.name}
-                                                                    className="w-full h-full object-cover"
-                                                                />
-                                                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                                                    <button
-                                                                        onClick={() => setPlayingVideo(`${leader.id}-${index}`)}
-                                                                        className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110"
-                                                                    >
-                                                                        <Play className="w-6 h-6 text-white ml-1" fill="white" />
-                                                                    </button>
-                                                                </div> */}
-                                                            </>
-                                                        {/* )} */}
-                                                    </div>
-
-                                                    {/* Content */}
-                                                    {/* <div className="p-6">
-                                                        <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
-                                                        <p className="text-slate-600 italic mb-4">{leader.quote}</p>
-                                                        <div className="border-t pt-4">
-                                                            <h4 className="font-['Outfit'] font-semibold text-slate-900">{leader.name}</h4>
-                                                            <p className="text-sm text-slate-500">{leader.title}</p>
-                                                        </div>
-                                                    </div> */}
-                                                </div>
+                                                <img
+                                                    src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
+                                                    alt={video.title}
+                                                    className="w-full h-[110px] object-cover"
+                                                />
                                             </div>
-                                        ))}
-                                    </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
+
+                            {/* LEFT BUTTON */}
+                            <button
+                                onClick={prevSlide}
+                                className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
+                                disabled={currentIndex === 0}
+                            >
+                                <ChevronLeft className="w-6 h-6 text-slate-700" />
+                            </button>
+
+                            {/* RIGHT BUTTON */}
+                            <button
+                                onClick={nextSlide}
+                                className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
+                                disabled={currentIndex >= videos.length - itemsPerView}
+                            >
+                                <ChevronRight className="w-6 h-6 text-slate-700" />
+                            </button>
+
                         </div>
                     </div>
 
                     {/* 2nd row */}
-                    <div className="flex items-center gap-8 w-4/4 mt-5">
-                        <div className='w-1/4'>
-                            <img src={RoundtableImg2} />
+                    <div className="container mx-auto px-4 max-w-7xl my-10">
+                        {/* MAIN VIDEO */}
+                        <div className="aspect-video rounded-xl overflow-hidden shadow-xl mb-6">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo)}?autoplay=1`}
+                                className="w-full h-full"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                            />
                         </div>
-                        <div className="w-3/4">
-                            <div className="relative">
-                                {/* Navigation Buttons */}
-                                <button
-                                    onClick={prevSlide}
-                                    className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                    data-testid="leaders-prev-btn"
+                        {/* THUMBNAIL NAVIGATION */}
+                        <div className="relative">
+                            <div className="overflow-hidden">
+                                <div
+                                    className="flex gap-4 transition-transform duration-500 ease-in-out"
+                                    style={{
+                                        transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
+                                    }}
                                 >
-                                    <ChevronLeft className="w-6 h-6 text-slate-700" />
-                                </button>
-                                <button
-                                    onClick={nextSlide}
-                                    className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                    data-testid="leaders-next-btn"
-                                >
-                                    <ChevronRight className="w-6 h-6 text-slate-700" />
-                                </button>
+                                    {videos.map((video, index) => {
+                                        const videoId = getVideoId(video.iframe);
 
-                                {/* Slider */}
-                                <div className="overflow-hidden">
-                                    <div
-                                        className="flex transition-transform duration-500 ease-in-out gap-6"
-                                        style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView + 2)}%)` }}
-                                    >
-                                        {roundTableVideos2.map((leader, index) => (
+                                        return (
                                             <div
-                                                key={`${leader.id}-${index}`}
-                                                className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
-                                                data-testid={`leader-card-${index}`}
+                                                key={index}
+                                                onClick={() => setActiveVideo(video.iframe)}
+                                                className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
+                                          ${activeVideo === video.iframe
+                                                        ? "border-[#07549c] scale-105"
+                                                        : "border-transparent hover:scale-105"
+                                                    }`}
                                             >
-                                                <div className="leader-video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100">
-                                                    {/* Video/Image */}
-                                                    <div className="relative aspect-video">
-                                                        {/* {playingVideo === `${leader.id}-${index}` ? ( */}
-                                                            <iframe
-                                                                src={`https://www.youtube.com/embed/${leader.id}?autoplay=1`}
-                                                                title={leader.name}
-                                                                className="w-full h-full"
-                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                                allowFullScreen
-                                                            />
-                                                        {/* ) : ( */}
-                                                            <>
-                                                                {/* <img
-                                                                    src={leader.thumbnail}
-                                                                    alt={leader.name}
-                                                                    className="w-full h-full object-cover"
-                                                                />
-                                                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                                                    <button
-                                                                        onClick={() => setPlayingVideo(`${leader.id}-${index}`)}
-                                                                        className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110"
-                                                                    >
-                                                                        <Play className="w-6 h-6 text-white ml-1" fill="white" />
-                                                                    </button>
-                                                                </div> */}
-                                                            </>
-                                                        {/* )} */}
-                                                    </div>
-
-                                                    {/* Content */}
-                                                    {/* <div className="p-6">
-                                                        <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
-                                                        <p className="text-slate-600 italic mb-4">{leader.quote}</p>
-                                                        <div className="border-t pt-4">
-                                                            <h4 className="font-['Outfit'] font-semibold text-slate-900">{leader.name}</h4>
-                                                            <p className="text-sm text-slate-500">{leader.title}</p>
-                                                        </div>
-                                                    </div> */}
-                                                </div>
+                                                <img
+                                                    src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
+                                                    alt={video.title}
+                                                    className="w-full h-[110px] object-cover"
+                                                />
                                             </div>
-                                        ))}
-                                    </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
+
+                            {/* LEFT BUTTON */}
+                            <button
+                                onClick={prevSlide}
+                                className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
+                                disabled={currentIndex === 0}
+                            >
+                                <ChevronLeft className="w-6 h-6 text-slate-700" />
+                            </button>
+
+                            {/* RIGHT BUTTON */}
+                            <button
+                                onClick={nextSlide}
+                                className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
+                                disabled={currentIndex >= videos.length - itemsPerView}
+                            >
+                                <ChevronRight className="w-6 h-6 text-slate-700" />
+                            </button>
+
                         </div>
                     </div>
 
                     {/* 3rd row */}
-                    <div className="flex items-center gap-8 w-4/4 mt-5">
-                        <div className='w-1/4'>
-                            <img src={RoundtableImg3} />
+                    <div className="container mx-auto px-4 max-w-7xl my-10">
+                        {/* MAIN VIDEO */}
+                        <div className="aspect-video rounded-xl overflow-hidden shadow-xl mb-6">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo)}?autoplay=1`}
+                                className="w-full h-full"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                            />
                         </div>
-                        <div className="w-3/4">
-                            <div className="relative">
-                                {/* Navigation Buttons */}
-                                <button
-                                    onClick={prevSlide}
-                                    className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                    data-testid="leaders-prev-btn"
+                        {/* THUMBNAIL NAVIGATION */}
+                        <div className="relative">
+                            <div className="overflow-hidden">
+                                <div
+                                    className="flex gap-4 transition-transform duration-500 ease-in-out"
+                                    style={{
+                                        transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
+                                    }}
                                 >
-                                    <ChevronLeft className="w-6 h-6 text-slate-700" />
-                                </button>
-                                <button
-                                    onClick={nextSlide}
-                                    className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                    data-testid="leaders-next-btn"
-                                >
-                                    <ChevronRight className="w-6 h-6 text-slate-700" />
-                                </button>
+                                    {videos.map((video, index) => {
+                                        const videoId = getVideoId(video.iframe);
 
-                                {/* Slider */}
-                                <div className="overflow-hidden">
-                                    <div
-                                        className="flex transition-transform duration-500 ease-in-out gap-6"
-                                        style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView + 2)}%)` }}
-                                    >
-                                        {roundTableVideos3.map((leader, index) => (
+                                        return (
                                             <div
-                                                key={`${leader.id}-${index}`}
-                                                className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
-                                                data-testid={`leader-card-${index}`}
+                                                key={index}
+                                                onClick={() => setActiveVideo(video.iframe)}
+                                                className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
+                                          ${activeVideo === video.iframe
+                                                        ? "border-[#07549c] scale-105"
+                                                        : "border-transparent hover:scale-105"
+                                                    }`}
                                             >
-                                                <div className="leader-video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100">
-                                                    {/* Video/Image */}
-                                                    <div className="relative aspect-video">
-                                                        {/* {playingVideo === `${leader.id}-${index}` ? ( */}
-                                                            <iframe
-                                                                src={`https://www.youtube.com/embed/${leader.id}?autoplay=1`}
-                                                                title={leader.name}
-                                                                className="w-full h-full"
-                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                                allowFullScreen
-                                                            />
-                                                          {/* ) : ( */}
-                                                            <>
-                                                                {/* <img
-                                                                    src={leader.thumbnail}
-                                                                    alt={leader.name}
-                                                                    className="w-full h-full object-cover"
-                                                                />
-                                                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                                                    <button
-                                                                        onClick={() => setPlayingVideo(`${leader.id}-${index}`)}
-                                                                        className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110"
-                                                                    >
-                                                                        <Play className="w-6 h-6 text-white ml-1" fill="white" />
-                                                                    </button>
-                                                                </div> */}
-                                                            </>
-                                                        {/* )} */}
-                                                    </div>
-
-                                                    {/* Content */}
-                                                    {/* <div className="p-6">
-                                                        <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
-                                                        <p className="text-slate-600 italic mb-4">{leader.quote}</p>
-                                                        <div className="border-t pt-4">
-                                                            <h4 className="font-['Outfit'] font-semibold text-slate-900">{leader.name}</h4>
-                                                            <p className="text-sm text-slate-500">{leader.title}</p>
-                                                        </div>
-                                                    </div> */}
-                                                </div>
+                                                <img
+                                                    src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
+                                                    alt={video.title}
+                                                    className="w-full h-[110px] object-cover"
+                                                />
                                             </div>
-                                        ))}
-                                    </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
+
+                            {/* LEFT BUTTON */}
+                            <button
+                                onClick={prevSlide}
+                                className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
+                                disabled={currentIndex === 0}
+                            >
+                                <ChevronLeft className="w-6 h-6 text-slate-700" />
+                            </button>
+
+                            {/* RIGHT BUTTON */}
+                            <button
+                                onClick={nextSlide}
+                                className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
+                                disabled={currentIndex >= videos.length - itemsPerView}
+                            >
+                                <ChevronRight className="w-6 h-6 text-slate-700" />
+                            </button>
+
                         </div>
                     </div>
 
                     {/* 4th row */}
-                    <div className="flex items-center gap-8 w-4/4 mt-5">
-                        <div className='w-1/4'>
-                            <img src={RoundtableImg4} />
+                    <div className="container mx-auto px-4 max-w-7xl my-10">
+                        {/* MAIN VIDEO */}
+                        <div className="aspect-video rounded-xl overflow-hidden shadow-xl mb-6">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo)}?autoplay=1`}
+                                className="w-full h-full"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                            />
                         </div>
-                        <div className="w-3/4">
-                            <div className="relative">
-                                {/* Navigation Buttons */}
-                                <button
-                                    onClick={prevSlide}
-                                    className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                    data-testid="leaders-prev-btn"
+                        {/* THUMBNAIL NAVIGATION */}
+                        <div className="relative">
+                            <div className="overflow-hidden">
+                                <div
+                                    className="flex gap-4 transition-transform duration-500 ease-in-out"
+                                    style={{
+                                        transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
+                                    }}
                                 >
-                                    <ChevronLeft className="w-6 h-6 text-slate-700" />
-                                </button>
-                                <button
-                                    onClick={nextSlide}
-                                    className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                    data-testid="leaders-next-btn"
-                                >
-                                    <ChevronRight className="w-6 h-6 text-slate-700" />
-                                </button>
+                                    {videos.map((video, index) => {
+                                        const videoId = getVideoId(video.iframe);
 
-                                {/* Slider */}
-                                <div className="overflow-hidden">
-                                    <div
-                                        className="flex transition-transform duration-500 ease-in-out gap-6"
-                                        style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView + 2)}%)` }}
-                                    >
-                                        {roundTableVideos4.map((leader, index) => (
+                                        return (
                                             <div
-                                                key={`${leader.id}-${index}`}
-                                                className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
-                                                data-testid={`leader-card-${index}`}
+                                                key={index}
+                                                onClick={() => setActiveVideo(video.iframe)}
+                                                className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
+                                          ${activeVideo === video.iframe
+                                                        ? "border-[#07549c] scale-105"
+                                                        : "border-transparent hover:scale-105"
+                                                    }`}
                                             >
-                                                <div className="leader-video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100">
-                                                    {/* Video/Image */}
-                                                    <div className="relative aspect-video">
-                                                        {/* {playingVideo === `${leader.id}-${index}` ? ( */}
-                                                            <iframe
-                                                                src={`https://www.youtube.com/embed/${leader.id}?autoplay=1`}
-                                                                title={leader.name}
-                                                                className="w-full h-full"
-                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                                allowFullScreen
-                                                            />
-                                                         {/* ) : ( */}
-                                                            <>
-                                                                {/* <img
-                                                                    src={leader.thumbnail}
-                                                                    alt={leader.name}
-                                                                    className="w-full h-full object-cover"
-                                                                />
-                                                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                                                    <button
-                                                                        onClick={() => setPlayingVideo(`${leader.id}-${index}`)}
-                                                                        className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110"
-                                                                    >
-                                                                        <Play className="w-6 h-6 text-white ml-1" fill="white" />
-                                                                    </button>
-                                                                </div> */}
-                                                            </>
-                                                        {/* )} */}
-                                                    </div>
-
-                                                    {/* Content */}
-                                                    {/* <div className="p-6">
-                                                        <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
-                                                        <p className="text-slate-600 italic mb-4">{leader.quote}</p>
-                                                        <div className="border-t pt-4">
-                                                            <h4 className="font-['Outfit'] font-semibold text-slate-900">{leader.name}</h4>
-                                                            <p className="text-sm text-slate-500">{leader.title}</p>
-                                                        </div>
-                                                    </div> */}
-                                                </div>
+                                                <img
+                                                    src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
+                                                    alt={video.title}
+                                                    className="w-full h-[110px] object-cover"
+                                                />
                                             </div>
-                                        ))}
-                                    </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
+
+                            {/* LEFT BUTTON */}
+                            <button
+                                onClick={prevSlide}
+                                className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
+                                disabled={currentIndex === 0}
+                            >
+                                <ChevronLeft className="w-6 h-6 text-slate-700" />
+                            </button>
+
+                            {/* RIGHT BUTTON */}
+                            <button
+                                onClick={nextSlide}
+                                className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
+                                disabled={currentIndex >= videos.length - itemsPerView}
+                            >
+                                <ChevronRight className="w-6 h-6 text-slate-700" />
+                            </button>
+
                         </div>
                     </div>
                 </div>
