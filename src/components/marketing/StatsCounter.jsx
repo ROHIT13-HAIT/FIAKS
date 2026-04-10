@@ -186,7 +186,7 @@ const StatsCounter = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="counter-card bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center group"
+              className="counter-card bg-[#07549c] backdrop-blur-sm rounded-xl p-6 text-center group"
             >
               
               {/* Number + Icon */}
