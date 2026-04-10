@@ -7,6 +7,8 @@ import {
 } from 'react-simple-maps';
 // import { useState } from 'react';
 
+import globalCommunitiesImg from '../../images/fiaks_map.png'
+
 const geoUrl = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
 
@@ -83,7 +85,7 @@ const GlobalCommunities = () => {
         </div> */}
         {/* <br></br> */}
         {/* <div className="relative bg-slate-50 rounded-2xl p-4 md:p-8 overflow-hidden" data-testid="world-map"> */}
-        <div className="relative bg-slate-50 rounded-2xl   overflow-hidden" data-testid="world-map">
+        <div className="relative bg-slate-50 rounded-2xl   overflow-hidden" data-testid="world-map" style={{display:'none'}}>
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{
@@ -145,7 +147,7 @@ const GlobalCommunities = () => {
 ))}
           </ComposableMap>
         </div>
-
+        <img src={globalCommunitiesImg} alt='Our Global Communities'/>   
 
       </div>
     </section>

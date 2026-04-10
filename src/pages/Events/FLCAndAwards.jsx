@@ -14,47 +14,46 @@ import Intellectual from '../../../src/images/Intellectual.png'
 import icon1 from '../../../src/images/business_leader.png'
 import icon2 from '../../../src/images/decision_makers.png'
 import icon3 from '../../../src/images/decision-making.png'
-import { MessageSquare, BookOpen, Heart, Quote, CheckCircle } from 'lucide-react';
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { Award, Trophy, Star, Quote, CheckCircle } from 'lucide-react';
 
 
 const events = [
   {
     id: 1,
     slug: 'global-fintech-summit-2025',
-    title: 'Global Fintech Summit 2025',
-    description: 'The premier gathering of BFSI leaders, innovators, and regulators shaping the future of financial services.',
-    date: 'April 15-17, 2025', 
+    title: 'FIAKS Leadership Conclave (FLC) Inauguration',
+    description: 'FIAKS Leadership Conclave Launch edition inauguration by Ms Zarin Daruwala, CEO Standard Chartered Bank, India and Mr Jaspal Bindra Chairman Centrum Group along with FIAKS founders Anuradha Panditrao and Vikas Panditrao on 21st June 2019',
+    date: 'June 21st, 2019',
     location: 'Taj Palace, New Delhi',
     attendees: '1200+',
     type: '1st Edition',
-    image: '../fiaks/src/images/slider1.png',
+    image: '../../fiaks/src/images/slider1.png',
     featured: true,
     status: 'upcoming',
   },
   {
     id: 2,
     slug: 'regtech-innovation-workshop',
-    title: 'RegTech Innovation Workshop',
+    title: 'FIAKS Leadership Conclave (FLC)',
     description: 'Hands-on workshop exploring cutting-edge regulatory technology solutions for compliance challenges.',
-    date: 'March 28, 2023',
+    date: 'June 23rd, 2020',
     location: 'Mumbai Marriott',
     attendees: '150',
     type: '2nd Edition',
-    image: '../fiaks/src/images/slider2.png',
+    image: '../../fiaks/src/images/slider2.png',
     featured: true,
     status: 'upcoming',
   },
   {
     id: 3,
     slug: 'bfsi-leadership-conclave',
-    title: 'BFSI Leadership Conclave',
+    title: 'FIAKS Leadership Conclave',
     description: 'Exclusive gathering of C-suite executives discussing strategic priorities and industry transformation.',
-    date: 'May 5, 2023',
+    date: 'May 5, 2021',
     location: 'ITC Grand Chola, Chennai',
     attendees: '200',
     type: '3rd Edition',
-    image: '../fiaks/src/images/slider3.png',
+    image: '../../fiaks/src/images/slider3.png',
     featured: false,
     status: 'upcoming',
   },
@@ -67,7 +66,7 @@ const events = [
     location: 'Hyatt Regency, Bangalore',
     attendees: '80',
     type: '4th Edition',
-    image: '../fiaks/src/images/slider4.png',
+    image: '../../fiaks/src/images/slider4.png',
     featured: false,
     status: 'upcoming',
   },
@@ -80,7 +79,7 @@ const events = [
     location: 'The Oberoi, Mumbai',
     attendees: '300',
     type: '5th Edition',
-    image: '../fiaks/src/images/slider5.jpg',
+    image: '../../fiaks/src/images/slider5.jpg',
     featured: false,
     status: 'upcoming',
   },
@@ -93,7 +92,7 @@ const events = [
     location: 'HICC, Hyderabad',
     attendees: '500',
     type: '6th Edition',
-    image: '../fiaks/src/images/slider6.jpg',
+    image: '../../fiaks/src/images/slider6.jpg',
     featured: false,
     status: 'upcoming',
   },
@@ -110,7 +109,7 @@ const leaderVideos = [
     id: 'dQw4w9WgXcQ',
     name: 'Rajesh Sharma',
     type: '1th Edition',
-    year:'2025',
+    year: '2025',
     title: 'CEO, National Banking Corp',
     image: '../fiaks/src/images/slider1.png',
     quote: 'Fintech Forum has been instrumental in shaping our digital transformation journey.',
@@ -119,7 +118,7 @@ const leaderVideos = [
     id: 'LXb3EKWsInQ',
     name: 'Priya Mehta',
     type: '2th Edition',
-    year:'2025',
+    year: '2025',
     title: 'MD, Global Fintech Solutions',
     image: '../fiaks/src/images/slider2.png',
     quote: 'The networking opportunities here are unmatched in the industry.',
@@ -128,7 +127,7 @@ const leaderVideos = [
     id: 'jfKfPfyJRdk',
     name: 'Amit Verma',
     type: '3th Edition',
-    year:'2025',
+    year: '2025',
     title: 'CTO, DigiPay Technologies',
     image: '../fiaks/src/images/slider3.png',
     quote: 'A platform that truly understands the pulse of financial innovation.',
@@ -155,7 +154,7 @@ const leaderVideos = [
     id: 'LXb3EKWsInQ',
     name: 'Michael Chen',
     type: '5th Edition',
-    year:'2025',
+    year: '2025',
     title: 'Partner, Venture Capital Firm',
     image: '../fiaks/src/images/slider6.jpg',
     quote: 'Found my best investment opportunities through this community.',
@@ -213,16 +212,57 @@ const FLCAndAwards = () => {
           </div>
         </div>
       </section> */}
- 
 
-     
+
+
 
 
       {/* Leadership Conclave */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
           {/* Filters */}
-          <div className="flex items-center justify-between flex-wrap gap-4"> 
+          <div className="flex items-center justify-between flex-wrap gap-4">
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredEvents.map((event) => (
+                <Link
+                  key={event.id}
+                  to={`/events/${event.slug}`}
+                  className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all"
+                  data-testid={`event-card-${event.id}`}
+                >
+                  <div className="aspect-[16/10] overflow-hidden relative">
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 left-3 shadow-xl">
+                      <span className="px-2 py-1 bg-white/90 backdrop-blur-sm rounded text-xs font-bold capitalize text-slate-700">
+                        {event.type}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-['Outfit'] text-lg font-semibold text-slate-900 mb-2 group-hover:text-[#07549c] transition-colors">
+                      {event.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm mb-4 line-clamp-2">{event.description}</p>
+                    <div className="space-y-2 text-sm text-slate-500">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-[#07549c]" />
+                        {event.date}
+                      </div>
+                      {/* <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4 text-[#07549c]" />
+                            {event.location}
+                          </div> */}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
             {/* <div className="flex items-center gap-2">
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {eventTypes.map((type) => (
@@ -287,8 +327,7 @@ const FLCAndAwards = () => {
             </Tabs> */}
 
 
-              <div className="relative">
-          {/* Navigation Buttons */}
+            {/* <div className="relative"> 
           <button
             onClick={prevSlide}
             className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
@@ -303,8 +342,7 @@ const FLCAndAwards = () => {
           >
             <ChevronRight className="w-6 h-6 text-slate-700" />
           </button>
-
-          {/* Slider */}
+ 
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out "
@@ -317,7 +355,7 @@ const FLCAndAwards = () => {
                   data-testid={`leader-card-${index}`}
                 >
                   <div className="leader-video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100 mx-3 my-4">
-                    {/* Video/Image */}
+                   
                     <div className="relative aspect-video p-4"> 
                         <>
                           <img
@@ -333,13 +371,13 @@ const FLCAndAwards = () => {
                         </> 
                     </div>
                   
-                    {/* Content */}
+                  
                     <div className="px-5 pb-5">
-                      {/* <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
-                      <p className="text-slate-600 italic mb-4">{leader.quote}</p> */}
+                       <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
+                      <p className="text-slate-600 italic mb-4">{leader.quote}</p> }
                       <div className=" ">
                         <h4 className="font-['Outfit'] font-semibold text-slate-900">{leader.year}</h4>
-                        {/* <p className="text-sm text-slate-500">{leader.title}</p> */}
+                         <p className="text-sm text-slate-500">{leader.title}</p>  }
                       </div>
                     </div>
                   </div>
@@ -347,7 +385,7 @@ const FLCAndAwards = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
 
           </div>
@@ -356,7 +394,7 @@ const FLCAndAwards = () => {
 
 
       {/* Fiaks Leadership Conclave */}
-      <section className="py-16 md:py-20 bg-slate-50" id="what-we-offer" data-testid="what-we-offer-section">
+      {/* <section className="py-16 md:py-20 bg-slate-50" id="what-we-offer" data-testid="what-we-offer-section">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-16">
             <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
@@ -367,13 +405,12 @@ const FLCAndAwards = () => {
             </h2>
             <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
           </div>
-          <div className="grid  gap-12 items-center">
-            {/* Content */}
+          <div className="grid  gap-12 items-center"> 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className=' '>
                 <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
                   <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
-                    {/* <MessageSquare className="w-8 h-8 text-[#07549c]" /> */}
+                    
                     <img src={IgnitedMinds} className='p-2' alt='FIAKS Ignited Minds Awards' />
                   </div>
                   <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
@@ -389,7 +426,7 @@ const FLCAndAwards = () => {
               <div className=' '>
                 <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
                   <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
-                    {/* <MessageSquare className="w-8 h-8 text-[#07549c]" /> */}
+       
                     <img src={Pathfinder} className='p-2' alt='FIAKS Pathfinder Awards' />
                   </div>
                   <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
@@ -406,7 +443,7 @@ const FLCAndAwards = () => {
               <div className=' '>
                 <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
                   <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
-                    {/* <MessageSquare className="w-8 h-8 text-[#07549c]" /> */}
+              
                     <img src={Intellectual} className='p-2' alt='FIAKS Pathfinder Awards' />
                   </div>
                   <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
@@ -419,6 +456,122 @@ const FLCAndAwards = () => {
                   <p className='border-t pt-4 text-slate-700 text-md leading-relaxed'>This award is presented to leaders of the industry who have pushed the traditional way of thinking to discover inventive concepts. These individuals have been sharing fundamentally exceptional thoughts that guide the community to think in a very different manner, to discover novel solutions and ways of working in the industry.</p>
                 </div>
               </div>
+            </div>
+            <div className="space-y-6" data-testid="unique-content">
+              <p className="text-slate-700 text-lg leading-relaxed">
+                The FIAKS Leadership Conclave is our next level initiative to applaud and recognise exemplary intellectual and academic
+                contributions in Banking, Fin-Tech, Payment, Technology and E- commerce sector on the platform. With the Leadership
+                Conclave, FIAKS aims at initiating a forward thinking and growth mindset among the future leaders of the industry.
+                The leadership conclave will facilitate a unique platform for business leaders, Banking, Payments, Fintech and
+                E-Commerce industry experts to connect.
+              </p>
+
+              <p className="text-slate-700 text-lg leading-relaxed">
+                Talent and raw originality come in all shapes and sizes and does not discriminate by age, gender or organizations
+                worked for!. FIAKS identifies these brilliant minds in the community and aims to recognise them as IGNITED MINDS,
+                PATH FINDERS, INTELLECTUAL EXPLORERS!
+              </p>
+
+              <p className="text-slate-700 text-lg leading-relaxed">
+                The FIAKS Award is a true testament to the continuous efforts and thoughts in the community; that have driven insights,
+                conversations, and discussions. With the sharing of articles, posts and news from across the globe to raising
+                crucial questions and offering solutions, FIAKS community is creating an enlightened ecosystem of talent and
+                innovation.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section> */}
+
+
+      <section className="py-16 md:py-20 bg-slate-50" id="what-we-offer" data-testid="what-we-offer-section">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+          <div className="text-center mb-16">
+            <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
+              FLC & Awards Home
+            </p>
+            <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+              Fiaks Leadership Conclave
+            </h2>
+            <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
+          </div>
+          <div className="grid  gap-12 items-center">
+            <div className=" ">
+              <div className='my-4'>
+                <div className="md:flex gap-5" style={{ height: '100%' }}>
+                  <div className='md:w-3/5 relative'>
+                    <div className='offering-card bg-white rounded-xl p-8 md:shadow-lg hover:shadow-xl' style={{ height: '100%' }}>
+                      <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
+                        <img src={IgnitedMinds} className='p-2 rounded-xl md:shadow-lg hover:shadow-xl' alt='FIAKS Ignited Minds Awards' />
+                      </div>
+                      <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                        FIAKS Ignited Minds Awards
+                      </h3>
+                    </div>
+                    <span className='absolute top-5 right-6 text-slate-100 font-bold text-8xl'>01</span>
+                  </div>
+                  <div className='md:w-4/5'>
+                    <div className='offering-card bg-white rounded-xl p-8 shadow-lg md:hover:shadow-xl' style={{ height: '100%' }}>
+                      <div style={{ display: 'flex' }}>
+                        <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" style={{ minWidth: '2rem', marginRight: '6px' }} />
+                        <p className="italic font-bold text-slate-900 text-md mb-4">An idea that kindled in your mind and a story that awakened a dialogue… we call an ignited mind!</p>
+                      </div>
+                      <p className='border-t pt-4 text-slate-700 text-md leading-relaxed'>This award is presented to individuals who have been relentless in their endeavour to share the latest news, interesting articles and knowledgeable updates in the community. The awards are being presented after a quantitative and qualitative analysis of the posts shared in the last year</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className='my-4'>
+                <div className="md:flex gap-5" style={{ height: '100%' }}> 
+                  <div className='md:w-4/5'>
+                    <div className='offering-card bg-white rounded-xl p-8 shadow-lg md:hover:shadow-xl' style={{ height: '100%' }}>
+                      <div style={{ display: 'flex' }}>
+                        <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" style={{ minWidth: '2rem', marginRight: '6px' }} />
+                        <p className="italic font-bold text-slate-900 text-md mb-4">An innovator in thought and a forerunner with ideas to forge your own path… we call a pathfinder!</p>
+                      </div>
+                      <p className='border-t pt-4 text-slate-700 text-md leading-relaxed'>This award is presented to individuals who have been sharing their opinions backed by intelligent thought. These intellectuals have pushed the boundaries of original thinking while driving relevant discussion and directions to policies.</p>
+                    </div>
+                  </div>
+                  <div className='md:w-3/5 relative'>
+                    <div className='offering-card bg-white rounded-xl p-8 md:shadow-lg md:hover:shadow-xl' style={{ height: '100%' }}>
+                      <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
+                        <img src={Pathfinder} className='p-2 rounded-xl md:shadow-lg hover:shadow-xl' alt='FIAKS Pathfinder Awards' />
+                      </div>
+                      <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                       FIAKS Pathfinder Awards
+                      </h3>
+                    </div>
+                    <span className='absolute top-5 right-6 text-slate-100 font-bold text-8xl'>02</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className='my-4'>
+                <div className="md:flex gap-5" style={{ height: '100%' }}>
+                  <div className='md:w-3/5 relative'>
+                    <div className='offering-card bg-white rounded-xl p-8 md:shadow-lg hover:shadow-xl' style={{ height: '100%' }}>
+                      <div className='w-16 h-16 rounded-xl bg-[#07549c]/10 flex items-center justify-center mb-6'>
+                         <img src={Intellectual} className='p-2 rounded-xl md:shadow-lg hover:shadow-xl' alt='FIAKS Pathfinder Awards' />
+                      </div>
+                      <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                        FIAKS Intellectual Explorer Award
+                      </h3>
+                    </div>
+                    <span className='absolute top-5 right-6 text-slate-100 font-bold text-8xl'>03</span>
+                  </div>
+                  <div className='md:w-4/5'>
+                    <div className='offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl' style={{ height: '100%' }}>
+                      <div style={{ display: 'flex' }}>
+                        <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" style={{ minWidth: '2rem', marginRight: '6px' }} />
+                        <p className="italic font-bold text-slate-900 text-md mb-4">An academic voyager that discovers unique ideas and solutions… we call Intellectual Explorer!</p>
+                      </div>
+                      <p className='border-t pt-4 text-slate-700 text-md leading-relaxed'>This award is presented to leaders of the industry who have pushed the traditional way of thinking to discover inventive concepts. These individuals have been sharing fundamentally exceptional thoughts that guide the community to think in a very different manner, to discover novel solutions and ways of working in the industry.</p>
+                    </div>
+                  </div>
+                </div>
+              </div> 
             </div>
             <div className="space-y-6" data-testid="unique-content">
               <p className="text-slate-700 text-lg leading-relaxed">
@@ -471,7 +624,7 @@ const FLCAndAwards = () => {
                   <div style={{ display: 'flex' }}>
                     <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" style={{ minWidth: '2rem', marginRight: '6px' }} />
                   </div>
-                  <p className='text-slate-700 text-md leading-relaxed'>The frequency, quantity and quality of posts, articles and news shared</p>
+                  <p className='italic font-semibold text-slate-800 text-md'>The frequency, quantity and quality of posts, articles and news shared</p>
                 </div>
               </div>
               <div className=' '>
@@ -482,7 +635,7 @@ const FLCAndAwards = () => {
                   <div style={{ display: 'flex' }}>
                     <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" style={{ minWidth: '2rem', marginRight: '6px' }} />
                   </div>
-                  <p className='text-slate-700 text-md leading-relaxed'>The discussions, conclusions, insights and analysis driven through the articles, news and posts shared.</p>
+                  <p className='italic font-semibold text-slate-800 text-md'>The discussions, conclusions, insights and analysis driven through the articles, news and posts shared.</p>
                 </div>
               </div>
 
@@ -514,52 +667,71 @@ const FLCAndAwards = () => {
             <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
 
           </div>
-          <div className="grid  gap-12 items-center">
+          <div className="grid gap-12 items-center">
             <div className="grid md:grid-cols-6 lg:grid-cols-2 items-center gap-8">
-              <div>
-                <p className="text-slate-700 text-lg leading-relaxed">FIAKS invites brands, institutions and organisations to partner with the Leadership Conclave and leverage this rewarding opportunity to connect with a high-level community of leaders via branding sponsorships through the event.</p><br></br>
+              <div className=''>
+                <p className="text-slate-700 text-lg leading-relaxed"><strong>FIAKS invites brands, institutions and organisations</strong> to partner with the Leadership Conclave and leverage this rewarding opportunity to connect with a high-level community of leaders via branding sponsorships through the event.</p><br></br>
                 <p className="text-slate-700 text-lg leading-relaxed">The FIAKS Leadership Conclave will host CxO level professionals from the Banking, Payments, Fintech, E-Commerce industry in India. The FIAKS Community Members attending the event are:</p>
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4 pt-6">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-sm" style={{ background: 'rgb(7 84 156 / 2%)', border: '1px solid rgb(7 84 156 / 16%)' }}>
+                    <div className="font-['Outfit'] text-[#07549c] text-2xl font-bold">50+</div>
+                    <p className="text-sm text-slate-600">Awards</p>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-xl shadow-sm" style={{ background: 'rgb(7 84 156 / 2%)', border: '1px solid rgb(7 84 156 / 16%)' }}>
+                    <div className="font-['Outfit'] text-[#07549c] text-2xl font-bold">100+</div>
+                    <p className="text-sm text-slate-600">Events</p>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-xl shadow-sm" style={{ background: 'rgb(7 84 156 / 2%)', border: '1px solid rgb(7 84 156 / 16%)' }}>
+                    <div className="font-['Outfit'] text-[#07549c] text-2xl font-bold">15+</div>
+                    <p className="text-sm text-slate-600">Years</p>
+                  </div>
+                </div>
               </div>
-              <div className="mt-4" style={{ display: 'flex', flexWrap: ' wrap', gap: '10px' }}>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Managing Directors</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Chief Technology Officers</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Chief Information Officers</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Chief Digital Officers</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">General Managers</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Chief Finance Officers</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Chief Executive Officers</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Chief Innovation Officers</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Founders / Co-Founders</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-700" style={{ boxShadow: '0px 0px 16px rgb(0 0 0 / 18%)', padding: '5px 15px', borderRadius: '10px' }}>
-                  <CheckCircle className="w-5 h-5 text-[#07549c]" />
-                  <span className="text-slate-700 text-lg leading-relaxed">Senior Management</span>
+
+              <div className='rounded-xl p-8' style={{ background: 'rgb(7 84 156 / 2%)', border: '1px solid rgb(7 84 156 / 16%)' }}>
+                <h4 className='text-lg mb-4'>Event Attendees</h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Managing Directors</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Chief Technology Officers</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Chief Information Officers</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Chief Digital Officers</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">General Managers</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Chief Finance Officers</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Chief Executive Officers</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Chief Innovation Officers</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Founders / Co-Founders</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 shadow-md rounded-xl px-3 py-2">
+                    <CheckCircle className="w-5 h-5 text-[#07549c]" />
+                    <span className="text-slate-700 text-md leading-relaxed">Senior Management</span>
+                  </div>
                 </div>
               </div>
             </div>
