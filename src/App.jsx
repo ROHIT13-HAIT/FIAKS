@@ -23,6 +23,9 @@ import Workshops from './pages/Events/Workshops';
 import FLCAndAwardsDetails from './pages/Events/FLCAndAwardsDetails';
 import WhoWeAre from './pages/WhoWeAre';
 import ToranPage from './pages/ToranPage';
+import AcclivityProgram from './pages/Forums/AcclivityProgram';
+import CSRPage from './pages/SocialImpact/CSRPage';
+
 
 import Login from './pages/Login';
 import Partners from './pages/Partners';
@@ -55,6 +58,8 @@ const App = () => {
           <Route path="/events/fiaks-motes" element={<FIAKSMotes />} />
           <Route path="/events/fiaks-zero-hour" element={<FIAKSZeroHour />} />
           <Route path="/events/workshops" element={<Workshops />} />
+
+
           <Route path="/toran" element={<ToranPage />} />
 
 
@@ -68,7 +73,7 @@ const App = () => {
       </HashRouter>
       <Toaster position="top-right" />
 
-       
+
     </div>
   );
 };

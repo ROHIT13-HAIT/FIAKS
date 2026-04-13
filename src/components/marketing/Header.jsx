@@ -82,150 +82,156 @@ const Header = ({ forceDark = false }) => {
 
               {whatWeOfferOpen && (
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 top-full w-[95vw]
-                 max-w-6xl z-50">
+                <div className="absolute left-1/2 transform -translate-x-1/2 top-full w-[95vw] max-w-6xl z-50">
 
                   {/* invisible hover area */}
                   <div className="h-4 w-full"></div>
 
-                  <div className="bg-[#165a9c] text-white shadow-2xl rounded-xl p-6">
-                    <div className="grid grid-cols-5 gap-6">
+                  {/* <div className="bg-[#165a9c] text-white shadow-2xl p-6"> */}
+                  {/* <div className="bg-[#165a9c] text-white shadow-5xl p-6"> */}
+                  <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#165a9c] to-[#0a192f] text-white shadow-[0_30px_80px_rgba(0,0,0,0.5)] border border-white/10">
+                    <div className="p-6">
+                      <div className="grid grid-cols-5 gap-6">
 
-                      {/* Forums */}
-                      <div>
-                        <h4 className="font-semibold mb-3">Forums</h4>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Focused Activity Program of Knowledge Sharing</li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Policy Advocacy Bespoke Discussion Forum</li>
-                        </ul>
+                        {/* Forums */}
+                        <div>
+                          <h4 className="font-semibold mb-3">Forums</h4>
+                          <ul className="space-y-2 text-sm">
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/forums/acclivity-program"><span className="text-xs mt-1">▶</span>FIAKS Focused Activity Program of Knowledge Sharing</Link>
+                            </li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <span className="text-xs mt-1">▶</span>FIAKS Policy Advocacy Bespoke Discussion Forum</li>
+                          </ul>
+                        </div>
+
+                        {/* Events */}
+                        <div>
+                          <h4 className="font-semibold mb-3">Events</h4>
+                          <ul className="space-y-2 text-sm">
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/events/flc-and-awards"><span className="text-xs mt-1">▶</span>FLC & Awards</Link> </li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/events/fiaks-premier-league"><span className="text-xs mt-1">▶</span>FIAKS Premier League (FPL)</Link></li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/events/fiaks-motes"><span className="text-xs mt-1">▶</span>FIAKS MOTES </Link></li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/events/fiaks-zero-hour"><span className="text-xs mt-1">▶</span>FIAKS ZERO HOUR</Link></li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/events/workshops"><span className="text-xs mt-1">▶</span>Workshops</Link></li>
+                          </ul>
+                        </div>
+
+                        {/* Networking */}
+                        <div>
+                          <h4 className="font-semibold mb-3">Networking Platforms</h4>
+                          <ul className="space-y-2 text-sm">
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/toran"><span className="text-xs mt-1">▶</span>FIAKS TORAN</Link> </li>
+
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/jobs"><span className="text-xs mt-1">▶</span>FIAKS Executive Search</Link>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Social Impact */}
+                        <div>
+                          <h4 className="font-semibold mb-3">Social Impact Programmes</h4>
+                          <ul className="space-y-2 text-sm">
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <span className="text-xs mt-1">▶</span>FIAKS Digital शिक्षासार अभियान</li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <span className="text-xs mt-1">▶</span>FIAKS Global Meets Local</li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <Link to="/socialimpact/csr"><span className="text-xs mt-1">▶</span>Corporate Social Responsibility</Link>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Knowledge Center */}
+                        <div>
+                          <h4 className="font-semibold mb-3">Knowledge Center</h4>
+                          <ul className="space-y-2 text-sm">
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <span className="text-xs mt-1">▶</span>FIAKS e-Bulletin</li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <span className="text-xs mt-1">▶</span>FIAKS Writ</li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <span className="text-xs mt-1">▶</span>FIAKS Bespoke</li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <span className="text-xs mt-1">▶</span>FIAKS Daily</li>
+                            <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
+  hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
+                              <span className="text-xs mt-1">▶</span>FIAKS Compendium</li>
+                          </ul>
+                        </div>
+
                       </div>
-
-                      {/* Events */}
-                      <div>
-                        <h4 className="font-semibold mb-3">Events</h4>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <Link to="/events/flc-and-awards"><span className="text-xs mt-1">▶</span>FLC & Awards</Link> </li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <Link to="/events/fiaks-premier-league"><span className="text-xs mt-1">▶</span>FIAKS Premier League (FPL)</Link></li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                             <Link to="/events/fiaks-motes"><span className="text-xs mt-1">▶</span>FIAKS MOTES </Link></li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <Link to="/events/fiaks-zero-hour"><span className="text-xs mt-1">▶</span>FIAKS ZERO HOUR</Link></li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <Link to="/events/workshops"><span className="text-xs mt-1">▶</span>Workshops</Link></li>
-                        </ul>
-                      </div>
-
-                      {/* Networking */}
-                      <div>
-                        <h4 className="font-semibold mb-3">Networking Platforms</h4>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-    <Link to="/toran"><span className="text-xs mt-1">▶</span>FIAKS TORAN</Link> </li>
-                        
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Executive Search</li>
-                        </ul>
-                      </div>
-
-                      {/* Social Impact */}
-                      <div>
-                        <h4 className="font-semibold mb-3">Social Impact Programmes</h4>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Digital शिक्षासार अभियान</li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Global Meets Local</li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>Corporate Social Responsibility</li>
-                        </ul>
-                      </div>
-
-                      {/* Knowledge Center */}
-                      <div>
-                        <h4 className="font-semibold mb-3">Knowledge Center</h4>
-                        <ul className="space-y-2 text-sm">
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS e-Bulletin</li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Writ</li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Bespoke</li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Daily</li>
-                          <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
-  hover:bg-white/10 hover:translate-x-1 hover:text-white">
-                            <span className="text-xs mt-1">▶</span>FIAKS Compendium</li>
-                        </ul>
-                      </div>
-
                     </div>
                   </div>
-                </div>
+                  </div>
               )}
-            </div>
+                </div>
 
             {/* Who We Are Dropdown */}
-            <Link
-              to="/who-we-are"
-              className={`font-medium transition-colors ${isDarkText
+              <Link
+                to="/who-we-are"
+                className={`font-medium transition-colors ${isDarkText
                   ? "text-slate-700 hover:text-[#07549c]"
                   : "text-white hover:text-white/80"
-                }`}
-            >
-              Who We Are
-            </Link>
-
-            <Link
-              to="/contact"
-              className={`font-medium transition-colors ${isDarkText ? 'text-slate-700 hover:text-[#07549c]' : 'text-white hover:text-white/80'
-                }`}
-              data-testid="contact-link"
-            >
-              Get In Touch
-            </Link>
-
-            <Link to="/" data-testid="login-link">
-              <Button
-                variant={isDarkText ? 'default' : 'outline'}
-                className={
-                  isDarkText
-                    ? 'bg-[#07549c] hover:bg-[#054178] text-white'
-                    : 'border-white text-white hover:bg-white hover:text-[#07549c]'
-                }
+                  }`}
               >
-                Login
-              </Button>
-            </Link>
+                Who We Are
+              </Link>
 
-            {/* Search Button */}
-            <Link
-              to="/"
-              className={`p-2 rounded-full transition-colors ${isDarkText ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
-                }`}
-              data-testid="search-button"
-            >
-              <Search className="w-5 h-5" />
-            </Link>
+              <Link
+                to="/contact"
+                className={`font-medium transition-colors ${isDarkText ? 'text-slate-700 hover:text-[#07549c]' : 'text-white hover:text-white/80'
+                  }`}
+                data-testid="contact-link"
+              >
+                Get In Touch
+              </Link>
+
+              <Link to="/" data-testid="login-link">
+                <Button
+                  variant={isDarkText ? 'default' : 'outline'}
+                  className={
+                    isDarkText
+                      ? 'bg-[#07549c] hover:bg-[#054178] text-white'
+                      : 'border-white text-white hover:bg-white hover:text-[#07549c]'
+                  }
+                >
+                  Login
+                </Button>
+              </Link>
+
+              {/* Search Button */}
+              <Link
+                to="/"
+                className={`p-2 rounded-full transition-colors ${isDarkText ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
+                  }`}
+                data-testid="search-button"
+              >
+                <Search className="w-5 h-5" />
+              </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -261,7 +267,7 @@ const Header = ({ forceDark = false }) => {
               </div>
               <div className="py-2 border-b">
                 <p className="font-semibold text-[#07549c] mb-2">Who We Are</p>
-                
+
                 {/* {whoWeAreItems.map((item) => (
                   <Link
                     key={item.label}

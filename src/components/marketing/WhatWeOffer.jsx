@@ -128,48 +128,48 @@ import { useEffect } from "react";
 import "swiper/css";
 
 const pills = [
-  { title: "FIAKS Focused Activity Program of Knowledge Sharing", link: "#", img: "/fiaks/Bespoke.png" },
-  { title: "FIAKS Policy Advocacy Bespoke Discussion Forum", link: "#", img: "/fiaks/compendium.png" },
-  { title: "FLC & Awards", link: "#", img: "/fiaks/CorporateSocialResponsibility.png" },
-  { title: "FIAKS Premier League (FPL)", link: "#", img: "/fiaks/daily.png" },
-  { title: "FIAKS MOTES", link: "#", img: "/fiaks/FIAKSDigital.png" },
-  { title: "FIAKS ZERO HOUR", link: "#", img: "/fiaks/FIAKSe-Bulletin.png" },
-  { title: "Workshops", link: "#", img: "/fiaks/FIAKSExecutiveSearch.png" },
-  { title: "FIAKS TORAN", link: "#", img: "/fiaks/FIAKSFocused.png" },
-  { title: "FIAKS Executive Search", link: "#", img: "/fiaks/FIAKSMOTES.png" },
-  { title: "FIAKS Digital शिक्षासार अभियान", link: "#", img: "/fiaks/FIAKSPolicy.png" },
-  { title: "FIAKS Global Meets Local", link: "#", img: "/fiaks/FIAKSPremierLeague.png" },
-  { title: "Corporate Social Responsibility", link: "#", img: "/fiaks/FIAKSTORAN.png" },
-  { title: "FIAKS e-Bulletin", link: "#", img: "/fiaks/FIAKSWrit.png" },
-  { title: "FIAKS Writ", link: "#", img: "/fiaks/FIAKSZEROHOUR.png" },
-  { title: "FIAKS Bespoke", link: "#", img: "/fiaks/FLC-Awards.png" },
-  { title: "FIAKS Daily", link: "#", img: "/fiaks/GlobalMeetsLocal.png" },
-  { title: "FIAKS Compendium", link: "#", img: "/fiaks/Workshops.png" },
+  { title: "FIAKS Focused Aclivity Program of Knowledge Sharing", link: "#", img: "/fiaks/forum.png" },
+  { title: "FIAKS Policy Advocacy Bespoke Discussion Forum", link: "#", img: "/fiaks/forum.png" },
+  { title: "FLC & Awards", link: "#", img: "/fiaks/events.png" },
+  { title: "FIAKS Premier League (FPL)", link: "#", img: "/fiaks/events.png" },
+  { title: "FIAKS MOTES", link: "#", img: "/fiaks/events.png" },
+  { title: "FIAKS ZERO HOUR", link: "#", img: "/fiaks/events.png" },
+  { title: "Workshops", link: "#", img: "/fiaks/events.png" },
+  { title: "FIAKS TORAN", link: "#", img: "/fiaks/network.png" },
+  { title: "FIAKS Executive Search", link: "#", img: "/fiaks/network.png" },
+  { title: "FIAKS Digital शिक्षासार अभियान", link: "#", img: "/fiaks/social.png" },
+  { title: "FIAKS Global Meets Local", link: "#", img: "/fiaks/social.png" },
+  { title: "Corporate Social Responsibility", link: "#", img: "/fiaks/social.png" },
+  { title: "FIAKS e-Bulletin", link: "#", img: "/fiaks/Knowledge.png" },
+  { title: "FIAKS Writ", link: "#", img: "/fiaks/Knowledge.png" },
+  { title: "FIAKS Bespoke", link: "#", img: "/fiaks/Knowledge.png" },
+  { title: "FIAKS Daily", link: "#", img: "/fiaks/Knowledge.png" },
+  { title: "FIAKS Compendium", link: "#", img: "/fiaks/Knowledge.png" },
 ];
 
 const WhatWeOffer = () => {
   useEffect(() => {
-  const elements = document.querySelectorAll(".animate");
+    const elements = document.querySelectorAll(".animate");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show"); // 👈 THIS ENABLES HIDE ON SCROLL BACK
-        }
-      });
-    },
-    {
-      threshold: 0.3,
-    }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show"); // 👈 THIS ENABLES HIDE ON SCROLL BACK
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
 
-  elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 bg-[#f5f7fa] overflow-visible">
@@ -183,11 +183,11 @@ const WhatWeOffer = () => {
               Our Services
             </p>
 
-           <h2 className="animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6"> 
+            <h2 className="animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">
               What We Offer
             </h2>
 
-              <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed">
+            <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed">
               FIAKS is a disruptive learning & development initiative based on the concept of sharing economy. Because of the high content quality, it has created a broad consensus amongst top leaders on several matters concerning the industry whereby it has also become a disruptive Policy Advocacy platform. The content on our platform is posted by C-suite executives around the globe hence it’s unparalleled content. It’s not something that is browsed or downloaded from the free world of the internet.
             </p>
 
@@ -217,28 +217,37 @@ const WhatWeOffer = () => {
               </div>
             </div> */}
 
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4 p-4" style={{ backgroundColor: "#07549c", borderRadius: "10px"}}>
 
-  {[
-    'Exclusive Access',
-    'Curated Network',
-    'Actionable Insights',
-    'Strategic Growth'
-  ].map((item, index) => (
-    
-    <div
-      key={item}
-      className={`animate flex items-center gap-2 text-slate-700 
-        ${index % 2 === 0 ? 'slide-left' : 'slide-right'} 
-        delay-${index + 1}`}
-    >
-      <CheckCircle className="w-5 h-5 text-[#07549c]" />
-      <span className="font-medium">{item}</span>
-    </div>
+              {[
+                { label: 'Forums', img: '/fiaks/forum.png' },
+                { label: 'Events', img: '/fiaks/events.png' },
+                { label: 'Networking Platforms', img: '/fiaks/network.png' },
+                { label: 'Social Impact Programmes', img: '/fiaks/social.png' },
+                { label: 'Knowledge Center', img: '/fiaks/Knowledge.png' }
+              ].map((item, index) => (
 
-  ))}
+                <div
+                  key={item.label}
+                  className={`animate flex items-center gap-2 text-slate-700 
+      ${index % 2 === 0 ? 'slide-left' : 'slide-right'} 
+      delay-${index + 1}`}
+                >
 
-</div>
+                  {/* Image instead of icon */}
+                  <img
+                    src={item.img}
+                    alt={item.label}
+                    className="w-5 h-5 object-contain"
+                  />
+
+                  <span className="font-medium text-white">{item.label}</span>
+
+                </div>
+
+              ))}
+
+            </div>
             <br></br>
             <button className="animate slide-up delay-5 bg-black text-white px-8 py-3 rounded-full hover:scale-105 transition">
               Learn More
@@ -246,22 +255,22 @@ const WhatWeOffer = () => {
           </div>
 
           {/* RIGHT SIDE SWIPER */}
-        <div className="relative h-[500px] overflow-hidden">
+          <div className="relative h-[500px] overflow-hidden">
 
-           <Swiper
-  direction="vertical"
-  slidesPerView={5}
-  centeredSlides={true}   // ✅ THIS FIXES YOUR ISSUE
-  spaceBetween={30}
-  loop={true}
-  speed={3000}
-  autoplay={{
-    delay: 1,
-    disableOnInteraction: false,
-  }}
-  modules={[Autoplay]}
-  className="h-full"
->
+            <Swiper
+              direction="vertical"
+              slidesPerView={5}
+              centeredSlides={true}   // ✅ THIS FIXES YOUR ISSUE
+              spaceBetween={30}
+              loop={true}
+              speed={3000}
+              autoplay={{
+                delay: 1,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+              className="h-full"
+            >
               {pills.map((item, i) => (
                 <SwiperSlide key={i}>
                   <div className="pill-wrapper">
@@ -270,10 +279,10 @@ const WhatWeOffer = () => {
                       onClick={() => window.location.href = item.link}
                     >
                       <img
-  src={item.img}
-  alt=""
-  className="w-18 h-18 rounded-full object-cover flex-shrink-0"
-/>
+                        src={item.img}
+                        alt=""
+                        className="w-18 h-18 rounded-full object-cover flex-shrink-0"
+                      />
                       <span>{item.title}</span>
                     </div>
                   </div>
