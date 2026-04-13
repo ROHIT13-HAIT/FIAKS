@@ -73,9 +73,9 @@ const Recognition = () => {
           <div className="w-16 h-1 bg-[#07549c] mx-auto" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Gallery */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4" data-testid="recognition-gallery">
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-4" data-testid="recognition-gallery">
             {recognitionImages.map((item) => (
               <div
                 key={item.id}
@@ -92,30 +92,18 @@ const Recognition = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+           <img src="/fiaks/recognition7.png" alt="" className="w-full h-full object-cover" />
 
           {/* Content */}
           <div className="space-y-6" data-testid="recognition-content">
             <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed">
-              Over the years, Fintech Forum has been honored with numerous accolades recognizing our
-              contribution to the BFSI ecosystem. From industry excellence awards to government
-              recognition for promoting financial inclusion, our achievements reflect the trust
-              placed in us by stakeholders across the sector.
+              FIAKS has been recognized and rewarded by the World Trade Centre Mumbai and All India Industry Association for its groundbreaking contribution in the field of Knowledge Sharing and Skill Development.
             </p>
 
             <p className="animate slide-right delay-4 text-slate-700 text-lg leading-relaxed">
-              Our annual summits have been attended by distinguished dignitaries including central
-              bank governors, ministry officials, and global fintech leaders. These events have
-              become the benchmark for industry gatherings, setting new standards for knowledge
-              exchange and networking in financial services.
-            </p>
-
-            <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed">
-              We take pride in fostering an environment where innovation thrives and partnerships
-              flourish. The success stories emerging from our community – from successful
-              collaborations to breakthrough innovations – stand testament to the value we create
-              for our members.
-            </p>
+              The award was given by Mr. Ganesh Natarajan, Member – Chairmen’s Council, NASSCOM and Former Vice Chairman & CEO at Zensar Technologies.
+            </p> 
 
             {/* Stats */}
             {/* <div className="grid grid-cols-3 gap-4 pt-6">

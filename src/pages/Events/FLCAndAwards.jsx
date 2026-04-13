@@ -7,7 +7,7 @@ import { Calendar, MapPin, Users, ArrowRight, Clock, Filter } from 'lucide-react
 import { Globe, BarChart3 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 
-import banner from '../../../src/images/flc-award-banner.jpeg'
+import banner from '../../../src/images/banners/flc-award.jpg'
 import IgnitedMinds from '../../../src/images/IgnitedMinds.png'
 import Pathfinder from '../../../src/images/Pathfinder.png'
 import Intellectual from '../../../src/images/Intellectual.png'
@@ -194,9 +194,20 @@ const FLCAndAwards = () => {
 
       {/* Hero Section */}
 
-      <section className="" style={{ marginTop: '80px' }}>
-        <img src={banner} className='img-fluid' alt='' style={{ width: '100%' }} />
+      <section className="relative" style={{ marginTop: '80px' }}> 
+        <img src={banner} className='img-fluid' alt='' style={{ width: '100%', height:'600px', objectFit:'cover' }} />
+         <div className="">
+        <div className='container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl absolute inset-0 flex flex-col items-start justify-center p-4'>
+            <h1 className="font-['Outfit'] text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6">
+              FLC & Awards
+            </h1>
+            <p className="text-white text-lg max-w-2xl">
+              Join industry leaders at our exclusive events, conferences, and workshops designed for BFSI professionals.
+            </p>
+            <button class="animate slide-up delay-5 bg-white text-black px-8 py-3 mt-6 rounded-full hover:scale-105 transition show">Learn More</button>
+        </div></div>
       </section>
+      
       {/* <section className="pt-32 pb-16 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-3xl">

@@ -175,6 +175,25 @@ const flcVideos = [
     },
 ];
 
+const videos = [
+    {
+        id: 'rmKIZ2TlMUE',
+        name: 'MD& CEO- Equitas Small Finance Bank',
+        designation: 'MD& CEO- Equitas Small Finance Bank​',
+        description: 'Question 1: We see everything today is Digital & Algorithm based. Is Banking domain expertise becoming a back-office function? Is Banking synonymous with Technology, or is it More than Technology?<br></br>Question 2: Do frequent outages impact people’s trust in Banking?',
+        image: '../fiaks/src/images/Sponsors.jpg',
+        quote: 'Fintech Forum has been instrumental in shaping our digital transformation journey.',
+    },
+   {
+        id: 'rmKIZ2TlMUE',
+        name: 'MD& CEO- Equitas Small Finance Bank',
+        designation: 'MD& CEO- Equitas Small Finance Bank​',
+        description: 'Question 1: We see everything today is Digital & Algorithm based. Is Banking domain expertise becoming a back-office function? Is Banking synonymous with Technology, or is it More than Technology?<br></br>Question 2: Do frequent outages impact people’s trust in Banking?',
+        image: '../fiaks/src/images/Sponsors.jpg',
+        quote: 'Fintech Forum has been instrumental in shaping our digital transformation journey.',
+    },
+];
+
 const megaPanelVideos = [
     {
         id: 'DR2cJdDYcco',
@@ -308,15 +327,29 @@ const FLCAndAwardsDetails = () => {
             {/* Hero Section */}
 
             <section className="relative" style={{ marginTop: '80px' }}>
-                <img src={banner} className='img-fluid' alt='' style={{ width: '100%', height: '600px', objectFit: 'cover', objectPosition: 'top' }} />
+                <img src={banner} className='img-fluid' alt='' style={{ width: '100%', height: '500px', objectFit: 'cover', objectPosition: 'top' }} />
                 <div className='absolute top-0 bottom-0 left-0 right-0' style={{ background: '#07549ce8' }}>
-                    <div style={{ position: 'absolute', top: '42%',left: '50%', transform: 'translate(-50%)', textAlign: 'center'}}>
+                    <div style={{ position: 'absolute', top: '42%', left: '50%', transform: 'translate(-50%)', textAlign: 'center' }}>
                         <h1 className="font-['Outfit'] text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                             FLC 2024
                         </h1>
                         <p className="text-white text-xl mb-3">
                             FIAKS Leadership Conclave - Shaping the Future of Banking, Fintech & Payments
                         </p>
+                        <span className="inline-flex flex-wrap justify-center gap-4 text-md text-slate-900 font-semibold rounded-md bg-white px-4 py-2 mt-4">
+                            <span className="flex items-center gap-1">
+                                <Calendar className="w-4 h-4 text-[#07549c]" />
+                                June 10, 2025
+                            </span>
+                            <span className="flex items-center gap-1">
+                                <MapPin className="w-4 h-4 text-[#07549c]" />
+                                HICC, Hyderabad
+                            </span>
+                            <span className="flex items-center gap-1">
+                                <Users className="w-4 h-4 text-[#07549c]" />
+                                500
+                            </span>
+                        </span>
                     </div>
                 </div>
             </section>
@@ -496,6 +529,61 @@ const FLCAndAwardsDetails = () => {
                     </Tabs>
 
 
+                </div>
+            </section>
+
+
+            <section className="pt-16 pb-16 bg-gradient-to-br from-slate-50 to-white">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+                    <div className="max-w-3xl mx-auto text-center">
+                        <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
+                            FLC & Awards
+                        </p>
+                        <h1 className="font-['Outfit'] text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+                            Our Panelist
+                        </h1>
+                        <p className="text-slate-600 text-lg">
+                            FIAKS Community Through Leaders Participated In the Mega Panel Discussion
+                        </p>
+                    </div>
+                    <div className="container mx-auto max-w-7xl mt-10">
+                        <div className="grid md:grid-cols-1 gap-8">
+                            {videos.map((video) => (
+                                <div className="flex offering-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100">
+                                     
+                                        <div
+                                            key={video.id}
+                                            className="video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100 w-2/3"
+                                            data-testid={`video-card-${video.id}`}
+                                        >
+                                            <div className="relative aspect-video">
+                                                {/* {activeVideo === video.id ? ( */}
+                                                <iframe
+                                                    src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                                                    title={video.title}
+                                                    className="w-full h-full"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen
+                                                />
+                                            </div>
+                                        </div> 
+
+                                  
+                                    <div className='w-2/3 p-10'>
+                                        <h3 className="font-['Outfit'] text-3xl md:text-3xl lg:text-3xl font-semibold text-slate-900 mb-4">
+                                           {video.name}
+                                        </h3>
+                                        <p className="text-[#07549c] font-semibold text-md mb-4">
+                                           {video.designation}
+                                        </p>
+                                        <p className="text-slate-600 text-md">
+                                           {video.description}
+                                        </p>
+                                    </div>
+
+                                </div>))}
+                        </div>
+                    </div>
                 </div>
             </section>
 

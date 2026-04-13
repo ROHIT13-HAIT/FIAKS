@@ -7,7 +7,7 @@ import { Calendar, MapPin, Users, ArrowRight, Clock, Filter } from 'lucide-react
 import { Globe, BarChart3 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 
-import banner from '../../../src/images/banner-bg.jpg'
+import banner from '../../../src/images/banners/fiaks-motes.jpg'
 import bannerLogo from '../../../src/images/motes-logo.png'
 import Startup from '../../../src/images/StartupShowcasing.png'
 import Roundtable from '../../../src/images/RoundtableDiscussions.png'
@@ -251,13 +251,28 @@ const FIAKSMotes = () => {
             <Header forceDark={true} />
 
             {/* Hero Section */}
-
             <section className="relative" style={{ marginTop: '80px' }}>
+                <img src={banner} className='img-fluid' alt='' style={{ width: '100%', height: '600px', objectFit: 'cover' }} />
+                <div className="">
+                    <div className='container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl absolute inset-0 flex flex-col items-start justify-center p-4'>
+                        <h1 className="font-['Outfit'] text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6">
+                            FIAKS Motes
+                        </h1>
+                        <p className="text-white text-lg max-w-2xl">
+                            Join industry leaders at our exclusive events, conferences, and workshops designed for BFSI professionals.
+                        </p>
+                        <button class="animate slide-up delay-5 bg-white text-black px-8 py-3 mt-6 rounded-full hover:scale-105 transition show">Learn More</button>
+                    </div>
+                </div>
+            </section>
+            {/* <section className="relative" style={{ marginTop: '80px' }}>
                 <img src={banner} className='img-fluid' alt='' style={{ width: '100%', height: '350px', objectFit: 'cover' }} />
                 <img src={bannerLogo} alt='' className='absolute' style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '25%' }} />
-            </section>
-
-            <section className="py-16 md:py-16 bg-[#07549c]">
+            </section> */}
+             <div className='py-4'>
+                <img src={bannerLogo} className='img-fluid mx-auto bg-white p-2 rounded-md ' alt='' style={{width:'300px'}}/>
+             </div>
+            <section className="py-16 md:py-16" style={{ background:'#f5f5f5'}}>
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
                     <div className="grid gap-12 items-center">
                         {/* Content */}
@@ -266,10 +281,11 @@ const FIAKSMotes = () => {
                                 <div className="sm:flex justify-between items-center" style={{ height: '100%' }}>
                                     <div className='w-1/2'>
                                         <div className='px-5'>
-                                            <h3 className="font-['Outfit'] text-3xl font-semibold text-white mb-4">
+                                            <h3 className="font-['Outfit'] text-3xl font-semibold mb-4">
                                                 Startup Showcasing
                                             </h3>
-                                            <p className='text-white text-md leading-relaxed'>Under this Knowledge Sharing initiative we curate & invite various start-ups to showcase and pitch their products and services to the FIAKS community members.</p>
+                                            <p className='text-md leading-relaxed'>Under this Knowledge Sharing initiative we curate & invite various start-ups to showcase and pitch their products and services to the FIAKS community members.</p>
+                                            <button class="animate slide-up delay-5 bg-black text-white px-8 py-3 mt-6 rounded-full hover:scale-105 transition show">Learn More</button>
                                         </div>
                                     </div>
                                     <div className='w-2/5 relative text-center'>
@@ -289,7 +305,7 @@ const FIAKSMotes = () => {
             </section>
 
 
-            <section className="py-16 md:py-16 bg-slate-50">
+            <section className="py-16 md:py-16 bg-[#07549c]">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
                     <div className="grid gap-12 items-center">
                         {/* Content */}
@@ -307,10 +323,11 @@ const FIAKSMotes = () => {
                                     </div>
                                     <div className='w-1/2'>
                                         <div className='px-5'>
-                                            <h3 className="font-['Outfit'] text-3xl font-semibold text-slate-900 mb-4">
+                                            <h3 className="font-['Outfit'] text-3xl font-semibold text-white mb-4">
                                                 Roundtable Discussions
                                             </h3>
-                                            <p className='text-slate-700 text-md leading-relaxed'>Under the product FIAKS MOTES, we organize a series of round tables on various fintech and financial inclusion topics with industry experts and start-up founders. We envision that these roundtables will enable collaboration, and understanding of challenges and innovations for Bharat.</p>
+                                            <p className='text-white text-md leading-relaxed'>Under the product FIAKS MOTES, we organize a series of round tables on various fintech and financial inclusion topics with industry experts and start-up founders. We envision that these roundtables will enable collaboration, and understanding of challenges and innovations for Bharat.</p>
+                                            <button class="animate slide-up delay-5 bg-white text-black px-8 py-3 mt-6 rounded-full hover:scale-105 transition show">Learn More</button>
                                         </div>
                                     </div>
                                 </div>
