@@ -178,6 +178,8 @@ const WhatWeOffer = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT SIDE */}
+          {/* HEADER */}
+
           <div>
             <p className="animate slide-left delay-1 text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
               Our Services
@@ -186,9 +188,12 @@ const WhatWeOffer = () => {
             {/* <h2 className="animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">
               What We Offer
             </h2> */}
-            <span className="text-[#07549c] animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">What We</span>{' '}
-            <span className="text-black animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">Offer</span>
 
+            <div className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <span className="text-[#07549c] ">What We</span>{' '}
+              <span className="text-black">Offer</span>
+            </div>
+            <div className="w-16 h-1 bg-[#07549c]  mb-6" />
 
             <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed mt-2">
               FIAKS is a disruptive learning & development initiative based on the concept of sharing economy. Because of the high content quality, it has created a broad consensus amongst top leaders on several matters concerning the industry whereby it has also become a disruptive Policy Advocacy platform. The content on our platform is posted by C-suite executives around the globe hence it’s unparalleled content. It’s not something that is browsed or downloaded from the free world of the internet.
@@ -222,7 +227,7 @@ const WhatWeOffer = () => {
 
             {/* <div className="flex flex-wrap gap-4 pt-4 p-4"> */}
 
-              {/* {[
+            {/* {[
                 { label: 'Forums', img: '/fiaks/forum.png' },
                 { label: 'Events', img: '/fiaks/events.png' },
                 { label: 'Networking Platforms', img: '/fiaks/network.png' },

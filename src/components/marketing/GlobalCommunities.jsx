@@ -51,21 +51,21 @@ const GlobalCommunities = () => {
 
   return (
     <section className="py-20 md:py-28 bg-white" data-testid="global-communities-section">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">  
         <div className="text-center mb-12">
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Worldwide Presence
           </p>
-          <span className="text-[#07549c] font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">Our Global</span>{' '}
-  <span className="text-black font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">Communities</span>
-          {/* <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Our Global Communities
-          </h2> */}
+          <div className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <span className="text-[#07549c] ">Our Global</span>{' '}
+            <span className="text-black">Communities</span>
+          </div> 
           <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Connecting fintech professionals across major financial hubs worldwide
           </p>
         </div>
+
         {/* City list */}
         {/* <div className="mt-12 flex flex-wrap justify-center gap-3">
           {fintechCities.map((city) => (
