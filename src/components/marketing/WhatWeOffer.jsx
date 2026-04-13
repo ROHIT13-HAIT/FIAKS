@@ -128,23 +128,23 @@ import { useEffect } from "react";
 import "swiper/css";
 
 const pills = [
-  { title: "FIAKS Focused Aclivity Program of Knowledge Sharing", link: "#", img: "/fiaks/forum.png" },
-  { title: "FIAKS Policy Advocacy Bespoke Discussion Forum", link: "#", img: "/fiaks/forum.png" },
-  { title: "FLC & Awards", link: "#", img: "/fiaks/events.png" },
-  { title: "FIAKS Premier League (FPL)", link: "#", img: "/fiaks/events.png" },
-  { title: "FIAKS MOTES", link: "#", img: "/fiaks/events.png" },
-  { title: "FIAKS ZERO HOUR", link: "#", img: "/fiaks/events.png" },
-  { title: "Workshops", link: "#", img: "/fiaks/events.png" },
-  { title: "FIAKS TORAN", link: "#", img: "/fiaks/network.png" },
-  { title: "FIAKS Executive Search", link: "#", img: "/fiaks/network.png" },
-  { title: "FIAKS Digital शिक्षासार अभियान", link: "#", img: "/fiaks/social.png" },
-  { title: "FIAKS Global Meets Local", link: "#", img: "/fiaks/social.png" },
-  { title: "Corporate Social Responsibility", link: "#", img: "/fiaks/social.png" },
-  { title: "FIAKS e-Bulletin", link: "#", img: "/fiaks/Knowledge.png" },
-  { title: "FIAKS Writ", link: "#", img: "/fiaks/Knowledge.png" },
+  { title: "FIAKS Focused Aclivity Program of Knowledge Sharing", link: "#", img: "/fiaks/Forums.png" },
+  { title: "FIAKS Policy Advocacy Bespoke Discussion Forum", link: "#", img: "/fiaks/policy-advocacy.png" },
+  { title: "FLC & Awards", link: "#", img: "/fiaks/FLC-Awards.png" },
+  { title: "FIAKS Premier League (FPL)", link: "#", img: "/fiaks/Premier-League.png" },
+  { title: "FIAKS MOTES", link: "#", img: "/fiaks/MOTES.png" },
+  { title: "FIAKS ZERO HOUR", link: "#", img: "/fiaks/ZERO-HOUR.png" },
+  { title: "Workshops", link: "#", img: "/fiaks/Workshops.png" },
+  { title: "FIAKS TORAN", link: "#", img: "/fiaks/toran.png" },
+  { title: "FIAKS Executive Search", link: "#", img: "/fiaks/Executive-Search.png" },
+  { title: "FIAKS Digital शिक्षासार अभियान", link: "#", img: "/fiaks/digital-literacy.png" },
+  { title: "FIAKS Global Meets Local", link: "#", img: "/fiaks/globe.png" },
+  { title: "Corporate Social Responsibility", link: "#", img: "/fiaks/csr.png" },
+  { title: "FIAKS e-Bulletin", link: "#", img: "/fiaks/e-bulletin.png" },
+  { title: "FIAKS Writ", link: "#", img: "/fiaks/writ.png" },
   { title: "FIAKS Bespoke", link: "#", img: "/fiaks/Knowledge.png" },
-  { title: "FIAKS Daily", link: "#", img: "/fiaks/Knowledge.png" },
-  { title: "FIAKS Compendium", link: "#", img: "/fiaks/Knowledge.png" },
+  { title: "FIAKS Daily", link: "#", img: "/fiaks/daily.png" },
+  { title: "FIAKS Compendium", link: "#", img: "/fiaks/compendium.png" },
 ];
 
 const WhatWeOffer = () => {
@@ -183,15 +183,18 @@ const WhatWeOffer = () => {
               Our Services
             </p>
 
-            <h2 className="animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">
+            {/* <h2 className="animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">
               What We Offer
-            </h2>
+            </h2> */}
+            <span className="text-[#07549c] animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">What We</span>{' '}
+            <span className="text-black animate slide-right delay-2 text-4xl md:text-5xl font-bold mb-6">Offer</span>
 
-            <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed">
+
+            <p className="animate slide-left delay-3 text-slate-700 text-lg leading-relaxed mt-2">
               FIAKS is a disruptive learning & development initiative based on the concept of sharing economy. Because of the high content quality, it has created a broad consensus amongst top leaders on several matters concerning the industry whereby it has also become a disruptive Policy Advocacy platform. The content on our platform is posted by C-suite executives around the globe hence it’s unparalleled content. It’s not something that is browsed or downloaded from the free world of the internet.
             </p>
 
-            <p className="animate slide-right delay-4 text-slate-700 text-lg leading-relaxed">
+            <p className="animate slide-right delay-4 text-slate-700 text-lg leading-relaxed mb-4">
               In the disruptive world, leaders are required to constantly remain updated with what’s happening in the industry and chalk out the growth strategy for the organization. Also, leaders have limited time to consume the content. Hence right knowledge at the right time in a capsule that can be consumed in less than half an hour is critical. With FIAKS, there is no lagging behind on what’s latest happening internationally, domestically, on the regulatory front, what’s brewing in tech, industry reports, important audio, trending BFSI-related videos and much more.
             </p>
 
@@ -217,9 +220,9 @@ const WhatWeOffer = () => {
               </div>
             </div> */}
 
-            <div className="flex flex-wrap gap-4 pt-4 p-4" style={{ backgroundColor: "#07549c", borderRadius: "10px"}}>
+            {/* <div className="flex flex-wrap gap-4 pt-4 p-4"> */}
 
-              {[
+              {/* {[
                 { label: 'Forums', img: '/fiaks/forum.png' },
                 { label: 'Events', img: '/fiaks/events.png' },
                 { label: 'Networking Platforms', img: '/fiaks/network.png' },
@@ -234,7 +237,7 @@ const WhatWeOffer = () => {
       delay-${index + 1}`}
                 >
 
-                  {/* Image instead of icon */}
+                 
                   <img
                     src={item.img}
                     alt={item.label}
@@ -248,7 +251,7 @@ const WhatWeOffer = () => {
               ))}
 
             </div>
-            <br></br>
+            <br></br> */}
             <button className="animate slide-up delay-5 bg-black text-white px-8 py-3 rounded-full hover:scale-105 transition">
               Learn More
             </button>

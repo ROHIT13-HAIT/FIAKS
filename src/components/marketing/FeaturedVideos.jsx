@@ -158,7 +158,7 @@ const FeaturedVideos = () => {
 
 
 
-  const itemsPerView = 3;
+  const itemsPerView = 4;
 
   const nextSlide = () => {
     if (currentIndex < videos.length - itemsPerView) {
@@ -181,9 +181,10 @@ const FeaturedVideos = () => {
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Featured Content
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Featured Videos
-          </h2>
+          <span className="text-[#07549c] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Featured</span>{' '}
+  <span className="text-black text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Videos</span>
+          
+          
           <div className="w-16 h-1 bg-[#07549c] mx-auto" />
         </div>
 
@@ -201,7 +202,7 @@ const FeaturedVideos = () => {
                 const videoId = getVideoId(video.iframe);
 
                 return (
-                  <div className="w-full md:w-1/2 lg:w-1/3 px-3 flex-shrink-0">
+                  <div className="w-full md:w-1/2 lg:w-1/4 px-3 flex-shrink-0">
                     <div
                       className="group relative bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100 h-full transition-transform duration-300 hover:scale-105"
                       onMouseEnter={() => setHoveredVideo(video.iframe)}
