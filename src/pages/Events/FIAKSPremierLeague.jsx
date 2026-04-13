@@ -8,7 +8,7 @@ import { Calendar, MapPin, Users, ArrowRight, Clock, Filter } from 'lucide-react
 import { Globe, BarChart3 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 
-import banner from '../../../src/images/flc-banner-1.png'
+import banner from '../../../src/images/banners/fiaks-premier-league.jpg'
 import team1 from '../../../src/images/team1.png'
 import team2 from '../../../src/images/team2.png'
 import team3 from '../../../src/images/team3.png'
@@ -44,7 +44,7 @@ const events = [
     featured: true,
     status: 'upcoming',
   },
-   
+
 ];
 
 const eventTypes = [
@@ -57,9 +57,9 @@ const eventTypes = [
 const videos = [
   {
     id: 'O6rYV8ZNtOQ',
-    title: 'Season 1', 
+    title: 'Season 1',
     thumbnail: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80',
-  }, 
+  },
 ];
 
 const FIAKSPremierLeague = () => {
@@ -76,11 +76,21 @@ const FIAKSPremierLeague = () => {
     <div className="min-h-screen bg-white" data-testid="events-page">
       <Header forceDark={true} />
 
-      {/* Hero Section */}
-
-      <section className="" style={{ marginTop: '80px' }}>
-        <img src={banner} className='img-fluid' alt='' style={{ width: '100%' }} />
+      {/* Hero Section */} 
+      <section className="relative" style={{ marginTop: '80px' }}>
+        <img src={banner} className='img-fluid' alt='' style={{ width: '100%', height: '600px', objectFit: 'cover' }} />
+        <div className="">
+          <div className='container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl absolute inset-0 flex flex-col items-start justify-center p-4'>
+            <h1 className="font-['Outfit'] text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6">
+              FIAKS Premier League (FPL)
+            </h1>
+            <p className="text-white text-lg max-w-2xl">
+              Join industry leaders at our exclusive events, conferences, and workshops designed for BFSI professionals.
+            </p>
+            <button class="animate slide-up delay-5 bg-white text-black px-8 py-3 mt-6 rounded-full hover:scale-105 transition show">Learn More</button>
+          </div></div>
       </section>
+
       {/* <section className="pt-32 pb-16 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-3xl">
@@ -164,45 +174,45 @@ const FIAKSPremierLeague = () => {
             <div className="grid md:grid-cols-1 lg:grid-cols-2  gap-8">
               <div className=' '>
                 <div className="sm:flex items-center offering-card bg-white rounded-xl shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                  <img src={team1} className='rounded-xl' alt='' style={{width:'200px'}} />
+                  <img src={team1} className='rounded-xl' alt='' style={{ width: '200px' }} />
                   <div className='p-5'>
                     <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
-                    API Avengers
-                  </h3>
-                  <p className='text-slate-700 text-md leading-relaxed'>This team will be sending balls to the boundaries, like requests to servers, All they ask of you is to not be astonished by their brilliance!</p>
+                      API Avengers
+                    </h3>
+                    <p className='text-slate-700 text-md leading-relaxed'>This team will be sending balls to the boundaries, like requests to servers, All they ask of you is to not be astonished by their brilliance!</p>
                   </div>
                 </div>
               </div>
               <div className=' '>
                 <div className="sm:flex items-center offering-card bg-white rounded-xl shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                  <img src={team2} className='rounded-xl' alt='' style={{width:'200px'}} />
+                  <img src={team2} className='rounded-xl' alt='' style={{ width: '200px' }} />
                   <div className='p-5'>
                     <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
-                    Blockchain Blasters
-                  </h3>
-                  <p className='text-slate-700 text-md leading-relaxed'>With tremendous capacity that propelling their momentum, They are here to blast off the score boards!</p>
+                      Blockchain Blasters
+                    </h3>
+                    <p className='text-slate-700 text-md leading-relaxed'>With tremendous capacity that propelling their momentum, They are here to blast off the score boards!</p>
                   </div>
                 </div>
               </div>
               <div className=' '>
                 <div className="sm:flex items-center offering-card bg-white rounded-xl shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                  <img src={team3} className='rounded-xl' alt='' style={{width:'200px'}} />
+                  <img src={team3} className='rounded-xl' alt='' style={{ width: '200px' }} />
                   <div className='p-5'>
                     <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
-                    DEFI Daredevils
-                  </h3>
-                  <p className='text-slate-700 text-md leading-relaxed'>Secure, stable and widely in demand</p>
+                      DEFI Daredevils
+                    </h3>
+                    <p className='text-slate-700 text-md leading-relaxed'>Secure, stable and widely in demand</p>
                   </div>
                 </div>
               </div>
               <div className=' '>
                 <div className="sm:flex items-center offering-card bg-white rounded-xl shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                  <img src={team4} className='rounded-xl' alt='' style={{width:'200px'}} />
+                  <img src={team4} className='rounded-xl' alt='' style={{ width: '200px' }} />
                   <div className=' p-5'>
                     <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
-                    Crypto Super Kings
-                  </h3>
-                  <p className='text-slate-700 text-md leading-relaxed'>This team has it all Decentralized talent, volatility and popularity!</p>
+                      Crypto Super Kings
+                    </h3>
+                    <p className='text-slate-700 text-md leading-relaxed'>This team has it all Decentralized talent, volatility and popularity!</p>
                   </div>
                 </div>
               </div>
@@ -216,14 +226,14 @@ const FIAKSPremierLeague = () => {
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
           <h2 className="font-['Outfit'] text-2xl font-bold text-slate-900 mb-8">Highlights Of FPL Seasons</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {videos.map((video) => (
-            <div
-              key={video.id}
-              className="video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100"
-              data-testid={`video-card-${video.id}`}
-            >
-              <div className="relative aspect-video">
-                {/* {activeVideo === video.id ? ( */}
+            {videos.map((video) => (
+              <div
+                key={video.id}
+                className="video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100"
+                data-testid={`video-card-${video.id}`}
+              >
+                <div className="relative aspect-video">
+                  {/* {activeVideo === video.id ? ( */}
                   <iframe
                     src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
                     title={video.title}
@@ -231,7 +241,7 @@ const FIAKSPremierLeague = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
-                {/* ) : ( */}
+                  {/* ) : ( */}
                   <>
                     {/* <img
                       src={video.thumbnail}
@@ -248,17 +258,17 @@ const FIAKSPremierLeague = () => {
                       </button>
                     </div> */}
                   </>
-                {/* )} */}
+                  {/* )} */}
+                </div>
+                <div className="p-5">
+                  <h3 className="font-['Outfit'] text-xl font-semibold text-slate-900 mb-2">
+                    {video.title}
+                  </h3>
+                  <p className="text-slate-600">{video.description}</p>
+                </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-['Outfit'] text-xl font-semibold text-slate-900 mb-2">
-                  {video.title}
-                </h3>
-                <p className="text-slate-600">{video.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
       </section>
 
