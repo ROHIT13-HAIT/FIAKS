@@ -27,12 +27,12 @@ import AcclivityProgram from './pages/Forums/AcclivityProgram';
 import CSRPage from './pages/SocialImpact/CSRPage';
 
 
-import Login from './pages/Login';
-import Partners from './pages/Partners';
-import Testimonials from './pages/Testimonials'; 
-import TermsAndConditions from './pages/TermsAndConditions';
-import PrivacyPolicy from './pages/PrivacyPolicy'; 
-import Disclaimer from './pages/Disclaimer';
+// import Login from './pages/Login';
+// import Partners from './pages/Partners';
+// import Testimonials from './pages/Testimonials'; 
+// import TermsAndConditions from './pages/TermsAndConditions';
+// import PrivacyPolicy from './pages/PrivacyPolicy'; 
+// import Disclaimer from './pages/Disclaimer';
 
 const App = () => {
   return (
@@ -40,7 +40,7 @@ const App = () => {
       <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
+          {/* <Route path="/login" element={<LoginPage />} /> */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/who-we-are" element={<WhoWeAre />} />
           <Route path="/contact" element={<ContactPage />} />
@@ -63,12 +63,12 @@ const App = () => {
           <Route path="/toran" element={<ToranPage />} />
 
 
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/disclaimer" element={<Disclaimer />} /> */}
         </Routes>
       </HashRouter>
       <Toaster position="top-right" />
