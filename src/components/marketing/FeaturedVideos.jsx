@@ -174,18 +174,17 @@ const FeaturedVideos = () => {
 
   return (
     <section className="py-20 md:py-28 bg-white">
-      <div className="container mx-auto px-4 max-w-7xl">
-
-        {/* Header */}
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 max-w-7xl"> 
+        {/* Header */}  
+        <div className="text-center mb-12">
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Featured Content
           </p>
-          <span className="text-[#07549c] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Featured</span>{' '}
-  <span className="text-black text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Videos</span>
-          
-          
-          <div className="w-16 h-1 bg-[#07549c] mx-auto" />
+          <div className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <span className="text-[#07549c]">Featured</span>{' '}
+            <span className="text-black">Videos</span>
+          </div> 
+          <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" /> 
         </div>
 
         {/* Slider */}
