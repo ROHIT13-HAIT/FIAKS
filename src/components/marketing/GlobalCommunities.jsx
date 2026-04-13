@@ -56,9 +56,11 @@ const GlobalCommunities = () => {
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Worldwide Presence
           </p>
-          <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          <span className="text-[#07549c] font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">Our Global</span>{' '}
+  <span className="text-black font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">Communities</span>
+          {/* <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             Our Global Communities
-          </h2>
+          </h2> */}
           <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Connecting fintech professionals across major financial hubs worldwide

@@ -174,10 +174,10 @@ const StatsCounter = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         
         <div className="text-center mb-16">
-          <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Our Growing Community
-          </h2>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+          <span className="text-[#07549c] font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Our Growing</span>{' '}
+  <span className="text-black font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">Community</span>
+          
+          <p className=" text-lg max-w-2xl mx-auto text-[#07549c] mt-3">
             Join thousands of industry leaders shaping the future of BFSI
           </p>
         </div>

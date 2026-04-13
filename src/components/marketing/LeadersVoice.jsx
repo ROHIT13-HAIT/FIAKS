@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Play, Quote } from 'lucide-react';
+import { Play, Quote } from 'lucide-react';
 
 const leaderVideos = [
   {
@@ -39,128 +39,87 @@ const getVideoId = (url) => {
 };
 
 const LeadersVoice = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  // const [playingVideo, setPlayingVideo] = useState(null);
   const [hoveredVideo, setHoveredVideo] = useState(null);
 
-
-  const itemsPerView = 3;
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev + 1 >= leaderVideos.length - itemsPerView + 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev - 1 < 0 ? leaderVideos.length - itemsPerView : prev - 1
-    );
-  };
-
   return (
-    <section className="py-20 md:py-28 bg-white" id="leaders-voice" data-testid="leaders-voice-section">
+    <section className="py-20 md:py-28 bg-white" id="leaders-voice">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+
+        {/* HEADER */}
         <div className="text-center mb-16">
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Testimonials
           </p>
-          <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Leaders Voice
-          </h2>
+
+          <span className="text-[#07549c] font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Leaders
+          </span>{' '}
+          <span className="text-black font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Voice
+          </span>
+
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Hear what industry leaders have to say about us
           </p>
+
           <div className="w-16 h-1 bg-[#07549c] mx-auto mt-4" />
         </div>
 
-        <div className="relative">
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-            data-testid="leaders-prev-btn"
-          >
-            <ChevronLeft className="w-6 h-6 text-slate-700" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-            data-testid="leaders-next-btn"
-          >
-            <ChevronRight className="w-6 h-6 text-slate-700" />
-          </button>
+        {/* GRID (NO SLIDER NOW) */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {/* Slider */}
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out gap-6"
-              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView + 2)}%)` }}
-            >
-              {leaderVideos.map((leader, index) => {
-                const videoId = getVideoId(leader.url);
+          {leaderVideos.map((leader, index) => {
+            const videoId = getVideoId(leader.url);
 
-                return (
+            return (
+              <div key={index}>
+                <div className="leader-video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100">
+
+                  {/* VIDEO THUMB */}
                   <div
-                    key={index}
-                    className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                    className="relative aspect-video cursor-pointer"
+                    onMouseEnter={() => setHoveredVideo(leader.url)}
+                    onMouseLeave={() => setHoveredVideo(null)}
                   >
-                    <div className="leader-video-card bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100">
+                    <img
+                      src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                      alt={leader.name}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    />
 
-                      {/* Video/Image */}
-                      {/* <div className="relative aspect-video"> */}
-
-                      <div
-                        className="relative aspect-video cursor-pointer"
-                        onMouseEnter={() => setHoveredVideo(leader.url)}
-                        onMouseLeave={() => setHoveredVideo(null)}
-                      >
-                        <img
-                          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
-                          alt={leader.name}
-                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                        />
-
-                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                                                  <button
-                                                    // onClick={() => setModalVideo(video.iframe)}
-                                                    className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110"
-                                                  >
-                                                    <Play className="w-6 h-6 text-white ml-1" fill="white" />
-                                                  </button>
-                                                </div>
-                      </div>
-                      {/* </div> */}
-
-                      {/* Content */}
-                      <div className="p-6">
-                        <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
-                        <p className="text-slate-600 italic mb-4">{leader.quote}</p>
-                        {/* <div className="border-t pt-4">
-                          <h4 className="font-['Outfit'] font-semibold text-slate-900">
-                            {leader.name}
-                          </h4>
-                          <p className="text-sm text-slate-500">{leader.title}</p>
-                        </div> */}
-                      </div>
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                      <button className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110">
+                        <Play className="w-6 h-6 text-white ml-1" fill="white" />
+                      </button>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
+
+                  {/* CONTENT */}
+                  <div className="p-6">
+                    <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
+                    <p className="text-slate-600 italic mb-4">
+                      {leader.quote}
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            );
+          })}
+
         </div>
       </div>
+
+      {/* HOVER VIDEO MODAL (UNCHANGED) */}
       {hoveredVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
 
           <div
-            className="relative w-[80%] max-w-4xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl animate-[zoomIn_0.25s_ease]"
+            className="relative w-[80%] max-w-2xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl animate-[zoomIn_0.25s_ease]"
             onMouseEnter={() => setHoveredVideo(hoveredVideo)}
             onMouseLeave={() => setHoveredVideo(null)}
             style={{ pointerEvents: "auto" }}
           >
-            {/* Close */}
             <button
               className="absolute top-3 right-3 z-10 bg-white/20 hover:bg-white/40 text-white rounded-full p-2"
               onClick={() => setHoveredVideo(null)}
@@ -168,7 +127,6 @@ const LeadersVoice = () => {
               ✕
             </button>
 
-            {/* Video */}
             <iframe
               src={`https://www.youtube.com/embed/${getVideoId(hoveredVideo)}?autoplay=1&mute=1`}
               title="Video"
@@ -180,7 +138,6 @@ const LeadersVoice = () => {
 
         </div>
       )}
-
     </section>
   );
 };

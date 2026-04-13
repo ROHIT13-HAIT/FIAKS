@@ -102,9 +102,12 @@ const PartnersSlider = () => {
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Trusted By
           </p>
-          <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+
+          <span className="text-[#07549c] font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">Our</span>{' '}
+  <span className="text-black font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">Partners</span>
+          {/* <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             Our Partners
-          </h2>
+          </h2> */}
           <div className="w-16 h-1 bg-[#07549c] mx-auto" />
         </div>
       </div>
