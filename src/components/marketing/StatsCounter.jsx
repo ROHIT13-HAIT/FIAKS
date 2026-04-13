@@ -171,14 +171,18 @@ const StatsCounter = () => {
       ref={sectionRef}
       className="stats-section py-20 md:py-28"
     >
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-        
-        <div className="text-center mb-16">
-          <span className="text-[#07549c] font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Our Growing</span>{' '}
-  <span className="text-black font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">Community</span>
-          
-          <p className=" text-lg max-w-2xl mx-auto text-[#07549c] mt-3">
-            Join thousands of industry leaders shaping the future of BFSI
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">  
+        <div className="text-center mb-12">
+          <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
+            Worldwide Presence
+          </p>
+          <div className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <span className="text-[#07549c] ">Our Growing</span>{' '}
+            <span className="text-black">Community</span>
+          </div> 
+          <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+             Join thousands of industry leaders shaping the future of BFSI
           </p>
         </div>
 

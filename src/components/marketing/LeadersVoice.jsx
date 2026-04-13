@@ -43,26 +43,20 @@ const LeadersVoice = () => {
 
   return (
     <section className="py-20 md:py-28 bg-white" id="leaders-voice">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-
-        {/* HEADER */}
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl"> 
+        {/* HEADER */} 
+        <div className="text-center mb-12">
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
-            Testimonials
+          Testimonials
           </p>
-
-          <span className="text-[#07549c] font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Leaders
-          </span>{' '}
-          <span className="text-black font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Voice
-          </span>
-
+          <div className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <span className="text-[#07549c] ">Leaders</span>{' '}
+            <span className="text-black">Voice</span>
+          </div> 
+          <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Hear what industry leaders have to say about us
           </p>
-
-          <div className="w-16 h-1 bg-[#07549c] mx-auto mt-4" />
         </div>
 
         {/* GRID (NO SLIDER NOW) */}
