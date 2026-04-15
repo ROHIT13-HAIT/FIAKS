@@ -153,7 +153,9 @@ const Header = ({ forceDark = false }) => {
                               <span className="text-xs mt-1">▶</span>FIAKS Digital शिक्षासार अभियान</li>
                             <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
-                              <span className="text-xs mt-1">▶</span>FIAKS Global Meets Local</li>
+          
+                               <Link to="/socialimpact/global-meets-local"><span className="text-xs mt-1">▶</span>FIAKS Global Meets Local</Link>
+                               </li>
                             <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
                               <Link to="/socialimpact/csr"><span className="text-xs mt-1">▶</span>Corporate Social Responsibility</Link>
@@ -167,7 +169,8 @@ const Header = ({ forceDark = false }) => {
                           <ul className="space-y-2 text-sm">
                             <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
-                              <span className="text-xs mt-1">▶</span>FIAKS e-Bulletin</li>
+    <Link to="/knowledgecenter/e-bulletin"><span className="text-xs mt-1">▶</span>FIAKS e-Bulletin</Link>
+                             </li>
                             <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
                               <span className="text-xs mt-1">▶</span>FIAKS Writ</li>

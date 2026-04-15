@@ -650,7 +650,7 @@ const ContactPage = () => {
         <div className="rounded-2xl overflow-hidden shadow-xl h-[300px] md:h-[350px]">
 
           <iframe
-            src="https://maps.google.com/maps?q=18.9332,72.82512&z=15&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4636.988591193084!2d72.8576840259378!3d19.174520648870814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a6318c9b07%3A0xf8d5ea759c5c8669!2sKC%20Knowledge%20Centre!5e1!3m2!1sen!2sin!4v1776257344920!5m2!1sen!2sin"
             className="w-full h-full block"
             style={{ border: 0 }}
             loading="lazy"

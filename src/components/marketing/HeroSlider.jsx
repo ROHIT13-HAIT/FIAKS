@@ -66,7 +66,7 @@
 //     <div className="relative z-20 h-full flex items-center">
 //       <div className="container mx-auto px-4 max-w-7xl">
 //         <div className="max-w-4xl">
-          
+
 //           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 //             India's Most Trusted & Inclusive Knowledge Sharing Community of BFSI Industry Experts
 //           </h1>
@@ -119,16 +119,16 @@ const taglines = [
 ];
 
 const HeroSlider = () => {
-//   const [currentSlide, setCurrentSlide] = useState(0);
+  //   const [currentSlide, setCurrentSlide] = useState(0);
   const [tagIndex, setTagIndex] = useState(0);
 
   // Background slider
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       setCurrentSlide((prev) => (prev + 1) % slides.length);
-//     }, 6000);
-//     return () => clearInterval(timer);
-//   }, []);
+  //   useEffect(() => {
+  //     const timer = setInterval(() => {
+  //       setCurrentSlide((prev) => (prev + 1) % slides.length);
+  //     }, 6000);
+  //     return () => clearInterval(timer);
+  //   }, []);
 
   // Tagline rotation
   useEffect(() => {
@@ -211,75 +211,75 @@ const HeroSlider = () => {
 
   //   </section>
   // );
-return (
-  <section className="hero-container relative h-screen min-h-[600px] overflow-hidden">
+  return (
+    <section className="hero-container relative h-screen min-h-[600px] overflow-hidden">
 
-    {/* 🎥 BACKGROUND VIDEO */}
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover"
-    >
-      <source src="/fiaks/testimonial_final.mp4" type="video/mp4" />
-    </video>
+      {/* 🎥 BACKGROUND VIDEO */}
+      <video
+        autoPlay
+        // muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/fiaks/testimonial_final.mp4" type="video/mp4" />
+      </video>
 
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-black/50" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
 
-    {/* Content */}
-    <div className="relative z-20 h-full flex items-center">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="max-w-4xl">
+      {/* Content */}
+      <div className="relative z-20 h-full flex items-center">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="max-w-4xl">
 
-          {/* 🔥 ANIMATED TEXT */}
-          <div className="h-[250px] flex items-center overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.h1
-                key={tagIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-                className="text-5xl md:text-7xl font-bold text-white leading-tight"
-              >
-                {taglines[tagIndex].split(" ").map((word, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: i * 0.06,
-                      duration: 0.5,
-                      ease: "easeOut",
-                    }}
-                    className="inline-block mr-2"
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-              </motion.h1>
-            </AnimatePresence>
+            {/* 🔥 ANIMATED TEXT */}
+            <div className="h-[250px] flex items-center overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.h1
+                  key={tagIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="text-5xl md:text-7xl font-bold text-white leading-tight"
+                >
+                  {taglines[tagIndex].split(" ").map((word, i) => (
+                    <motion.span
+                      key={i}
+                      initial={{ opacity: 0, x: -30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        delay: i * 0.06,
+                        duration: 0.5,
+                        ease: "easeOut",
+                      }}
+                      className="inline-block mr-2"
+                    >
+                      {word}
+                    </motion.span>
+                  ))}
+                </motion.h1>
+              </AnimatePresence>
+            </div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <Button className="mt-6 bg-[#07549c] hover:bg-[#054178] text-white px-8 py-6 text-lg rounded-lg shadow-lg hover:scale-105 transition-all">
+                BECOME A MEMBER
+              </Button>
+            </motion.div>
+
           </div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <Button className="mt-6 bg-[#07549c] hover:bg-[#054178] text-white px-8 py-6 text-lg rounded-lg shadow-lg hover:scale-105 transition-all">
-              BECOME A MEMBER
-            </Button>
-          </motion.div>
-
         </div>
       </div>
-    </div>
 
-  </section>
-);
+    </section>
+  );
 };
 
 export default HeroSlider;
