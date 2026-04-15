@@ -18,44 +18,7 @@ import RoundtableImg4 from '../../../src/images/4-1.png'
 
 import { ChevronLeft, ChevronRight, Play, Quote } from 'lucide-react';
 
-
-const events = [
-    {
-        id: 1,
-        slug: 'global-fintech-summit-2025',
-        title: 'Season 1',
-        description: 'The premier gathering of BFSI leaders, innovators, and regulators shaping the future of financial services.',
-        date: 'April 15-17, 2025',
-        location: 'Taj Palace, New Delhi',
-        attendees: '1200+',
-        type: '1st Edition',
-        image: '../fiaks/src/images/ffllcc.png',
-        featured: true,
-        status: 'upcoming',
-    },
-    {
-        id: 2,
-        slug: 'regtech-innovation-workshop',
-        title: 'Season 2',
-        description: 'Hands-on workshop exploring cutting-edge regulatory technology solutions for compliance challenges.',
-        date: 'March 28, 2023',
-        location: 'Mumbai Marriott',
-        attendees: '150',
-        type: '2nd Edition',
-        image: '../fiaks/src/images/ffllcc.png',
-        featured: true,
-        status: 'upcoming',
-    },
-
-];
-
-const eventTypes = [
-    { id: 'conference', name: '2026' },
-    { id: '6th Edition', name: '2025' },
-    { id: '5th Edition', name: '2024' },
-    { id: '4th Edition', name: '2023' },
-];
-
+ 
 const startupVideos = [
     {
         id: 'WhZZK8nNDBU',
@@ -74,175 +37,139 @@ const startupVideos = [
     }
 ];
 
-const roundTableVideos1 = [
+const videos1 = [
     {
-        id: 'Z3RWmAgD94Y',
-        name: 'Rajesh Sharma',
-        title: 'CEO, National Banking Corp',
-        thumbnail: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-        quote: 'Fintech Forum has been instrumental in shaping our digital transformation journey.',
+        iframe: 'Z3RWmAgD94Y', 
+        title: '', 
     },
     {
-        id: '3aZcCNHGqEE',
-        name: 'Priya Mehta',
-        title: 'MD, Global Fintech Solutions',
-        thumbnail: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-        quote: 'The networking opportunities here are unmatched in the industry.',
+        iframe: '3aZcCNHGqEE', 
+        title: '', 
     },
     {
-        id: 'jYoboOwLbnc',
-        name: 'Amit Verma',
-        title: 'CTO, DigiPay Technologies',
-        thumbnail: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-        quote: 'A platform that truly understands the pulse of financial innovation.',
+        iframe: 'jYoboOwLbnc',
+        title: '',
     },
     {
-        id: '9rKXwaqT-bY',
-        name: 'Dr. Sunita Rao',
-        title: 'Chairperson, Banking Regulatory Authority',
-        thumbnail: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
-        quote: 'Excellent forum for policy discussions and industry alignment.',
+        iframe: '9rKXwaqT-bY',
+        title: '',
     },
 ];
-const roundTableVideos2 = [
+const videos2 = [
     {
-        id: 'TY072euui9s',
-        name: 'Rajesh Sharma',
-        title: 'CEO, National Banking Corp',
-        thumbnail: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-        quote: 'Fintech Forum has been instrumental in shaping our digital transformation journey.',
+        iframe: 'TY072euui9s', 
+        title: '', 
     },
     {
-        id: '8tCsihW2nS4',
-        name: 'Priya Mehta',
-        title: 'MD, Global Fintech Solutions',
-        thumbnail: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-        quote: 'The networking opportunities here are unmatched in the industry.',
+        iframe: '8tCsihW2nS4',
+        title: '',
     },
     {
-        id: 'u_TN2Z0Fk2Y',
-        name: 'Amit Verma',
-        title: 'CTO, DigiPay Technologies',
-        thumbnail: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-        quote: 'A platform that truly understands the pulse of financial innovation.',
+        iframe: 'u_TN2Z0Fk2Y',
+        title: '',
     },
     {
-        id: 'U7gTCuVn1OM',
-        name: 'Dr. Sunita Rao',
-        title: 'Chairperson, Banking Regulatory Authority',
-        thumbnail: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
-        quote: 'Excellent forum for policy discussions and industry alignment.',
+        iframe: 'U7gTCuVn1OM',
+        title: '',
     }
 ];
-const roundTableVideos3 = [
+const videos3 = [
     {
-        id: '341B8HPnzb4',
-        name: 'Rajesh Sharma',
-        title: 'CEO, National Banking Corp',
-        thumbnail: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-        quote: 'Fintech Forum has been instrumental in shaping our digital transformation journey.',
+        iframe: '341B8HPnzb4', 
+        title: '', 
     },
     {
-        id: 'GETOLmR6sd8',
-        name: 'Priya Mehta',
-        title: 'MD, Global Fintech Solutions',
-        thumbnail: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-        quote: 'The networking opportunities here are unmatched in the industry.',
+        iframe: 'GETOLmR6sd8',
+        title: '', 
     },
     {
-        id: 'msTpRfRlvII',
-        name: 'Amit Verma',
-        title: 'CTO, DigiPay Technologies',
-        thumbnail: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-        quote: 'A platform that truly understands the pulse of financial innovation.',
+        iframe: 'msTpRfRlvII',
+        title: '', 
     },
     {
-        id: 'b4OLY75rpfA',
-        name: 'Dr. Sunita Rao',
-        title: 'Chairperson, Banking Regulatory Authority',
-        thumbnail: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
-        quote: 'Excellent forum for policy discussions and industry alignment.',
+        iframe: 'b4OLY75rpfA',
+        title: '', 
     },
 ];
-const roundTableVideos4 = [
+const videos4 = [
     {
         id: 'K_YRJbS3mvA',
-        name: 'Rajesh Sharma',
-        title: 'CEO, National Banking Corp',
-        thumbnail: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-        quote: 'Fintech Forum has been instrumental in shaping our digital transformation journey.',
+        title: '', 
     }
-];
-const videos = [
-    {
-        iframe: "https://youtu.be/0koXRO-rkCk",
-        title: "UPI at Galleries Lafayette",
-    },
-    {
-        iframe: "https://youtu.be/WPPzSBOiwno",
-        title: "UPI at Eifel towers",
-    },
-    {
-        iframe: "https://youtu.be/SUvjxw_pybs",
-        title:
-            "Women international Day",
-    },
-    {
-        iframe: "https://youtu.be/Z78ff1eZRYE",
-        title: "FIAKS Awards",
-    },
-    {
-        iframe: "https://youtu.be/SjBUzkym9uI",
-        title: "FIAKS Digital शिक्षाप्रसार अभियान",
-    },
-    {
-        iframe: "https://youtu.be/w9_-3FvtYok",
-        title:
-            "Nationwide Training",
-    },
-    {
-        iframe: "https://youtu.be/i_9Imt3tj2Q",
-        title:
-            "FIAKS Maven",
-    },
-    {
-        iframe: "https://youtu.be/nbiy8yPQHug",
-        title:
-            "AIFPF",
-    },
-    {
-        iframe: "https://youtu.be/gf7QeRPDijQ",
-        title:
-            "FLC2025",
-    },
-
-];
+]; 
 
 const FIAKSMotes = () => {
+    // Separate state for videos1 (first row)
+    const [activeVideo1, setActiveVideo1] = useState(videos1[0]?.iframe || '');
+    const [currentIndex1, setCurrentIndex1] = useState(0);
 
+    // Separate state for videos2 (second row)
+    const [activeVideo2, setActiveVideo2] = useState(videos2[0]?.id || '');
+    const [currentIndex2, setCurrentIndex2] = useState(0);
 
-    const [activeVideo, setActiveVideo] = useState(videos[0].iframe);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    // Separate state for videos2 (third row)
+    const [activeVideo3, setActiveVideo3] = useState(videos3[0]?.id || '');
+    const [currentIndex3, setCurrentIndex3] = useState(0);
+
+    // Separate state for videos2 (fourth row)
+    const [activeVideo4, setActiveVideo4] = useState(videos4[0]?.id || '');
+    const [currentIndex4, setCurrentIndex4] = useState(0);
 
     const itemsPerView = 4;
 
-    const nextSlide = () => {
-        if (currentIndex < videos.length - itemsPerView) {
-            setCurrentIndex((prev) => prev + 1);
+    // Navigation for first row
+    const nextSlide1 = () => {
+        if (currentIndex1 < videos1.length - itemsPerView) {
+            setCurrentIndex1((prev) => prev + 1);
+        }
+    };
+    const prevSlide1 = () => {
+        if (currentIndex1 > 0) {
+            setCurrentIndex1((prev) => prev - 1);
         }
     };
 
-    const prevSlide = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex((prev) => prev - 1);
+    // Navigation for second row
+    const nextSlide2 = () => {
+        if (currentIndex2 < videos2.length - itemsPerView) {
+            setCurrentIndex2((prev) => prev + 1);
+        }
+    };
+    const prevSlide2 = () => {
+        if (currentIndex2 > 0) {
+            setCurrentIndex2((prev) => prev - 1);
         }
     };
 
+    // Navigation for third row
+    const nextSlide3 = () => {
+        if (currentIndex3 < videos3.length - itemsPerView) {
+            setCurrentIndex3((prev) => prev + 1);
+        }
+    };
+    const prevSlide3 = () => {
+        if (currentIndex3 > 0) {
+            setCurrentIndex3((prev) => prev - 1);
+        }
+    };
 
+    // Navigation for fourth row
+    const nextSlide4 = () => {
+        if (currentIndex4 < videos4.length - itemsPerView) {
+            setCurrentIndex4((prev) => prev + 1);
+        }
+    };
+    const prevSlide4 = () => {
+        if (currentIndex4 > 0) {
+            setCurrentIndex4((prev) => prev - 1);
+        }
+    };
 
     const getVideoId = (url) => {
+        if (!url) return '';
         if (url.includes("youtu.be")) return url.split("youtu.be/")[1];
-        return url.split("v=")[1];
+        if (url.includes("v=")) return url.split("v=")[1];
+        return url;
     };
 
 
@@ -272,7 +199,7 @@ const FIAKSMotes = () => {
              <div className='py-4'>
                 <img src={bannerLogo} className='img-fluid mx-auto bg-white p-2 rounded-md ' alt='' style={{width:'300px'}}/>
              </div>
-            <section className="py-16 md:py-16" style={{ background:'#f5f5f5'}}>
+            <section className="py-16 md:py-16" style={{ background:'#07549c08'}}>
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
                     <div className="grid gap-12 items-center">
                         {/* Content */}
@@ -358,7 +285,7 @@ const FIAKSMotes = () => {
             </section>
 
             {/* STARTUP SHOWCASING - EDITION 1.0 */}
-            <section className="pb-12 bg-white">
+            <section className="py-12 bg-slate-50">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
                     {/* HEADER */}
                     <div className="text-center mb-16">
@@ -380,7 +307,7 @@ const FIAKSMotes = () => {
                                 <div className="relative aspect-video">
                                     {/* {playingVideo === video.id ? ( */}
                                     <iframe
-                                        src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                                        src={`https://www.youtube.com/embed/${video.id}`}
                                         title={video.title}
                                         className="w-full h-full"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -406,7 +333,7 @@ const FIAKSMotes = () => {
                                     {/* )} */}
                                 </div>
                                 <div className="p-5">
-                                    <p className="text-slate-700 text-md leading-relaxed">
+                                    <p className="text-slate-700 font-semibold text-md leading-relaxed">
                                         {video.title}
                                     </p>
                                 </div>
@@ -417,7 +344,7 @@ const FIAKSMotes = () => {
             </section>
 
             {/* Roundtable Discussions - Edition 1.0 */}
-            <section className="py-12 bg-slate-50">
+            <section className="py-12">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
                     {/* HEADER */}
                     <div className="text-center mb-16">
@@ -435,7 +362,7 @@ const FIAKSMotes = () => {
                         {/* MAIN VIDEO */}
                         <div className="aspect-video rounded-xl overflow-hidden shadow-xl mb-6">
                             <iframe
-                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo)}?autoplay=1`}
+                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo1)}`}
                                 className="w-full h-full"
                                 allow="autoplay; encrypted-media"
                                 allowFullScreen
@@ -447,18 +374,18 @@ const FIAKSMotes = () => {
                                 <div
                                     className="flex gap-4 transition-transform duration-500 ease-in-out"
                                     style={{
-                                        transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
+                                        transform: `translateX(-${(currentIndex1 * 100) / itemsPerView}%)`,
                                     }}
                                 >
-                                    {videos.map((video, index) => {
+                                    {videos1.map((video, index) => {
                                         const videoId = getVideoId(video.iframe);
 
                                         return (
                                             <div
                                                 key={index}
-                                                onClick={() => setActiveVideo(video.iframe)}
+                                                onClick={() => setActiveVideo1(video.iframe)}
                                                 className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
-                                          ${activeVideo === video.iframe
+                                          ${activeVideo1 === video.iframe
                                                         ? "border-[#07549c] scale-105"
                                                         : "border-transparent hover:scale-105"
                                                     }`}
@@ -476,31 +403,31 @@ const FIAKSMotes = () => {
 
                             {/* LEFT BUTTON */}
                             <button
-                                onClick={prevSlide}
+                                onClick={prevSlide1}
                                 className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                disabled={currentIndex === 0}
+                                disabled={currentIndex1 === 0}
                             >
                                 <ChevronLeft className="w-6 h-6 text-slate-700" />
                             </button>
 
                             {/* RIGHT BUTTON */}
                             <button
-                                onClick={nextSlide}
+                                onClick={nextSlide1}
                                 className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                disabled={currentIndex >= videos.length - itemsPerView}
+                                disabled={currentIndex1 >= videos1.length - itemsPerView}
                             >
                                 <ChevronRight className="w-6 h-6 text-slate-700" />
                             </button>
 
                         </div>
-                    </div>
+                    </div> 
 
                     {/* 2nd row */}
                     <div className="container mx-auto px-4 max-w-7xl my-10">
                         {/* MAIN VIDEO */}
                         <div className="aspect-video rounded-xl overflow-hidden shadow-xl mb-6">
                             <iframe
-                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo)}?autoplay=1`}
+                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo2)}`}
                                 className="w-full h-full"
                                 allow="autoplay; encrypted-media"
                                 allowFullScreen
@@ -512,18 +439,18 @@ const FIAKSMotes = () => {
                                 <div
                                     className="flex gap-4 transition-transform duration-500 ease-in-out"
                                     style={{
-                                        transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
+                                        transform: `translateX(-${(currentIndex2 * 100) / itemsPerView}%)`,
                                     }}
                                 >
-                                    {videos.map((video, index) => {
+                                    {videos2.map((video, index) => {
                                         const videoId = getVideoId(video.iframe);
 
                                         return (
                                             <div
                                                 key={index}
-                                                onClick={() => setActiveVideo(video.iframe)}
+                                                onClick={() => setActiveVideo2(video.iframe)}
                                                 className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
-                                          ${activeVideo === video.iframe
+                                          ${activeVideo2 === video.iframe
                                                         ? "border-[#07549c] scale-105"
                                                         : "border-transparent hover:scale-105"
                                                     }`}
@@ -541,31 +468,31 @@ const FIAKSMotes = () => {
 
                             {/* LEFT BUTTON */}
                             <button
-                                onClick={prevSlide}
+                                onClick={prevSlide2}
                                 className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                disabled={currentIndex === 0}
+                                disabled={currentIndex2 === 0}
                             >
                                 <ChevronLeft className="w-6 h-6 text-slate-700" />
                             </button>
 
                             {/* RIGHT BUTTON */}
                             <button
-                                onClick={nextSlide}
+                                onClick={nextSlide2}
                                 className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                disabled={currentIndex >= videos.length - itemsPerView}
+                                disabled={currentIndex2 >= videos2.length - itemsPerView}
                             >
                                 <ChevronRight className="w-6 h-6 text-slate-700" />
                             </button>
 
                         </div>
-                    </div>
+                    </div> 
 
                     {/* 3rd row */}
                     <div className="container mx-auto px-4 max-w-7xl my-10">
                         {/* MAIN VIDEO */}
                         <div className="aspect-video rounded-xl overflow-hidden shadow-xl mb-6">
                             <iframe
-                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo)}?autoplay=1`}
+                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo3)}`}
                                 className="w-full h-full"
                                 allow="autoplay; encrypted-media"
                                 allowFullScreen
@@ -577,18 +504,18 @@ const FIAKSMotes = () => {
                                 <div
                                     className="flex gap-4 transition-transform duration-500 ease-in-out"
                                     style={{
-                                        transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
+                                        transform: `translateX(-${(currentIndex3 * 100) / itemsPerView}%)`,
                                     }}
                                 >
-                                    {videos.map((video, index) => {
+                                    {videos3.map((video, index) => {
                                         const videoId = getVideoId(video.iframe);
 
                                         return (
                                             <div
                                                 key={index}
-                                                onClick={() => setActiveVideo(video.iframe)}
+                                                onClick={() => setActiveVideo3(video.iframe)}
                                                 className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
-                                          ${activeVideo === video.iframe
+                                          ${activeVideo3 === video.iframe
                                                         ? "border-[#07549c] scale-105"
                                                         : "border-transparent hover:scale-105"
                                                     }`}
@@ -606,31 +533,31 @@ const FIAKSMotes = () => {
 
                             {/* LEFT BUTTON */}
                             <button
-                                onClick={prevSlide}
+                                onClick={prevSlide3}
                                 className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                disabled={currentIndex === 0}
+                                disabled={currentIndex3 === 0}
                             >
                                 <ChevronLeft className="w-6 h-6 text-slate-700" />
                             </button>
 
                             {/* RIGHT BUTTON */}
                             <button
-                                onClick={nextSlide}
+                                onClick={nextSlide3}
                                 className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                disabled={currentIndex >= videos.length - itemsPerView}
+                                disabled={currentIndex3 >= videos3.length - itemsPerView}
                             >
                                 <ChevronRight className="w-6 h-6 text-slate-700" />
                             </button>
 
                         </div>
-                    </div>
+                    </div> 
 
                     {/* 4th row */}
                     <div className="container mx-auto px-4 max-w-7xl my-10">
                         {/* MAIN VIDEO */}
                         <div className="aspect-video rounded-xl overflow-hidden shadow-xl mb-6">
                             <iframe
-                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo)}?autoplay=1`}
+                                src={`https://www.youtube.com/embed/${getVideoId(activeVideo4)}`}
                                 className="w-full h-full"
                                 allow="autoplay; encrypted-media"
                                 allowFullScreen
@@ -642,18 +569,18 @@ const FIAKSMotes = () => {
                                 <div
                                     className="flex gap-4 transition-transform duration-500 ease-in-out"
                                     style={{
-                                        transform: `translateX(-${(currentIndex * 100) / itemsPerView}%)`,
+                                        transform: `translateX(-${(currentIndex4 * 100) / itemsPerView}%)`,
                                     }}
                                 >
-                                    {videos.map((video, index) => {
+                                    {videos4.map((video, index) => {
                                         const videoId = getVideoId(video.iframe);
 
                                         return (
                                             <div
                                                 key={index}
-                                                onClick={() => setActiveVideo(video.iframe)}
+                                                onClick={() => setActiveVideo4(video.iframe)}
                                                 className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
-                                          ${activeVideo === video.iframe
+                                          ${activeVideo4 === video.iframe
                                                         ? "border-[#07549c] scale-105"
                                                         : "border-transparent hover:scale-105"
                                                     }`}
@@ -671,24 +598,25 @@ const FIAKSMotes = () => {
 
                             {/* LEFT BUTTON */}
                             <button
-                                onClick={prevSlide}
+                                onClick={prevSlide4}
                                 className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                disabled={currentIndex === 0}
+                                disabled={currentIndex4 === 0}
                             >
                                 <ChevronLeft className="w-6 h-6 text-slate-700" />
                             </button>
 
                             {/* RIGHT BUTTON */}
                             <button
-                                onClick={nextSlide}
+                                onClick={nextSlide4}
                                 className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-slate-50 transition-all"
-                                disabled={currentIndex >= videos.length - itemsPerView}
+                                disabled={currentIndex4 >= videos4.length - itemsPerView}
                             >
                                 <ChevronRight className="w-6 h-6 text-slate-700" />
                             </button>
 
                         </div>
-                    </div>
+                    </div> 
+ 
                 </div>
             </section>
 

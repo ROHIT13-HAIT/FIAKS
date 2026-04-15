@@ -19,7 +19,7 @@ const gridImg = [
 ];
 
 const GalleryImg = ({ src }) => (
-  <div className="flex items-center justify-center">
+  <div className="flex flex-wrap items-center justify-start">
     <img
       src={src}
       alt="partner"
