@@ -174,8 +174,8 @@ const FeaturedVideos = () => {
 
   return (
     <section className="py-20 md:py-28 bg-white">
-      <div className="container mx-auto px-4 max-w-7xl"> 
-        {/* Header */}  
+      <div className="container mx-auto px-4 max-w-7xl">
+        {/* Header */}
         <div className="text-center mb-12">
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
             Featured Content
@@ -183,8 +183,8 @@ const FeaturedVideos = () => {
           <div className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             <span className="text-[#07549c]">Featured</span>{' '}
             <span className="text-black">Videos</span>
-          </div> 
-          <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" /> 
+          </div>
+          <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
         </div>
 
         {/* Slider */}
@@ -214,7 +214,12 @@ const FeaturedVideos = () => {
                           alt={video.title}
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
-
+                        
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                          <button className="w-14 h-14 rounded-full bg-[#07549c] flex items-center justify-center hover:bg-[#054178] transition-all hover:scale-110">
+                            <Play className="w-6 h-6 text-white ml-1" fill="white" />
+                          </button>
+                        </div>
                         {/* <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                           <button
                             onClick={() => setModalVideo(video.iframe)}
@@ -410,7 +415,7 @@ export default FeaturedVideos;
 //                   <div
 //                     key={index}
 //                     onClick={() => setActiveVideo(video.iframe)}
-//                     className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 
+//                     className={`min-w-[200px] cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300
 //                       ${
 //                         activeVideo === video.iframe
 //                           ? "border-[#07549c] scale-105"

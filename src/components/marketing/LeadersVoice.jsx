@@ -6,25 +6,25 @@ const leaderVideos = [
     url: 'https://youtu.be/cQU7GFwASaU',
     name: 'Rajiv Anand',
     title: 'Deputy Managing Director, Axis Bank',
-    quote: 'FIAKS Focused Acclivity Program of Knowledge Sharing',
+    quote: ' FIAKS Acclivity Program ',
   },
   {
     url: 'https://youtu.be/W-VcwTLJQ5Q',
     name: 'Vijay Shekhar Sharma',
     title: 'Founder & CEO, Paytm',
-    quote: 'FIAKS Focused Acclivity Program of Knowledge Sharing',
+    quote: 'FIAKS Acclivity Program ',
   },
   {
     url: 'https://youtu.be/938Esg2mm-Q',
     name: 'Abhishek Dalmiya',
     title: 'Head Developer Ecosystem & Integrations , Tally Solutions',
-    quote: 'FIAKS Focused Acclivity Program of Knowledge Sharing',
+    quote: 'FIAKS Acclivity Program',
   },
   {
     url: 'https://youtu.be/BThYX3O2NjA',
     name: 'Abhishek Dalmiya',
     title: 'Head Developer Ecosystem & Integrations , Tally Solutions',
-    quote: 'FIAKS Focused Acclivity Program of Knowledge Sharing',
+    quote: 'FIAKS Acclivity Program',
   },
 ];
 
@@ -91,7 +91,7 @@ const LeadersVoice = () => {
                   {/* CONTENT */}
                   <div className="p-6">
                     <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
-                    <p className="text-slate-600 italic mb-4">
+                    <p className="text-slate-600 italic mb-4 text-xs md:text-sm">
                       {leader.quote}
                     </p>
                   </div>

@@ -2,38 +2,38 @@ import React from 'react';
 import { Award, Trophy, Star } from 'lucide-react';
 import { useEffect } from "react";
 
-const recognitionImages = [
-  {
-    id: 1,
-    image: '/fiaks/recognition1.png',
-    title: 'Annual Summit 2024',
-  },
-  {
-    id: 2,
-    image: '/fiaks/recognition2.png',
-    title: 'Excellence Award Ceremony',
-  },
-  {
-    id: 3,
-    image: '/fiaks/recognition7.png',
-    title: 'Industry Leadership Forum',
-  },
-  {
-    id: 4,
-    image: '/fiaks/recognition4.png',
-    title: 'Global Partnership Meet',
-  },
-  {
-    id: 5,
-    image: '/fiaks/recognition8.png',
-    title: 'Innovation Showcase',
-  },
-  {
-    id: 6,
-    image: '/fiaks/recognition6.png',
-    title: 'Digital Banking Conference',
-  },
-];
+// const recognitionImages = [
+//   {
+//     id: 1,
+//     image: '/fiaks/recognition1.png',
+//     title: 'Annual Summit 2024',
+//   },
+//   {
+//     id: 2,
+//     image: '/fiaks/recognition2.png',
+//     title: 'Excellence Award Ceremony',
+//   },
+//   {
+//     id: 3,
+//     image: '/fiaks/recognition7.png',
+//     title: 'Industry Leadership Forum',
+//   },
+//   {
+//     id: 4,
+//     image: '/fiaks/recognition4.png',
+//     title: 'Global Partnership Meet',
+//   },
+//   {
+//     id: 5,
+//     image: '/fiaks/recognition8.png',
+//     title: 'Innovation Showcase',
+//   },
+//   {
+//     id: 6,
+//     image: '/fiaks/recognition6.png',
+//     title: 'Digital Banking Conference',
+//   },
+// ];
 
 const Recognition = () => {
 
@@ -93,7 +93,7 @@ const Recognition = () => {
               </div>
             ))}
           </div> */}
-           <img src="/fiaks/recognition7.png" alt="" className="w-full h-full object-cover" />
+           <img src="/fiaks/recognition7.png" alt="" className="w-full h-full object-cover animate slide-right delay-4" />
 
           {/* Content */}
           <div className="space-y-6" data-testid="recognition-content">
