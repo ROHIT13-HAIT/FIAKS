@@ -269,6 +269,7 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { toast } from 'sonner';
 import { ArrowLeft, Eye, EyeOff } from 'lucide-react';
+import logo from "../../src/images/logo.png";
 
 // ❌ removed axios + backend
 
@@ -343,7 +344,7 @@ const LoginPage = () => {
         }
       }
     } catch (error) {
-       console.log(error);
+      console.log(error);
       toast.error('Something went wrong');
     } finally {
       setLoading(false);
@@ -361,19 +362,17 @@ const LoginPage = () => {
               'url(https://images.unsplash.com/photo-1560439514-0fc9d2cd5e1b?w=1200&q=80)',
           }}
         />
+
         <div className="absolute inset-0 bg-gradient-to-r from-[#07549c]/90 to-[#07549c]/70" />
         <div className="relative z-10 flex flex-col justify-center p-12 text-white">
           <Link to="/" className="flex items-center gap-3 mb-12">
-            <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl font-['Outfit']">FF</span>
-            </div>
-            <span className="text-2xl font-bold font-['Outfit']">Fintech Forum</span>
+            <img src={logo} alt="Fintech Forum Logo" className=" " />
           </Link>
-          <h1 className="font-['Outfit'] text-4xl font-bold mb-6">
-            Welcome to the Premier BFSI Community
+          <h1 className="font-['Outfit'] text-5xl font-bold mb-6">
+            Welcome to the FIAKS  
           </h1>
           <p className="text-white/80 text-lg max-w-md">
-            Join thousands of industry leaders shaping the future of financial services.
+            Forum of Industry and Academic Knowledge Sharing
           </p>
         </div>
       </div>

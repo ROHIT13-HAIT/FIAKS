@@ -27,23 +27,10 @@ const events = [
     location: 'Taj Palace, New Delhi',
     attendees: '1200+',
     type: '1st Edition',
-    image: '../../../src/images/ffllcc.png',
+    image: '../fiaks/public/ffllcc.png',
     featured: true,
     status: 'upcoming',
-  },
-  {
-    id: 2,
-    slug: 'regtech-innovation-workshop',
-    title: 'Season 2',
-    description: 'Hands-on workshop exploring cutting-edge regulatory technology solutions for compliance challenges.',
-    date: 'March 28, 2023',
-    location: 'Mumbai Marriott',
-    attendees: '150',
-    type: '2nd Edition',
-    image: '../../../src/images/ffllcc.png',
-    featured: true,
-    status: 'upcoming',
-  },
+  }, 
 
 ];
 
@@ -110,7 +97,7 @@ const FIAKSPremierLeague = () => {
       {/* Featured Events */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {featuredEvents.map((event) => (
               <Link
                 key={event.id}
@@ -130,8 +117,8 @@ const FIAKSPremierLeague = () => {
                     </span>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-3 group-hover:text-[#07549c] transition-colors">
+                <div className="p-5">
+                  <h3 className="font-['Outfit'] text-xl font-semibold text-slate-900 mb-2">
                     {event.title}
                   </h3>
                   {/* <p className="text-slate-600 mb-4">{event.description}</p>
@@ -235,7 +222,7 @@ const FIAKSPremierLeague = () => {
                 <div className="relative aspect-video">
                   {/* {activeVideo === video.id ? ( */}
                   <iframe
-                    src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                    src={`https://www.youtube.com/embed/${video.id}`}
                     title={video.title}
                     className="w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

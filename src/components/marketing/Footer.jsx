@@ -7,13 +7,13 @@ import { Play } from "lucide-react";
 
 const Footer = () => {
   const quickLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/' },
-    { label: 'Honorary Advisory Committee', href: '/' },
-    { label: 'Partners', href: '/' },
-    { label: 'Testimonials', href: '/' },
-    { label: 'Contact Us', href: '/' },
-    { label: 'Login', href: '/' },
+    { label: 'Home', href: '/home' },
+    { label: 'About Us', href: '/who-we-are' },
+    { label: 'Honorary Advisory Committee', href: '/honorary-advisory-committee' },
+    { label: 'Partners', href: '/partners' },
+    { label: 'Testimonials', href: '/testimonials' },
+    { label: 'Contact Us', href: '/contact' },
+    { label: 'Login', href: '/login' },
   ];
 
   const socialLinks = [
@@ -175,10 +175,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
             <p>© {new Date().getFullYear()} FIAKS. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link to="/" className="hover:text-[#07549c] transition-colors">
+              <Link to="/privacy-policy" className="hover:text-[#07549c] transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/" className="hover:text-[#07549c] transition-colors">
+              <Link to="/terms-and-conditions" className="hover:text-[#07549c] transition-colors">
                 Terms of Service
               </Link>
             </div>
