@@ -20,79 +20,79 @@ import { Award, Trophy, Star, Quote, CheckCircle } from 'lucide-react';
 const events = [
   {
     id: 1,
-    slug: 'global-fintech-summit-2025',
+    slug: '',
     title: 'FIAKS Leadership Conclave (FLC) Inauguration',
     description: 'FIAKS Leadership Conclave Launch edition inauguration by Ms Zarin Daruwala, CEO Standard Chartered Bank, India and Mr Jaspal Bindra Chairman Centrum Group along with FIAKS founders Anuradha Panditrao and Vikas Panditrao on 21st June 2019',
     date: 'June 21st, 2019',
     location: 'Taj Palace, New Delhi',
     attendees: '1200+',
     type: '1st Edition',
-    image: '../../fiaks/src/images/slider1.png',
+    image: '../fiaks/public/edition1.png',
     featured: true,
     status: 'upcoming',
   },
   {
     id: 2,
-    slug: 'regtech-innovation-workshop',
+    slug: '',
     title: 'FIAKS Leadership Conclave (FLC)',
     description: 'Hands-on workshop exploring cutting-edge regulatory technology solutions for compliance challenges.',
     date: 'June 23rd, 2020',
     location: 'Mumbai Marriott',
     attendees: '150',
     type: '2nd Edition',
-    image: '../../fiaks/src/images/slider2.png',
+    image: '../fiaks/public/edition2.png',
     featured: true,
     status: 'upcoming',
   },
   {
     id: 3,
-    slug: 'bfsi-leadership-conclave',
+    slug: '',
     title: 'FIAKS Leadership Conclave',
     description: 'Exclusive gathering of C-suite executives discussing strategic priorities and industry transformation.',
     date: 'May 5, 2021',
     location: 'ITC Grand Chola, Chennai',
     attendees: '200',
     type: '3rd Edition',
-    image: '../../fiaks/src/images/slider3.png',
+    image: '../fiaks/public/edition3.png',
     featured: false,
     status: 'upcoming',
   },
   {
     id: 4,
-    slug: 'digital-payments-roundtable',
+    slug: '',
     title: 'Digital Payments Roundtable',
     description: 'Industry roundtable on the evolution of digital payments and UPI\'s global expansion.',
     date: 'April 5, 2023',
     location: 'Hyatt Regency, Bangalore',
     attendees: '80',
     type: '4th Edition',
-    image: '../../fiaks/src/images/slider4.png',
+    image: '../fiaks/public/edition4.png',
     featured: false,
     status: 'upcoming',
   },
   {
     id: 5,
-    slug: 'ai-in-banking-summit',
+    slug: '',
     title: 'AI in Banking Summit',
     description: 'Deep dive into artificial intelligence applications transforming banking operations.',
     date: 'May 20, 2024',
     location: 'The Oberoi, Mumbai',
     attendees: '300',
     type: '5th Edition',
-    image: '../../fiaks/src/images/slider5.jpg',
+    image: '../fiaks/public/edition5.jpg',
     featured: false,
     status: 'upcoming',
   },
   {
     id: 6,
-    slug: 'fintech-startup-showcase',
+    slug: '',
     title: 'Fintech Startup Showcase',
     description: 'Platform for emerging fintech startups to present innovations to investors and industry leaders.',
     date: 'June 10, 2025',
     location: 'HICC, Hyderabad',
     attendees: '500',
     type: '6th Edition',
-    image: '../../fiaks/src/images/slider6.jpg',
+    image: '../fiaks/public/edition6.jpg',
     featured: false,
     status: 'upcoming',
   },
@@ -192,8 +192,7 @@ const FLCAndAwards = () => {
     <div className="min-h-screen bg-white" data-testid="events-page">
       <Header forceDark={true} />
 
-      {/* Hero Section */}
-
+      {/* Hero Section */} 
       <section className="relative" style={{ marginTop: '80px' }}> 
         <img src={banner} className='img-fluid' alt='' style={{ width: '100%', height:'600px', objectFit:'cover' }} />
          <div className="">
@@ -206,27 +205,7 @@ const FLCAndAwards = () => {
             </p>
             <button class="animate slide-up delay-5 bg-white text-black px-8 py-3 mt-6 rounded-full hover:scale-105 transition show">Learn More</button>
         </div></div>
-      </section>
-      
-      {/* <section className="pt-32 pb-16 bg-gradient-to-br from-slate-50 to-white">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">
-              Events & Conferences
-            </p>
-            <h1 className="font-['Outfit'] text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Upcoming Events
-            </h1>
-            <p className="text-slate-600 text-lg">
-              Join industry leaders at our exclusive events, conferences, and workshops designed for BFSI professionals.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
-
-
-
+      </section>  
 
       {/* Leadership Conclave */}
       <section className="py-12 bg-white">
@@ -238,7 +217,7 @@ const FLCAndAwards = () => {
               {filteredEvents.map((event) => (
                 <Link
                   key={event.id}
-                  to={`/events/${event.slug}`}
+                   
                   className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all"
                   data-testid={`event-card-${event.id}`}
                 >
@@ -507,7 +486,7 @@ const FLCAndAwards = () => {
             </h2>
             <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
           </div>
-          <div className="grid  gap-12 items-center">
+          <div className="grid gap-12 items-center">
             <div className=" ">
               <div className='my-4'>
                 <div className="md:flex gap-5" style={{ height: '100%' }}>
@@ -536,7 +515,7 @@ const FLCAndAwards = () => {
               </div>
               
               <div className='my-4'>
-                <div className="md:flex gap-5" style={{ height: '100%' }}> 
+                <div className="flex flex-col-reverse md:flex-row md:flex gap-5" style={{ height: '100%' }}> 
                   <div className='md:w-4/5'>
                     <div className='offering-card bg-white rounded-xl p-8 shadow-lg md:hover:shadow-xl' style={{ height: '100%' }}>
                       <div style={{ display: 'flex' }}>
@@ -678,11 +657,10 @@ const FLCAndAwards = () => {
             <h2 className="font-['Outfit'] text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
               Partner With Fiaks Leadership Awards
             </h2>
-            <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" />
-
+            <div className="w-16 h-1 bg-[#07549c] mx-auto mb-6" /> 
           </div>
           <div className="grid gap-12 items-center">
-            <div className="grid md:grid-cols-6 lg:grid-cols-2 items-center gap-8">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 items-center gap-8">
               <div className=''>
                 <p className="text-slate-700 text-lg leading-relaxed"><strong>FIAKS invites brands, institutions and organisations</strong> to partner with the Leadership Conclave and leverage this rewarding opportunity to connect with a high-level community of leaders via branding sponsorships through the event.</p><br></br>
                 <p className="text-slate-700 text-lg leading-relaxed">The FIAKS Leadership Conclave will host CxO level professionals from the Banking, Payments, Fintech, E-Commerce industry in India. The FIAKS Community Members attending the event are:</p>
@@ -749,37 +727,42 @@ const FLCAndAwards = () => {
                 </div>
               </div>
             </div>
-            <div className="grid gap-12 items-center mt-5">
+          </div>
+        </div>
+      </section>
+
+      <section className='bg-[#07549c] py-8'>
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+            <div className="grid gap-12 items-center">
               {/* Content */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
                 <div className=''>
-                  <div className="offering-card bg-[#07549c] rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                    <div className='shadow-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto', borderRadius: '50%'}}>
+                  <div className="offering-card bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
+                    <div className='bg-[#07549c] shadow-xl rounded-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto', }}>
                       <img src={icon1} className='p-5' style={{ width: '130px',filter: 'brightness(40)' }} />
                     </div>
-                    <p className="text-white text-xl leading-relaxed mt-4">Speak and showcase to the right business leader.</p>
+                    <p className="text-xl leading-relaxed mt-4">Speak and showcase to the right business leader.</p>
                   </div>
                 </div>
                 <div className=' '>
-                  <div className="offering-card bg-[#07549c] rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                    <div className='shadow-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto', borderRadius: '50%'}}>
+                  <div className="offering-card bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
+                    <div className='bg-[#07549c] shadow-xl rounded-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto'}}>
                       <img src={icon2} className='p-5' style={{ width: '130px',filter: 'brightness(40)' }} />
                     </div>
-                    <p className="text-white text-xl leading-relaxed mt-4">With the top-level decision makers of the Banking, Fintech, Tech, Payments world!</p>
+                    <p className="text-xl leading-relaxed mt-4">With the top-level decision makers of the Banking, Fintech, Tech, Payments world!</p>
                   </div>
                 </div>
                 <div className=' '>
-                  <div className="offering-card bg-[#07549c] rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                    <div className='shadow-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto', borderRadius: '50%'}}>
+                  <div className="offering-card bg-slate-50 rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
+                    <div className='bg-[#07549c] shadow-xl rounded-xl' style={{ border: '1px solid #ddd', width: '100px', margin: '0 auto'}}>
                       <img src={icon3} className='p-5' style={{ width: '130px',filter: 'brightness(40)' }} />
                     </div>
-                    <p className="text-white text-xl leading-relaxed mt-4">With CxO’s who are on top of the decision-making pyramid.</p>
+                    <p className="text-xl leading-relaxed mt-4">With CxO’s who are on top of the decision-making pyramid.</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+            </div>
       </section>
 
       <section className="py-16 md:py-20" id="what-we-offer" data-testid="what-we-offer-section">
@@ -789,28 +772,28 @@ const FLCAndAwards = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className=' '>
                 <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                  <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                  <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
+                  <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-2">
                     Network
                   </h3>
-                  <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
                   <p className='text-slate-700 text-md leading-relaxed'>CxO’s are on top of the decision-making pyramid, and FIAKS enables your brand and products to connect with this audience. With a space to exhibit and multiple networking opportunities, the conclave ensures that you reach the correct target group.</p>
                 </div>
               </div>
               <div className=' '>
                 <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                  <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                  <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
+                  <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-2">
                     Launch
                   </h3>
-                  <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
                   <p className='text-slate-700 text-md leading-relaxed'>With the top-level decision makers of the BFSI world at the conclave, your new products get a focused platform to launch at and an engrossed audience to showcase to.</p>
                 </div>
               </div>
               <div className=' '>
                 <div className="offering-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl" style={{ height: '100%' }}>
-                  <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-4">
+                  <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
+                  <h3 className="font-['Outfit'] text-2xl font-semibold text-slate-900 mb-2">
                     Acquire Leads
                   </h3>
-                  <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
                   <p className='text-slate-700 text-md leading-relaxed'>As a partner to the FIAKS Leadership Conclave, there are many opportunities for brands to generate sales leads for products and services.</p>
                 </div>
               </div>

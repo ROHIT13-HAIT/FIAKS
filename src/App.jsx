@@ -25,8 +25,12 @@ import WhoWeAre from './pages/WhoWeAre';
 import ToranPage from './pages/ToranPage';
 import AcclivityProgram from './pages/Forums/AcclivityProgram';
 import CSRPage from './pages/SocialImpact/CSRPage';
-
  
+import HonoraryAdvisoryCommittee from './pages/HonoraryAdvisoryCommittee';
+import Partners from './pages/Partners';
+import Testimonials from './pages/Testimonials'; 
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';  
 import Disclaimer from './pages/Disclaimer';
 
 const App = () => {
@@ -52,12 +56,14 @@ const App = () => {
           <Route path="/events/fiaks-premier-league" element={<FIAKSPremierLeague />} />
           <Route path="/events/fiaks-motes" element={<FIAKSMotes />} />
           <Route path="/events/fiaks-zero-hour" element={<FIAKSZeroHour />} />
-          <Route path="/events/workshops" element={<Workshops />} />
-
+          <Route path="/events/workshops" element={<Workshops />} /> 
 
           <Route path="/toran" element={<ToranPage />} />
-
- 
+          <Route path="/honorary-advisory-committee" element={<HonoraryAdvisoryCommittee />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
         </Routes>
       </HashRouter>
