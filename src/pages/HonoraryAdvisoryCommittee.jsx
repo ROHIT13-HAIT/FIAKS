@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/marketing/Header';
 import Footer from '../components/marketing/Footer';
 
-import banner from '../../src/images/banners/fiaks-motes.jpg'
+import banner from '../../src/images/banners/honorary-advisory-committee.jpg'
 import CommitteeImg1 from '../../src/images/Committee1.png';
 import CommitteeImg2 from '../../src/images/Committee2.png'
 import { Quote } from 'lucide-react';

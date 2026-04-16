@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/marketing/Header';
 import Footer from '../components/marketing/Footer';
 
-import banner from '../../src/images/banners/fiaks-motes.jpg'
+import banner from '../../src/images/banners/privacy-policy.jpg'
 import policyImage from '../../src/images/policy.jpg';
 import bannerLogo from '../../src/images/motes-logo.png'
 import { CheckCircle } from 'lucide-react';

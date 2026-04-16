@@ -17,7 +17,7 @@ const currentEvents = [
     {
         id: 1,
         title: 'How to secure Payment with Fingerprint',
-        image: '../../fiaks/src/images/fingerprint.jpg',
+        image: '../fiaks/fingerprint.jpg',
     },
 
 ];
@@ -26,12 +26,12 @@ const pastEvents = [
     {
         id: 1,
         title: 'Bharat Bill Payment System – An Interactive Session With The Experts',
-        image: '../fiaks/public/pastEvent1.jpeg',
+        image: '../fiaks/pastEvent1.jpeg',
     },
     {
         id: 2,
         title: 'Interactive Session On UPI And BHIM',
-        image: '../fiaks/public/pastEvent2.jpeg',
+        image: '../fiaks/pastEvent2.jpeg',
     },
 
 ];

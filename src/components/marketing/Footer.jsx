@@ -175,6 +175,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
             <p>© {new Date().getFullYear()} FIAKS. All rights reserved.</p>
             <div className="flex gap-6">
+              <Link to="/disclaimer" className="hover:text-[#07549c] transition-colors">
+               Disclaimer
+              </Link>
               <Link to="/privacy-policy" className="hover:text-[#07549c] transition-colors">
                 Privacy Policy
               </Link>
