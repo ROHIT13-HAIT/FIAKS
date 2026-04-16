@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/marketing/Header';
 import Footer from '../components/marketing/Footer';
 
-import banner from '../../src/images/banners/zero-hour.jpg'
-import bannerLogo from '../../src/images/zero-hour.png'
+import banner from '../../src/images/banners/testimonials.jpg' 
 
 import { ChevronLeft, ChevronRight, Play, Quote } from 'lucide-react';
 

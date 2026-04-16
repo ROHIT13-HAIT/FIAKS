@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/marketing/Header';
 import Footer from '../components/marketing/Footer';
 
-import banner from '../../src/images/banners/fiaks-motes.jpg'
-import bannerLogo from '../../src/images/motes-logo.png'
+import banner from '../../src/images/banners/disclaimer.jpg' 
 
 
 

@@ -27,7 +27,7 @@ const events = [
     location: 'Taj Palace, New Delhi',
     attendees: '1200+',
     type: '1st Edition',
-    image: '../fiaks/public/ffllcc.png',
+    image: '../fiaks/ffllcc.png',
     featured: true,
     status: 'upcoming',
   }, 

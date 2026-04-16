@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/marketing/Header';
 import Footer from '../components/marketing/Footer';
 
-import banner from '../../src/images/banners/fiaks-motes.jpg'
-import bannerLogo from '../../src/images/motes-logo.png'
+import banner from '../../src/images/banners/partners.jpg' 
 
 const partnersRow1 = [
   "/fiaks/airtel.jpg",
@@ -59,7 +58,7 @@ const PartnerLogo = ({ src }) => (
     <img
       src={src}
       alt="partner"
-      className="h-12 md:h-20 object-contain grayscale hover:grayscale-0 transition duration-300"
+      className="h-12 md:h-20 object-contain grayscale hover:grayscale-0 transition duration-300 shadow-lg rounded-md" style={{  border: '1px solid rgb(221 221 221 / 49%)'}}
     />
   </div>
 );
@@ -135,7 +134,7 @@ const Partners = () => {
        
 
         {/* Row 1 */}
-        <div className="relative overflow-hidden   py-8 group">
+        <div className="relative overflow-hidden py-8 group">
           {/* Gradient Left */}
           <div className="absolute left-0 top-0 h-full w-32 z-10 bg-gradient-to-r" />
           {/* Gradient Right */}
@@ -173,7 +172,7 @@ const Partners = () => {
           <div className="absolute right-0 top-0 h-full w-32 z-10 bg-gradient-to-l" />
 
           <div className="flex flex-wrap justify-center">
-            {[...partnersRow1, ...partnersRow1].map((src, index) => (
+            {[...partnersRow2, ...partnersRow2].map((src, index) => (
               <PartnerLogo key={index} src={src} />
             ))}
           </div>
