@@ -96,7 +96,7 @@ const PartnerLogo = ({ src }) => (
 
 const PartnersSlider = () => {
   return (
-    <section className="py-20 md:py-28 bg-slate-50">
+    <section className="py-16 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">  
         <div className="text-center mb-16">
           <p className="text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">

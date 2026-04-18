@@ -21,6 +21,7 @@ import FIAKSMotes from './pages/Events/FIAKSMotes';
 import FIAKSZeroHour from './pages/Events/FIAKSZeroHour';
 import Workshops from './pages/Events/Workshops';
 import FLCAndAwardsDetails from './pages/Events/FLCAndAwardsDetails';
+import FIAKSPremierLeagueDetails from './pages/Events/FIAKSPremierLeagueDetails';
 import WhoWeAre from './pages/WhoWeAre';
 import ToranPage from './pages/ToranPage';
 import AcclivityProgram from './pages/Forums/AcclivityProgram';
@@ -30,11 +31,12 @@ import EBulletin from './pages/KnowledgeCenter/e-bulletin';
 
 
 // import Login from './pages/Login';
-// import Partners from './pages/Partners';
-// import Testimonials from './pages/Testimonials'; 
-// import TermsAndConditions from './pages/TermsAndConditions';
-// import PrivacyPolicy from './pages/PrivacyPolicy'; 
-// import Disclaimer from './pages/Disclaimer';
+import HonoraryAdvisoryCommittee from './pages/HonoraryAdvisoryCommittee';
+import Partners from './pages/Partners';
+import Testimonials from './pages/Testimonials'; 
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy'; 
+import Disclaimer from './pages/Disclaimer';
 
 const App = () => {
   return (
@@ -57,6 +59,7 @@ const App = () => {
           <Route path="/events/flc-and-awards" element={<FLCAndAwards />} />
           <Route path="/events/flc-and-awards/details" element={<FLCAndAwardsDetails />} />
           <Route path="/events/fiaks-premier-league" element={<FIAKSPremierLeague />} />
+          <Route path="/events/fiaks-premier-league/details" element={<FIAKSPremierLeagueDetails />} />
           <Route path="/events/fiaks-motes" element={<FIAKSMotes />} />
           <Route path="/events/fiaks-zero-hour" element={<FIAKSZeroHour />} />
           <Route path="/events/workshops" element={<Workshops />} />

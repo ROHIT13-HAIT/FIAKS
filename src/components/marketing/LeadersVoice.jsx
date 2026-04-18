@@ -6,25 +6,25 @@ const leaderVideos = [
     url: 'https://youtu.be/cQU7GFwASaU',
     name: 'Rajiv Anand',
     title: 'Deputy Managing Director, Axis Bank',
-    quote: ' FIAKS Acclivity Program ',
+    quote: 'Leaders from the BFSI industry  ',
   },
   {
     url: 'https://youtu.be/W-VcwTLJQ5Q',
     name: 'Vijay Shekhar Sharma',
     title: 'Founder & CEO, Paytm',
-    quote: 'FIAKS Acclivity Program ',
+    quote: 'Insights on Global knowledge hub',
   },
   {
     url: 'https://youtu.be/938Esg2mm-Q',
     name: 'Abhishek Dalmiya',
     title: 'Head Developer Ecosystem & Integrations , Tally Solutions',
-    quote: 'FIAKS Acclivity Program',
+    quote: 'Reputed Leaders in Discussion',
   },
   {
     url: 'https://youtu.be/BThYX3O2NjA',
     name: 'Abhishek Dalmiya',
     title: 'Head Developer Ecosystem & Integrations , Tally Solutions',
-    quote: 'FIAKS Acclivity Program',
+    quote: 'Essential for anyone in BFSI',
   },
 ];
 
@@ -42,7 +42,7 @@ const LeadersVoice = () => {
   const [hoveredVideo, setHoveredVideo] = useState(null);
 
   return (
-    <section className="py-20 md:py-28 bg-white" id="leaders-voice">
+    <section className="py-16 bg-white" id="leaders-voice">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl"> 
         {/* HEADER */} 
         <div className="text-center mb-12">
@@ -91,7 +91,7 @@ const LeadersVoice = () => {
                   {/* CONTENT */}
                   <div className="p-6">
                     <Quote className="w-8 h-8 text-[#07549c]/30 mb-3" />
-                    <p className="text-slate-600 italic mb-4 text-xs md:text-sm">
+                    <p className="text-slate-600 mb-4 text-xs md:text-sm" style={{ fontSize: '0.9rem'}}>
                       {leader.quote}
                     </p>
                   </div>

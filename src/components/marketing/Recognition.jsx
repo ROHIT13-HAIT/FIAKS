@@ -61,7 +61,7 @@ const Recognition = () => {
   }, []);
 
   return (
-    <section className="py-20 md:py-28 bg-slate-50" data-testid="recognition-section">
+    <section className="py-16 bg-slate-50" data-testid="recognition-section">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-16">
           <p className="animate slide-left delay-1 text-[#07549c] font-semibold tracking-widest uppercase text-sm mb-3">

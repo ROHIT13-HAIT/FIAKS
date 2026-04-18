@@ -169,7 +169,7 @@ const StatsCounter = () => {
   return (
     <section
       ref={sectionRef}
-      className="stats-section py-20 md:py-28"
+      className="stats-section py-16"
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">  
         <div className="text-center mb-12">

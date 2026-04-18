@@ -276,7 +276,9 @@
 /* ANIMATION WHAT WE OFFER */
 
 .slide-left,
-.slide-right {
+.slide-right,
+.slide-top,
+.slide-bottom  {
   opacity: 0;
   transition: all 0.6s ease;
 }
@@ -288,6 +290,12 @@
 
 .slide-right {
   transform: translateX(60px);
+}
+.slide-top {
+  transform: translateY(-60px);
+}
+.slide-bottom {
+  transform: translateY(60px);
 }
 
 /* when visible */

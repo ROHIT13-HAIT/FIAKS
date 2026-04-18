@@ -173,7 +173,7 @@ const FeaturedVideos = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
