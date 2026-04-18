@@ -101,7 +101,7 @@ const FIAKSPremierLeague = () => {
             {featuredEvents.map((event) => (
               <Link
                 key={event.id}
-                to={`/events/${event.slug}`}
+                // to={`/events/${event.slug}`}
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-all"
                 data-testid={`featured-event-${event.id}`}
               >

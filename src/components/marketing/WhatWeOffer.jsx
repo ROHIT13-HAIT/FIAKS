@@ -172,7 +172,7 @@ const WhatWeOffer = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-[#f5f7fa] overflow-visible">
+    <section className="py-16 bg-[#f5f7fa] overflow-visible">
       <div className="container mx-auto px-6 max-w-7xl">
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
