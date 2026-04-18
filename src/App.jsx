@@ -37,6 +37,8 @@ import Testimonials from './pages/Testimonials';
 import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy'; 
 import Disclaimer from './pages/Disclaimer';
+import PolicyAdvocacyPage from './pages/Forums/PolicyAdvocacy';
+import BlogDetail from './pages/Forums/BlogDetail';
 
 const App = () => {
   return (
@@ -63,6 +65,10 @@ const App = () => {
           <Route path="/events/fiaks-motes" element={<FIAKSMotes />} />
           <Route path="/events/fiaks-zero-hour" element={<FIAKSZeroHour />} />
           <Route path="/events/workshops" element={<Workshops />} />
+
+
+          <Route path="/forums/policy-advocacy" element={<PolicyAdvocacyPage />} />
+          <Route path="/forums/policy-advocacy/:slug" element={<BlogDetail />} />
 
 
           <Route path="/socialimpact/csr" element={<CSRPage />} />

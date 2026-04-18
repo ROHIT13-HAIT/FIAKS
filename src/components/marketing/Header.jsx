@@ -103,7 +103,8 @@ const Header = ({ forceDark = false }) => {
                             </li>
                             <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
-                              <span className="text-xs mt-1">▶</span>FIAKS Policy Advocacy Bespoke Discussion Forum</li>
+     <Link to="/forums/policy-advocacy"><span className="text-xs mt-1">▶</span>FIAKS Policy Advocacy Bespoke Discussion Forum</Link>
+                            </li>
                           </ul>
                         </div>
 
@@ -176,7 +177,8 @@ const Header = ({ forceDark = false }) => {
                               <span className="text-xs mt-1">▶</span>FIAKS Writ</li>
                             <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
-                              <span className="text-xs mt-1">▶</span>FIAKS Bespoke</li>
+    <Link to="/forums/policy-advocacy"><span className="text-xs mt-1">▶</span>FIAKS Bespoke</Link>
+                           </li>
                             <li className="flex items-start gap-2 cursor-pointer px-3 py-2 rounded-md transition-all duration-200
   hover:bg-white/20 hover:translate-x-2 hover:text-white shadow-sm hover:shadow-md">
                               <span className="text-xs mt-1">▶</span>FIAKS Daily</li>
